@@ -4,11 +4,55 @@
  "nota": "Coda di pubblicazione. L'attivita programmata gira ogni sera alle 20:00 Roma e pubblica la voce la cui data corrisponde a oggi. Per aggiungere contenuti basta aggiungere una voce qui e fare push: la programmazione non va toccata.",
  "post": [
   {
+   "id": "pin1",
+   "quando": "2026-07-29 20:00 Roma",
+   "tipo": "carosello",
+   "titolo": "INSIEME — cos'è Accumunation",
+   "caption": "Comprate insieme, pagate il prezzo del volume.\n\nCos'è Accumunation, in cinque slide. Il meccanismo per intero, senza righe scritte in piccolo.\n\nLink in bio.\n\n🫂\n\n#acquistocollettivo #insiemecostadimeno #brandsitaliani #fattoinitalia #consumoconsapevole #accumunation",
+   "media": [
+    "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/evidenza/01-insieme/copertina.jpg",
+    "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/evidenza/01-insieme/slide-02.jpg",
+    "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/evidenza/01-insieme/slide-03.jpg",
+    "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/evidenza/01-insieme/slide-04.jpg",
+    "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/evidenza/01-insieme/slide-05.jpg"
+   ]
+  },
+  {
+   "id": "pin2",
+   "quando": "2026-07-29 20:20 Roma",
+   "tipo": "carosello",
+   "titolo": "MENO — quanto risparmi",
+   "caption": "Più ordini arrivano, più il prezzo scende. Per tutti, anche per chi ha prenotato per primo.\n\nNon è uno sconto: è il listino a quantità che i brand usano da sempre coi rivenditori, aperto per la prima volta anche a te.\n\nLink in bio.\n\n🫂\n\n#accumunation #trasparenza #prezzi #brandsitaliani #consumoconsapevole #noaisconti",
+   "media": [
+    "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/evidenza/02-meno/copertina.jpg",
+    "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/evidenza/02-meno/slide-02.jpg",
+    "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/evidenza/02-meno/slide-03.jpg",
+    "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/evidenza/02-meno/slide-04.jpg",
+    "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/evidenza/02-meno/slide-05.jpg",
+    "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/evidenza/02-meno/slide-06.jpg"
+   ]
+  },
+  {
+   "id": "pin3",
+   "quando": "2026-07-29 20:40 Roma",
+   "tipo": "carosello",
+   "titolo": "GARANTITO — perché fidarsi",
+   "caption": "Se la soglia non si raggiunge, l'acconto torna indietro. Garantito.\n\nE tre cose che su Accumunation non troverai mai.\n\nLink in bio.\n\n🫂\n\n#accumunation #trasparenza #privacy #fiducia #garantito #brandsitaliani",
+   "media": [
+    "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/evidenza/03-garantito/copertina.jpg",
+    "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/evidenza/03-garantito/slide-02.jpg",
+    "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/evidenza/03-garantito/slide-03.jpg",
+    "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/evidenza/03-garantito/slide-04.jpg",
+    "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/evidenza/03-garantito/slide-05.jpg",
+    "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/evidenza/03-garantito/slide-06.jpg"
+   ]
+  },
+  {
    "id": "01-a-come-funziona",
-   "quando": "2026-07-29 20:30 Roma",
+   "quando": "2026-07-30 20:00 Roma",
    "tipo": "carosello",
    "titolo": "A — Come funziona",
-   "caption": "Più siamo, meno paghi. Non è uno slogan, è un meccanismo.\nSei slide per spiegare come funziona un acquisto collettivo fatto bene. Senza giri di parole, senza righe scritte in piccolo.\nLink in bio.\n\n#acquistocollettivo #insiemecostadimeno #brandsitaliani #fattoinitalia #consumoconsapevole #accumunation",
+   "caption": "Più siamo, meno paghi. Non è uno slogan, è un meccanismo.\nSei slide per spiegare come funziona un acquisto collettivo fatto bene. Senza giri di parole, senza righe scritte in piccolo.\nLink in bio.\n\n🫂\n\n#acquistocollettivo #insiemecostadimeno #brandsitaliani #fattoinitalia #consumoconsapevole #accumunation",
    "data": "2026-07-29",
    "media": [
     "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/evergreen/01-a-come-funziona/slide-01.jpg",
@@ -24,7 +68,7 @@
    "quando": "2026-07-31 20:00 Roma",
    "tipo": "reel",
    "titolo": "Reel — Quanto costa",
-   "caption": "Quanto costa davvero?\nLa risposta che nessuno ti da': dipende da te, e da quante persone prenotano insieme a te.\nProva tu stesso, link in bio.\n\n#acquistocollettivo #prezzi #trasparenza #brandsitaliani #consumoconsapevole #accumunation",
+   "caption": "Quanto costa davvero?\nLa risposta che nessuno ti da': dipende da te, e da quante persone prenotano insieme a te.\nProva tu stesso, link in bio.\n\n🫂\n\n#acquistocollettivo #prezzi #trasparenza #brandsitaliani #consumoconsapevole #accumunation",
    "data": "2026-07-31",
    "media": [
     "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/reel/01-quanto-costa.mp4"
@@ -35,7 +79,7 @@
    "quando": "2026-08-02 20:00 Roma",
    "tipo": "carosello",
    "titolo": "J — Come partecipare",
-   "caption": "Tre passi. Nessuna sorpresa.\nCome si partecipa a una campagna Accumunation, spiegato in 30 secondi.\nLink in bio.\n\n#accumunation #comefunziona #tutorial #acquistocollettivo #brandsitaliani",
+   "caption": "Tre passi. Nessuna sorpresa.\nCome si partecipa a una campagna Accumunation, spiegato in 30 secondi.\nLink in bio.\n\n🫂\n\n#accumunation #comefunziona #tutorial #acquistocollettivo #brandsitaliani",
    "data": "2026-08-03",
    "media": [
     "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/evergreen/02-j-come-partecipare-3-passi/slide-01.jpg",
@@ -50,7 +94,7 @@
    "quando": "2026-08-04 20:00 Roma",
    "tipo": "reel",
    "titolo": "Reel — E se non si parte",
-   "caption": "Cosa succede se non raggiungiamo la soglia?\nTi torna tutto indietro. Garantito, nessun modulo, nessuna sorpresa.\nLe condizioni sono tutte scritte, link in bio.\n\n#accumunation #garantito #rimborso #trasparenza #fiducia #acquistocollettivo",
+   "caption": "Cosa succede se non raggiungiamo la soglia?\nTi torna tutto indietro. Garantito, nessun modulo, nessuna sorpresa.\nLe condizioni sono tutte scritte, link in bio.\n\n🫂\n\n#accumunation #garantito #rimborso #trasparenza #fiducia #acquistocollettivo",
    "data": "2026-08-07",
    "media": [
     "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/reel/02-e-se-non-si-parte.mp4"
@@ -61,7 +105,7 @@
    "quando": "2026-08-05 20:30 Roma",
    "tipo": "carosello",
    "titolo": "C — Selezione brand",
-   "caption": "Non prendiamo chiunque. Ecco come scegliamo i brand.\nNon è un algoritmo, è una scelta. Conosciamo le storie, verifichiamo il prodotto, sappiamo cosa vi stiamo offrendo.\nLeggi i dettagli sul sito → link in bio.\n\n#accumunation #brandsitaliani #fattoinitalia #qualita #trasparenza #madeinitaly",
+   "caption": "Non prendiamo chiunque. Ecco come scegliamo i brand.\nNon è un algoritmo, è una scelta. Conosciamo le storie, verifichiamo il prodotto, sappiamo cosa vi stiamo offrendo.\nLeggi i dettagli sul sito → link in bio.\n\n🫂\n\n#accumunation #brandsitaliani #fattoinitalia #qualita #trasparenza #madeinitaly",
    "data": "2026-08-05",
    "media": [
     "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/evergreen/04-c-selezione-brand/slide-01.jpg",
@@ -76,7 +120,7 @@
    "quando": "2026-08-08 20:00 Roma",
    "tipo": "reel",
    "titolo": "Reel — Non è uno sconto",
-   "caption": "Non stiamo facendo sconti. Stiamo facendo matematica.\nLa differenza tra una promozione finta e un listino a quantita' vero.\nLink in bio.\n\n#accumunation #trasparenza #brandsitaliani #consumoconsapevole #noaisconti",
+   "caption": "Non stiamo facendo sconti. Stiamo facendo matematica.\nLa differenza tra una promozione finta e un listino a quantita' vero.\nLink in bio.\n\n🫂\n\n#accumunation #trasparenza #brandsitaliani #consumoconsapevole #noaisconti",
    "data": "2026-08-14",
    "media": [
     "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/reel/03-non-e-uno-sconto.mp4"
@@ -87,7 +131,7 @@
    "quando": "2026-08-09 20:00 Roma",
    "tipo": "carosello",
    "titolo": "F — Credito passaparola",
-   "caption": "Porti un amico, tutti e due ci guadagnate. Letteralmente.\nNon è marketing, è come funziona il credito passaparola su Accumunation.\nDettagli → link in bio.\n\n#accumunation #passaparola #acquistocollettivo #brandsitaliani #consumoconsapevole",
+   "caption": "Porti un amico, tutti e due ci guadagnate. Letteralmente.\nNon è marketing, è come funziona il credito passaparola su Accumunation.\nDettagli → link in bio.\n\n🫂\n\n#accumunation #passaparola #acquistocollettivo #brandsitaliani #consumoconsapevole",
    "data": "2026-08-10",
    "media": [
     "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/evergreen/05-f-credito-passaparola/slide-01.jpg",
@@ -102,7 +146,7 @@
    "quando": "2026-08-12 20:30 Roma",
    "tipo": "carosello",
    "titolo": "G — Non è uno sconto",
-   "caption": "Non stiamo facendo sconti. Stiamo facendo matematica.\nLa differenza tra una promozione finta e un listino a quantità vero → link in bio.\n\n#accumunation #trasparenza #brandsitaliani #consumoconsapevole #noaisconti",
+   "caption": "Non stiamo facendo sconti. Stiamo facendo matematica.\nLa differenza tra una promozione finta e un listino a quantità vero → link in bio.\n\n🫂\n\n#accumunation #trasparenza #brandsitaliani #consumoconsapevole #noaisconti",
    "data": "2026-08-12",
    "media": [
     "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/evergreen/03-g-non-e-uno-sconto/slide-01.jpg",
@@ -117,7 +161,7 @@
    "quando": "2026-08-16 20:00 Roma",
    "tipo": "carosello",
    "titolo": "H — Perché esiste",
-   "caption": "L'ho fondata perché ero stanco di scegliere tra prezzo pieno e svendita.\nPerché esiste Accumunation, in poche righe.\nLink in bio.\n\n#accumunation #founder #storiavera #brandsitaliani #madeinitaly",
+   "caption": "L'ho fondata perché ero stanco di scegliere tra prezzo pieno e svendita.\nPerché esiste Accumunation, in poche righe.\nLink in bio.\n\n🫂\n\n#accumunation #founder #storiavera #brandsitaliani #madeinitaly",
    "data": "2026-08-17",
    "media": [
     "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/evergreen/06-h-perche-esiste/slide-01.jpg",
@@ -132,7 +176,7 @@
    "quando": "2026-08-19 20:30 Roma",
    "tipo": "carosello",
    "titolo": "I — Cosa non facciamo",
-   "caption": "Tanto quanto quello che facciamo, conta quello che rifiutiamo di fare.\nTre cose che su Accumunation non troverai mai.\nLink in bio.\n\n#accumunation #trasparenza #privacy #fiducia #brandsitaliani",
+   "caption": "Tanto quanto quello che facciamo, conta quello che rifiutiamo di fare.\nTre cose che su Accumunation non troverai mai.\nLink in bio.\n\n🫂\n\n#accumunation #trasparenza #privacy #fiducia #brandsitaliani",
    "data": "2026-08-19",
    "media": [
     "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/evergreen/07-i-cosa-non-facciamo/slide-01.jpg",
@@ -144,8 +188,6 @@
   }
  ],
  "gia_pubblicati": [
-  "pin1 INSIEME 28/07",
-  "pin2 MENO 29/07",
-  "pin3 GARANTITO 29/07"
+  "versione navy 28-29/07, da archiviare a mano: DbV9FI0IH07, DbXpZ98INKt, DbXpfnlIBz1"
  ]
 }
