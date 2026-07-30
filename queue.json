@@ -1,7 +1,7 @@
 {
  "ig_user_id": "28288081357442027",
  "fb_page_id": "1159827427224071",
- "nota": "Coda di pubblicazione. L'attivita programmata gira ogni sera alle 20:00 Roma e pubblica la voce la cui data corrisponde a oggi. Per aggiungere contenuti basta aggiungere una voce qui e fare push: la programmazione non va toccata.",
+ "nota": "Coda di pubblicazione. L'attivita programmata gira ogni sera alle 20:00 Roma e pubblica la voce la cui data corrisponde a oggi. Per aggiungere contenuti basta aggiungere una voce qui e fare push: la programmazione non va toccata. | Dal 30/07 la produzione e just-in-time: l'attivita programmata 'produzione just-in-time' gira ogni mattina alle 09:00 Roma e crea UN post solo quando restano 3 o meno contenuti in coda. I temi vengono dalla griglia 100 caselle; quelli gia usati stanno in 'temi_usati'.",
  "post": [
   {
    "id": "pin1",
@@ -193,5 +193,18 @@
  "gia_pubblicati": [
   "versione navy 28-29/07, da archiviare a mano: DbV9FI0IH07, DbXpZ98INKt, DbXpfnlIBz1",
   "versione con affermazioni non fondate 29/07, da cancellare a mano prima della ripubblicazione del 31/07"
+ ],
+ "temi_usati": [
+  "Rischio zero x Rischio zero — cosa succede ai tuoi soldi (pin3 GARANTITO)",
+  "Prezzo che scende x Stesso prezzo — retroattivo per tutti (pin2 MENO)",
+  "Meccanismo completo — come funziona (pin1 INSIEME, 01-A)",
+  "Selezione x Selezione — i tre filtri (04-C)",
+  "Passaparola x Passaparola — il credito (05-F)",
+  "Trasparenza x Prezzo che scende — non e uno sconto (03-G e reel)",
+  "Come partecipare in 3 passi (02-J)",
+  "Perche esiste Accumunation (06-H)",
+  "Cosa non facciamo (07-I)",
+  "Quanto costa (reel 01)",
+  "E se non si parte (reel 02)"
  ]
 }
