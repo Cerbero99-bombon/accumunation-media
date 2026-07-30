@@ -5,7 +5,7 @@
  "post": [
   {
    "id": "pin1",
-   "quando": "2026-07-29 20:00 Roma",
+   "quando": "2026-07-31 20:00 Roma",
    "tipo": "carosello",
    "titolo": "INSIEME — cos'è Accumunation",
    "caption": "Comprate insieme, pagate il prezzo del volume.\n\nCos'è Accumunation, in cinque slide. Il meccanismo per intero, senza righe scritte in piccolo.\n\nLink in bio.\n\n🫂\n\n#acquistocollettivo #insiemecostadimeno #preordine #gruppodiacquisto #consumoconsapevole #accumunation",
@@ -15,11 +15,12 @@
     "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/evidenza/01-insieme/slide-03.jpg",
     "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/evidenza/01-insieme/slide-04.jpg",
     "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/evidenza/01-insieme/slide-05.jpg"
-   ]
+   ],
+   "nota": "RIPUBBLICAZIONE: versione corretta (niente \"brand italiano\"/\"algoritmo\", copertine uniformate). Enrico deve cancellare il vecchio post prima e ri-fissare questo."
   },
   {
    "id": "pin2",
-   "quando": "2026-07-29 20:20 Roma",
+   "quando": "2026-07-31 20:20 Roma",
    "tipo": "carosello",
    "titolo": "MENO — quanto risparmi",
    "caption": "Più ordini arrivano, più il prezzo scende. Per tutti, anche per chi ha prenotato per primo.\n\nNon è uno sconto: è il listino a quantità che i brand usano da sempre coi rivenditori, aperto per la prima volta anche a te.\n\nLink in bio.\n\n🫂\n\n#accumunation #trasparenza #prezzi #preordine #consumoconsapevole #noaisconti",
@@ -30,11 +31,12 @@
     "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/evidenza/02-meno/slide-04.jpg",
     "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/evidenza/02-meno/slide-05.jpg",
     "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/evidenza/02-meno/slide-06.jpg"
-   ]
+   ],
+   "nota": "RIPUBBLICAZIONE: versione corretta (niente \"brand italiano\"/\"algoritmo\", copertine uniformate). Enrico deve cancellare il vecchio post prima e ri-fissare questo."
   },
   {
    "id": "pin3",
-   "quando": "2026-07-29 20:40 Roma",
+   "quando": "2026-07-31 20:40 Roma",
    "tipo": "carosello",
    "titolo": "GARANTITO — perché fidarsi",
    "caption": "Se la soglia non si raggiunge, l'acconto torna indietro. Garantito.\n\nE tre cose che su Accumunation non troverai mai.\n\nLink in bio.\n\n🫂\n\n#accumunation #trasparenza #privacy #fiducia #garantito #preordine",
@@ -45,7 +47,8 @@
     "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/evidenza/03-garantito/slide-04.jpg",
     "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/evidenza/03-garantito/slide-05.jpg",
     "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/evidenza/03-garantito/slide-06.jpg"
-   ]
+   ],
+   "nota": "RIPUBBLICAZIONE: versione corretta (niente \"brand italiano\"/\"algoritmo\", copertine uniformate). Enrico deve cancellare il vecchio post prima e ri-fissare questo."
   },
   {
    "id": "01-a-come-funziona",
@@ -65,7 +68,7 @@
   },
   {
    "id": "01-quanto-costa",
-   "quando": "2026-07-31 20:00 Roma",
+   "quando": "2026-08-01 20:00 Roma",
    "tipo": "reel",
    "titolo": "Reel — Quanto costa",
    "caption": "Quanto costa davvero?\nLa risposta che nessuno ti da': dipende da te, e da quante persone prenotano insieme a te.\nProva tu stesso, link in bio.\n\n🫂\n\n#acquistocollettivo #prezzi #trasparenza #preordine #consumoconsapevole #accumunation",
@@ -188,6 +191,7 @@
   }
  ],
  "gia_pubblicati": [
-  "versione navy 28-29/07, da archiviare a mano: DbV9FI0IH07, DbXpZ98INKt, DbXpfnlIBz1"
+  "versione navy 28-29/07, da archiviare a mano: DbV9FI0IH07, DbXpZ98INKt, DbXpfnlIBz1",
+  "versione con affermazioni non fondate 29/07, da cancellare a mano prima della ripubblicazione del 31/07"
  ]
 }
