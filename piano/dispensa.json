@@ -1,0 +1,367 @@
+{
+ "voci": [
+  {
+   "id": "D01",
+   "tema": "invenduto",
+   "forza": "legge",
+   "titolo": "Dal 19 luglio 2026 in UE è vietato distruggere vestiti e scarpe invenduti",
+   "dato": "in vigore dal 19/07/2026 per le grandi imprese, dal 2030 per le medie",
+   "fonte": "Regolamento UE 2024/1781 (ESPR), art. 25 e Allegato VII — Commissione europea",
+   "url": "https://environment.ec.europa.eu/news/ban-destruction-unsold-clothes-and-shoes-enters-application-2026-07-17_en",
+   "perche": "È di questo mese. Una legge non si discute, e ci dà un aggancio all'attualità che nessuno può contestare.",
+   "rubriche": [
+    "R5",
+    "R3"
+   ],
+   "cautela": "",
+   "stato": "libera",
+   "post": null
+  },
+  {
+   "id": "D02",
+   "tema": "invenduto",
+   "forza": "ufficiale",
+   "titolo": "Il 21% dei prodotti tessili immessi sul mercato resta invenduto",
+   "dato": "21% invenduto; la quota poi distrutta varia tra un quinto e la metà a seconda della fonte",
+   "fonte": "Agenzia Europea dell'Ambiente 2024 + JRC Commissione europea 2026",
+   "url": "https://www.eea.europa.eu/en/analysis/publications/the-destruction-of-returned-and-unsold-textiles-in-europes-circular-economy",
+   "perche": "È il numero che regge davvero sull'invenduto, e viene da due enti UE indipendenti che concordano.",
+   "rubriche": [
+    "R5"
+   ],
+   "cautela": "La percentuale distrutta va citata come intervallo: le due fonti UE divergono.",
+   "stato": "libera",
+   "post": null
+  },
+  {
+   "id": "D03",
+   "tema": "invenduto",
+   "forza": "ufficiale",
+   "titolo": "Tra il 4% e il 9% dei tessili europei viene distrutto prima ancora di essere usato",
+   "dato": "264.000-594.000 tonnellate all'anno",
+   "fonte": "Agenzia Europea dell'Ambiente, marzo 2024",
+   "url": "https://www.eea.europa.eu/en/analysis/publications/the-destruction-of-returned-and-unsold-textiles-in-europes-circular-economy",
+   "perche": "\"Distrutto prima di essere usato\" è un'immagine che si capisce in due secondi, e il numero è di un'agenzia UE.",
+   "rubriche": [
+    "R5",
+    "R2"
+   ],
+   "cautela": "La fonte stessa dichiara che i dati sono frammentari.",
+   "stato": "libera",
+   "post": null
+  },
+  {
+   "id": "D04",
+   "tema": "resi",
+   "forza": "ufficiale",
+   "titolo": "Un terzo dei capi resi comprati online finisce distrutto",
+   "dato": "22-43% dei resi distrutti; tasso di reso 20% sull'abbigliamento, 30% sulle scarpe",
+   "fonte": "Agenzia Europea dell'Ambiente, 2024",
+   "url": "https://www.eea.europa.eu/en/analysis/publications/the-destruction-of-returned-and-unsold-textiles-in-europes-circular-economy",
+   "perche": "Tocca un gesto che tutti fanno (il reso) e ne mostra la conseguenza invisibile.",
+   "rubriche": [
+    "R5",
+    "R4"
+   ],
+   "cautela": "Range molto ampio: citare 22-43%, non solo 'un terzo'.",
+   "stato": "libera",
+   "post": null
+  },
+  {
+   "id": "D05",
+   "tema": "invenduto",
+   "forza": "studio",
+   "titolo": "In Germania distruggere un reso costa 85 centesimi, donarlo costa di più",
+   "dato": "circa 20 milioni di resi distrutti l'anno, 0,85 € di smaltimento a pezzo, 7,5 milioni sarebbero donabili",
+   "fonte": "Università di Bamberga, gruppo di ricerca sui resi, 2019",
+   "url": "https://www.uni-bamberg.de/presse/pm/artikel/retourenvernichtung-asdecker-2019/",
+   "perche": "Il dettaglio degli 85 centesimi spiega il meccanismo meglio di qualsiasi discorso: non è cattiveria, è che conviene.",
+   "rubriche": [
+    "R5",
+    "R4"
+   ],
+   "cautela": "Dato 2019, i resi sono cambiati molto dopo il Covid. Da datare.",
+   "stato": "libera",
+   "post": null
+  },
+  {
+   "id": "D06",
+   "tema": "invenduto",
+   "forza": "ufficiale",
+   "titolo": "La Francia vieta di distruggere l'invenduto dal 2022, quattro anni prima dell'UE",
+   "dato": "Loi AGEC 2020-105, art. 35, in vigore dal 1/1/2022. Multe fino a 15.000 € per infrazione",
+   "fonte": "Ministero dell'Economia francese",
+   "url": "https://www.economie.gouv.fr/economie-circulaire-interdiction-destruction-invendus-non-alimentaires",
+   "perche": "Racconta che si poteva fare prima e qualcuno l'ha fatto. Utile per l'angolo confronto.",
+   "rubriche": [
+    "R5"
+   ],
+   "cautela": "",
+   "stato": "libera",
+   "post": null
+  },
+  {
+   "id": "D07",
+   "tema": "invenduto",
+   "forza": "ufficiale",
+   "titolo": "In Francia 1,6 miliardi di euro di vestiti e scarpe invenduti in un anno",
+   "dato": "4,2 miliardi di invenduto non alimentare, di cui 1,6 di abbigliamento. Solo il 21% donato",
+   "fonte": "ADEME, ente pubblico francese, dati 2019",
+   "url": "https://www.actu-environnement.com/ae/news/invendus-non-alimentaires-ademe-estimation-gisement-38620.php4",
+   "perche": "Un valore in euro si capisce meglio di una percentuale.",
+   "rubriche": [
+    "R5"
+   ],
+   "cautela": "Dato pre-Covid, e ADEME misura il valore non i pezzi.",
+   "stato": "libera",
+   "post": null
+  },
+  {
+   "id": "D08",
+   "tema": "invenduto",
+   "forza": "bilancio",
+   "titolo": "Burberry ha dichiarato in bilancio 28,6 milioni di sterline di prodotti nuovi distrutti in un anno",
+   "dato": "28,6 milioni di £, esercizio chiuso il 31/03/2018",
+   "fonte": "Burberry Group plc, bilancio annuale 2017/18",
+   "url": "https://www.cnbc.com/2018/07/19/burberry-and-other-labels-are-destroying-millions-of-dollars-of-stock.html",
+   "perche": "L'ha scritto l'azienda nel proprio bilancio: non è un'accusa nostra, è una loro dichiarazione.",
+   "rubriche": [
+    "R5",
+    "R2"
+   ],
+   "cautela": "Burberry ha smesso nel 2018: va raccontato al passato. Meglio risalire al bilancio originale.",
+   "stato": "libera",
+   "post": null
+  },
+  {
+   "id": "D09",
+   "tema": "spreco",
+   "forza": "ufficiale",
+   "titolo": "Nell'UE si buttano 130 kg di cibo a testa ogni anno, 10 solo nella distribuzione",
+   "dato": "58,2 milioni di tonnellate nel 2023; 8% nella vendita al dettaglio",
+   "fonte": "Eurostat, ottobre 2025",
+   "url": "https://ec.europa.eu/eurostat/web/products-eurostat-news/w/ddn-20251016-2",
+   "perche": "Eurostat è il massimo della solidità: rilevazione obbligatoria e armonizzata. Se ci serve un numero inattaccabile, è questo.",
+   "rubriche": [
+    "R5"
+   ],
+   "cautela": "",
+   "stato": "libera",
+   "post": null
+  },
+  {
+   "id": "D10",
+   "tema": "sconti finti",
+   "forza": "sanzione",
+   "titolo": "Poltronesofà: solo lo 0-5% dei divani era stato davvero venduto al prezzo pieno barrato",
+   "dato": "sanzione 1.000.000 €, provvedimento n. 31788, caso PS12704, dicembre 2025",
+   "fonte": "AGCM",
+   "url": "https://www.agcm.it/pubblicazioni/bollettino-settimanale/2026/1/Bollettino-1-2026",
+   "perche": "È il gancio più forte di tutti: il prezzo barrato non era gonfiato, era proprio finto. E lo dice l'antitrust, non noi.",
+   "rubriche": [
+    "R2",
+    "R4",
+    "R5"
+   ],
+   "cautela": "Le sanzioni AGCM sono impugnabili: dire 'sanzionata con provvedimento n. 31788'.",
+   "stato": "libera",
+   "post": null
+  },
+  {
+   "id": "D11",
+   "tema": "urgenza finta",
+   "forza": "sanzione",
+   "titolo": "Deghi: il countdown scadeva e ripartiva da capo con le stesse condizioni",
+   "dato": "sanzione 2.000.000 €, provvedimento PS13027, giugno 2026",
+   "fonte": "AGCM",
+   "url": "https://www.agcm.it/media/comunicati-stampa/2026/6/PS13027",
+   "perche": "È di due mesi fa ed è esattamente la cosa che noi diciamo di non fare. L'AGCM la chiama dark pattern e sfruttamento dell'euristica della scarsità.",
+   "rubriche": [
+    "R2",
+    "R4"
+   ],
+   "cautela": "",
+   "stato": "libera",
+   "post": null
+  },
+  {
+   "id": "D12",
+   "tema": "urgenza finta",
+   "forza": "sanzione",
+   "titolo": "eDreams: 9 milioni di multa per pressione temporale e scarsità artificiale",
+   "dato": "9.000.000 €, provvedimento PS12853, febbraio 2026",
+   "fonte": "AGCM",
+   "url": "https://www.agcm.it/media/comunicati-stampa/2026/2/PS12853",
+   "perche": "La sanzione più alta del gruppo, su un servizio che tutti hanno usato almeno una volta.",
+   "rubriche": [
+    "R2",
+    "R4"
+   ],
+   "cautela": "",
+   "stato": "libera",
+   "post": null
+  },
+  {
+   "id": "D13",
+   "tema": "sconti finti",
+   "forza": "sanzione",
+   "titolo": "Materassi Marion: prezzo barrato in tv mai applicato, e a casa costava 3.000 euro in più",
+   "dato": "sanzione 3.000.000 €, provvedimento PS12706, luglio 2025",
+   "fonte": "AGCM",
+   "url": "https://www.agcm.it/media/comunicati-stampa/2025/7/PS12706-",
+   "perche": "Unisce sconto finto e vendita aggressiva agli anziani: è il caso che fa capire perché le regole servono.",
+   "rubriche": [
+    "R4",
+    "R2"
+   ],
+   "cautela": "",
+   "stato": "libera",
+   "post": null
+  },
+  {
+   "id": "D14",
+   "tema": "sconti finti",
+   "forza": "sanzione",
+   "titolo": "Outlet Coveri: capi nati per l'outlet, col cartellino di un prezzo che non è mai esistito",
+   "dato": "sanzione 300.000 €, provvedimento PS12856, novembre 2025",
+   "fonte": "AGCM",
+   "url": "https://www.agcm.it/media/comunicati-stampa/2025/11/PS12856-",
+   "perche": "Smonta l'idea di outlet come 'prezzo pieno scontato'. Prodotti fatti apposta per sembrare scontati.",
+   "rubriche": [
+    "R2",
+    "R5"
+   ],
+   "cautela": "",
+   "stato": "libera",
+   "post": null
+  },
+  {
+   "id": "D15",
+   "tema": "sconti finti",
+   "forza": "legge",
+   "titolo": "Dal 2023 uno sconto si calcola sul prezzo più basso dei 30 giorni precedenti",
+   "dato": "art. 17-bis Codice del consumo, D.lgs. 26/2023, in vigore dal 2 aprile 2023",
+   "fonte": "Gazzetta Ufficiale n. 66 del 18/03/2023",
+   "url": "https://www.gazzettaufficiale.it/eli/id/2023/03/18/23G00033/sg",
+   "perche": "È la regola che quasi nessuno conosce e che rende verificabile ogni sconto. Dà al lettore uno strumento, non un'opinione.",
+   "rubriche": [
+    "R2",
+    "R3"
+   ],
+   "cautela": "",
+   "stato": "libera",
+   "post": null
+  },
+  {
+   "id": "D16",
+   "tema": "sconti finti",
+   "forza": "sentenza",
+   "titolo": "La Corte UE ha confermato: lo sconto si calcola sul minimo dei 30 giorni, non sul prezzo di ieri",
+   "dato": "causa C-330/23 Aldi Süd, 26 settembre 2024",
+   "fonte": "Corte di Giustizia dell'Unione Europea",
+   "url": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=celex%3A62023CJ0330",
+   "perche": "Chiude la scappatoia. Una sentenza della Corte UE è il grado massimo di solidità dopo la legge.",
+   "rubriche": [
+    "R2",
+    "R3"
+   ],
+   "cautela": "",
+   "stato": "libera",
+   "post": null
+  },
+  {
+   "id": "D17",
+   "tema": "dark pattern",
+   "forza": "ufficiale",
+   "titolo": "Su 399 negozi online controllati in UE, 148 usavano trucchi di manipolazione",
+   "dato": "148 su 399; di cui 42 con countdown falsi, 54 con gerarchie che spingono al più caro",
+   "fonte": "Commissione europea e rete CPC, screening 2022 pubblicato gennaio 2023",
+   "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_23_418",
+   "perche": "Un controllo vero su siti veri, non un sondaggio. Il numero è preciso e la metodologia è pubblica.",
+   "rubriche": [
+    "R2",
+    "R4"
+   ],
+   "cautela": "Non confonderlo col 97% dell'altro studio: misurano cose diverse.",
+   "stato": "libera",
+   "post": null
+  },
+  {
+   "id": "D18",
+   "tema": "dark pattern",
+   "forza": "studio",
+   "titolo": "Su 11.000 siti di shopping, i countdown spesso continuano a valere dopo che sono scaduti",
+   "dato": "393 countdown su 361 siti; 22 aziende terze vendono il servizio di creare dark pattern",
+   "fonte": "Princeton University, Dark Patterns at Scale, 2019",
+   "url": "https://webtransparency.cs.princeton.edu/dark-patterns/",
+   "perche": "Il dettaglio delle 22 aziende che vendono il trucco come servizio è il più rivelatore: è un mercato, non un caso.",
+   "rubriche": [
+    "R2",
+    "R4"
+   ],
+   "cautela": "Studio 2019 su siti prevalentemente americani.",
+   "stato": "libera",
+   "post": null
+  },
+  {
+   "id": "D19",
+   "tema": "urgenza finta",
+   "forza": "studio",
+   "titolo": "La scarsità funziona davvero sul cervello, e non c'entra se è vera o finta",
+   "dato": "meta-analisi su 37 studi e 335 misure: effetto medio 0,28 sulla decisione d'acquisto",
+   "fonte": "Psychology & Marketing, 2023, DOI 10.1002/mar.21816",
+   "url": "https://radar.brookes.ac.uk/radar/file/609e47cf-0367-4af7-82ac-9ab7154e2a2c/1/Psychology%20and%20Marketing%20-%202023%20-%20Ladeira.pdf",
+   "perche": "È la base della rubrica 'Non è colpa tua': non sei debole, è una leva che funziona su tutti, misurata.",
+   "rubriche": [
+    "R4"
+   ],
+   "cautela": "Effetto medio, non enorme. Non gonfiarlo.",
+   "stato": "libera",
+   "post": null
+  },
+  {
+   "id": "D20",
+   "tema": "urgenza finta",
+   "forza": "ufficiale",
+   "titolo": "In Francia un negozio su tre che faceva promozioni era irregolare",
+   "dato": "controlli 2024 su 5.300 esercizi e 350 siti: un terzo in anomalia, 890 verbali",
+   "fonte": "DGCCRF, Ministero dell'Economia francese",
+   "url": "https://www.economie.gouv.fr/dgccrf/laction-de-la-dgccrf/les-enquetes-et-les-controles/black-friday-gare-aux-fausses-promesses",
+   "perche": "'Uno su tre' è una proporzione che chiunque capisce, e viene da controlli fisici veri, non da stime.",
+   "rubriche": [
+    "R2",
+    "R4",
+    "R3"
+   ],
+   "cautela": "Dato francese: non estenderlo all'Italia.",
+   "stato": "libera",
+   "post": null
+  }
+ ],
+ "scartate": [
+  {
+   "cosa": "Un camion di vestiti in discarica ogni secondo / 500 miliardi persi ogni anno",
+   "perche": "Gira ovunque ma i dati sotto sono del 2015 e soprattutto parlano di vestiti già usati e buttati dal consumatore, non di invenduto. Usarlo sul nostro tema sarebbe una citazione fuori contesto: è l'errore più diffuso del settore."
+  },
+  {
+   "cosa": "Il 30% dei capi prodotti non viene mai venduto",
+   "perche": "Non esiste una fonte primaria. Rimandi circolari tra blog e materiali di marketing. Al suo posto usiamo il 21% dell'Agenzia Europea dell'Ambiente: più basso ma difendibile davanti a chiunque."
+  },
+  {
+   "cosa": "SHEIN e gli sconti finti",
+   "perche": "È un'azione di indagine della Commissione, non una sanzione. Scritto come 'sanzionato' sarebbe falso e ci esporrebbe."
+  },
+  {
+   "cosa": "StubHub, Viagogo, Wayfair e le altre dell'elenco CMA",
+   "perche": "Sono indagini aperte, non condanne. Fare quei nomi oggi è un rischio legale senza nessun guadagno."
+  },
+  {
+   "cosa": "Amazon, 124.000 articoli marcati 'distruggi' in una settimana",
+   "perche": "Inchiesta giornalistica forte, ma riguarda un solo magazzino e non è un dato statistico. Tenuto da parte come aneddoto, non come numero."
+  },
+  {
+   "cosa": "Il 97% dei siti usa almeno un dark pattern",
+   "perche": "Vero e ufficiale, ma misura 'almeno un pattern' su siti popolarissimi: usato sul tema sconti sarebbe gonfiato. Preferito il 148 su 399, che è specifico."
+  }
+ ]
+}
