@@ -13,6 +13,20 @@ danno di non farla non sia peggiore: in quel caso si scrive qui perche'.
 
 ---
 
+## 2026-07-31 · Stile D rivisto (v2) e primo reel a movimento continuo finito
+**Cosa**: riscritto `tools/stileD/moto.py` e prodotto `social/reel/06-stesso-prezzo-per-tutti.mp4`
+(17,0 s, 1080x1920, -14 LUFS) con la sua copertina 9:16.
+**Perche'**: guardando i fotogrammi della v1 sono usciti tre difetti veri, non di rifinitura:
+il fondo era il navy `#0b1220` (l'errore di palette gia' pagato il 28/07, il fondo social e' il
+carbone caldo `#16120D`); la folla si leggeva come una **texture** e non come gente, e lasciava
+sotto il prezzo un buco nero per meta' schermo; dopo il settimo secondo il video era **fermo**,
+cioe' il contrario di quello che lo stile promette.
+**Cosa cambia ora**: prospettiva vera nella folla, ingresso dal centro verso i lati, prezzo che
+scende addosso alla gente, respiro delle figure e camera che accelera nella seconda meta',
+testo che entra a frasi con la parola pronunciata accesa, dicitura "esempio illustrativo" fissa.
+**Conseguenza**: nessuna sulla coda. Il reel **non e' stato messo in `queue.json`**: siamo dentro
+la finestra di silenzio e comunque manca il via libera di Enrico sullo stile.
+**Rischio se va storto**: nessuno in pubblico. Il file sta nel repo e basta non metterlo in coda.
 ## 2026-07-31 · Correzione dei segni di pubblicazione in coda
 **Cosa**: `03-g-non-e-uno-sconto` e `02-e-se-non-si-parte` erano marcati non pubblicati ma erano
 gia' usciti il 30/07; `03-non-e-uno-sconto` (reel) era marcato pubblicato ma non e' mai uscito.
