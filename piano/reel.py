@@ -52,6 +52,9 @@ RUBRICHE = {
            "niente parole: si registra lo schermo e si guarda succedere"),
     'R7': ("Cosa firma un brand", {'dimostrazione', 'obiezione', 'confronto'}, {PRODUCE},
            "cosa cambia davvero nel mestiere di chi produce"),
+    'R8': ("Si dice che", {'provocazione', 'confronto', 'obiezione'},
+           {COMPRA, PRODUCE, 'chi non ci conosce'},
+           "il detto che tutti ripetono, e dove smette di essere vero"),
 }
 
 ANGOLI = ['dimostrazione', 'obiezione', 'confronto', 'provocazione']
