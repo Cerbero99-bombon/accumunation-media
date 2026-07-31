@@ -43,3 +43,13 @@ sostituito il 30/07 alle 08:28. Portano ancora l'anello AN.
 **Conseguenza**: rigenerando la spec **il logo nuovo entra da solo**, non serve toccare i sorgenti.
 Il reel `03-non-e-uno-sconto`, che esce il 4 agosto, va rigenerato prima di quella data.
 I due gia' usciti non si possono correggere: o restano, o si rifanno e si cancellano i vecchi.
+
+## 2026-07-31 · I tre in evidenza corretti pubblicati in anticipo, su richiesta
+**Cosa**: pin1/pin2/pin3 erano in coda per le 20:00; pubblicati a mano alle 16:59.
+**Perche'**: Enrico ha chiesto di chiudere la cosa subito, i vecchi con "made in Italy" e
+"non e' un algoritmo" erano ancora fissati sul profilo.
+**Conseguenza**: nessuna sul calendario, erano gia' previsti per oggi. Segnati `pubblicato: true`
+con i permalink veri, quindi il run delle 20:00 li salta.
+**Nota tecnica**: `INSTAGRAM_CREATE_MEDIA_CONTAINER` con `child_image_urls` ora risponde 400.
+Per i caroselli si usa **`INSTAGRAM_CREATE_CAROUSEL_CONTAINER`**, che accetta `child_image_urls`
+direttamente. Il prompt del pubblicatore serale va aggiornato di conseguenza.

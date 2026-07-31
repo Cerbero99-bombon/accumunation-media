@@ -5,7 +5,7 @@
  "post": [
   {
    "id": "pin1",
-   "quando": "2026-07-31 20:00 Roma",
+   "quando": "2026-07-31 16:59 Roma",
    "tipo": "carosello",
    "titolo": "INSIEME — cos'è Accumunation",
    "caption": "Comprate insieme, pagate il prezzo del volume.\n\nCos'è Accumunation, in cinque slide. Il meccanismo per intero, senza righe scritte in piccolo.\n\nLink in bio.\n\n🫂\n\n#acquistocollettivo #insiemecostadimeno #preordine #gruppodiacquisto #consumoconsapevole #accumunation",
@@ -17,11 +17,12 @@
     "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/evidenza/01-insieme/slide-05.jpg"
    ],
    "nota": "RIPUBBLICAZIONE: versione corretta (niente \"brand italiano\"/\"algoritmo\", copertine uniformate). Enrico deve cancellare il vecchio post prima e ri-fissare questo.",
-   "pubblicato": false
+   "pubblicato": true,
+   "permalink": "https://www.instagram.com/p/DbdiPyoID6-/"
   },
   {
    "id": "pin2",
-   "quando": "2026-07-31 20:20 Roma",
+   "quando": "2026-07-31 16:59 Roma",
    "tipo": "carosello",
    "titolo": "MENO — quanto risparmi",
    "caption": "Più ordini arrivano, più il prezzo scende. Per tutti, anche per chi ha prenotato per primo.\n\nNon è uno sconto: è il listino a quantità che i brand usano da sempre coi rivenditori, aperto per la prima volta anche a te.\n\nLink in bio.\n\n🫂\n\n#accumunation #trasparenza #prezzi #preordine #consumoconsapevole #noaisconti",
@@ -34,11 +35,12 @@
     "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/evidenza/02-meno/slide-06.jpg"
    ],
    "nota": "RIPUBBLICAZIONE: versione corretta (niente \"brand italiano\"/\"algoritmo\", copertine uniformate). Enrico deve cancellare il vecchio post prima e ri-fissare questo.",
-   "pubblicato": false
+   "pubblicato": true,
+   "permalink": "https://www.instagram.com/p/DbdiQNxILro/"
   },
   {
    "id": "pin3",
-   "quando": "2026-07-31 20:40 Roma",
+   "quando": "2026-07-31 16:59 Roma",
    "tipo": "carosello",
    "titolo": "GARANTITO — perché fidarsi",
    "caption": "Se la soglia non si raggiunge, l'acconto torna indietro. Garantito.\n\nE tre cose che su Accumunation non troverai mai.\n\nLink in bio.\n\n🫂\n\n#accumunation #trasparenza #privacy #fiducia #garantito #preordine",
@@ -51,7 +53,8 @@
     "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/evidenza/03-garantito/slide-06.jpg"
    ],
    "nota": "RIPUBBLICAZIONE: versione corretta (niente \"brand italiano\"/\"algoritmo\", copertine uniformate). Enrico deve cancellare il vecchio post prima e ri-fissare questo.",
-   "pubblicato": false
+   "pubblicato": true,
+   "permalink": "https://www.instagram.com/p/DbdiQN8INNI/"
   },
   {
    "id": "01-a-come-funziona",
