@@ -153,6 +153,28 @@
    "scadenza": "2026-08-03",
    "stato": "aperta",
    "nata": "conversazione"
+  },
+  {
+   "id": "015",
+   "tipo": "enrico",
+   "titolo": "Chiave PostHog per il report visite automatico",
+   "dettaglio": "posthog.com (EU) > Settings > Personal API keys > crea una chiave con lettura su Query e Insights. Incollala in .cerbero-secrets come POSTHOG_PERSONAL_KEY=phx_... Serve solo per il riepilogo automatico del venerdi: i numeri veri li vedi comunque su vercel.com > progetto accumunation > Analytics. Vercel non ha API di lettura per le statistiche, verificato.",
+   "area": "analytics",
+   "quando": "da valutare",
+   "scadenza": "2026-08-14",
+   "stato": "aperta",
+   "nata": "conversazione"
+  },
+  {
+   "id": "016",
+   "tipo": "idea",
+   "titolo": "Il sito non contava le visite",
+   "dettaglio": "Fino al 31/07 Vercel Analytics risultava attivo sul progetto ma lo script non era su nessuna pagina: zero dati. PostHog c'era ma parte spento e si accende solo per chi accetta i cookie. Aggiunto lo script Vercel su tutte e 7 le pagine pubbliche: conta tutti, senza cookie. I numeri partono dal 31/07, prima non esiste niente.",
+   "area": "analytics",
+   "quando": "da valutare",
+   "scadenza": null,
+   "stato": "aperta",
+   "nata": "conversazione"
   }
  ]
 }
