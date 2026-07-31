@@ -1,0 +1,114 @@
+{
+ "voci": [
+  {
+   "id": "001",
+   "tipo": "enrico",
+   "titolo": "Collegare Threads: app Meta con use case Threads",
+   "dettaglio": "Due App ID: usare quello Threads. Permessi threads_basic, threads_content_publish, threads_manage_replies, threads_read_replies. Redirect gia' online: https://accumunation.it/threads-auth.html. Aggiungere @accumunation come Threads Tester e accettare l'invito da Impostazioni > Autorizzazioni sito web. Poi passare il codice a Claude per lo scambio col token a 60 giorni.",
+   "area": "threads",
+   "quando": "da valutare",
+   "scadenza": "2026-08-07",
+   "stato": "aperta",
+   "nata": "conversazione"
+  },
+  {
+   "id": "002",
+   "tipo": "enrico",
+   "titolo": "Cancellare i 3 post in evidenza vecchi e ri-fissare quelli corretti",
+   "dettaglio": "Le versioni corrette escono il 31/07 alle 20:00, 20:20, 20:40. I vecchi contengono 'brand italiano' e 'dietro non c'e' un algoritmo'. L'API non cancella e non fissa: solo a mano.",
+   "area": "instagram",
+   "quando": "da valutare",
+   "scadenza": "2026-08-01",
+   "stato": "aperta",
+   "nata": "conversazione"
+  },
+  {
+   "id": "003",
+   "tipo": "enrico",
+   "titolo": "Storie in evidenza: creare le cartelle e metterci le storie segnalate",
+   "dettaglio": "Nessun endpoint API esiste. Ogni ciclo l'agente storia segnala quali storie meritano un highlight e in quale cartella. Mezzo minuto a settimana.",
+   "area": "instagram",
+   "quando": "da valutare",
+   "scadenza": null,
+   "stato": "aperta",
+   "nata": "conversazione"
+  },
+  {
+   "id": "004",
+   "tipo": "enrico",
+   "titolo": "Audio in trend sui reel dove serve la distribuzione del suono",
+   "dettaglio": "Muxare la traccia nel video NON equivale a taggare l'audio in trend: il reel non entra nella pagina audio, nessuno puo' riusarlo, zero spinta dal trend. Per quei reel il video esce con la sola voce e l'audio si mette a mano dall'app. Reel per reel si decide: autonomia (voce+musica nostra) o distribuzione (audio trend a mano).",
+   "area": "reel",
+   "quando": "da valutare",
+   "scadenza": null,
+   "stato": "aperta",
+   "nata": "conversazione"
+  },
+  {
+   "id": "005",
+   "tipo": "idea",
+   "titolo": "Reel con mentalita' da guerra, non post animati",
+   "dettaglio": "I reel sono la leva di visibilita' su cui abbiamo controllo adesso. Non devono essere caroselli che si muovono: servono contenuti potenti, anche da 3 secondi, che colpiscono. Prudenza all'inizio, ma appena arriva un'onda buona si pubblica pesante per generare altre onde.",
+   "area": "reel",
+   "quando": "subito",
+   "scadenza": null,
+   "stato": "aperta",
+   "nata": "conversazione"
+  },
+  {
+   "id": "006",
+   "tipo": "idea",
+   "titolo": "Account satellite che convergono sulla pagina ufficiale",
+   "dettaglio": "Creare altri account (e business account Meta) che pubblicano contenuti anche poco legati ad Accumunation ma ad alto potenziale virale, e portano traffico sull'account ufficiale via menzioni, hashtag o altro. Apre uno spazio di generazione molto piu' ampio e fa convergere piu' canali in uno.",
+   "area": "strategia",
+   "quando": "primi 500 follower",
+   "scadenza": null,
+   "stato": "aperta",
+   "nata": "conversazione"
+  },
+  {
+   "id": "007",
+   "tipo": "idea",
+   "titolo": "Fantasia grafica quando arrivano le campagne",
+   "dettaglio": "Lo stile ordinato e monotono va bene adesso perche' siamo in fase di spiegazione e serve un profilo pulito. Quando partono le campagne il feed deve cambiare passo. Da non dimenticare prima di produrre lotti grandi.",
+   "area": "grafica",
+   "quando": "primo brand confermato",
+   "scadenza": null,
+   "stato": "aperta",
+   "nata": "conversazione"
+  },
+  {
+   "id": "008",
+   "tipo": "idea",
+   "titolo": "Generatore audio: voce del brand + selezione degli spezzoni giusti",
+   "dettaglio": "Pipeline verificata il 31/07: edge-tts voce it-IT-DiegoNeural con tempi parola-per-parola gratis dal motore, librosa per la griglia dei beat, sidechain ducking, loudnorm a -14 LUFS, sottotitoli karaoke bruciati. Un reel da 30s si monta in 22 secondi. Manca: clonazione della voce di Enrico (serve GPU) e una libreria musicale CC nel repo.",
+   "area": "reel",
+   "quando": "subito",
+   "scadenza": null,
+   "stato": "aperta",
+   "nata": "conversazione"
+  },
+  {
+   "id": "009",
+   "tipo": "idea",
+   "titolo": "Estendere la pubblicazione a Facebook e ai canali collegati",
+   "dettaglio": "Oggi FB ha bio e foto ma non riceve contenuti. Poi vanno collegati i sotto-canali e altri canali ancora, man mano.",
+   "area": "distribuzione",
+   "quando": "subito",
+   "scadenza": null,
+   "stato": "aperta",
+   "nata": "conversazione"
+  },
+  {
+   "id": "010",
+   "tipo": "idea",
+   "titolo": "Rilevatore d'onda: alzare il ritmo quando un reel tira",
+   "dettaglio": "Le insights per post sono gia' leggibili via API. Un controllo giornaliero che confronta un reel col suo andamento normale e, quando supera la soglia, avvisa e alza la cadenza di pubblicazione invece di lasciarla fissa.",
+   "area": "strategia",
+   "quando": "quando un reel supera 1000 views",
+   "scadenza": null,
+   "stato": "aperta",
+   "nata": "conversazione"
+  }
+ ]
+}

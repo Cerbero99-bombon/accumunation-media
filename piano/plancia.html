@@ -1,0 +1,38 @@
+<!doctype html><html lang="it"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Plancia · Accumunation</title><style>
+:root{--bg:#0b1220;--card:#162038;--ink:#f0f4ff;--ink2:#8fa8c8;--ink3:#546880;
+--verde:#22c55e;--blu:#4a9eff;--ambra:#fbbf24;--line:#243352}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);padding:32px 24px 80px;
+font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif}
+h1{font-size:1.9rem;margin:0 0 .3rem;letter-spacing:-.02em}
+.sub{color:var(--ink2);font-size:.95rem;max-width:72ch;line-height:1.55;margin:0 0 2rem}
+h2{font-size:1.05rem;margin:2.2rem 0 .9rem;letter-spacing:.04em;text-transform:uppercase;
+color:var(--ink3);font-weight:800}
+h2:first-of-type{margin-top:0}
+.griglia{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:.8rem}
+.v{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--line);
+border-radius:12px;padding:.9rem 1rem 1rem;position:relative}
+.v .n{font-size:.62rem;color:var(--ink3);letter-spacing:.1em}
+.v h3{font-size:.98rem;margin:.25rem 0 .45rem;line-height:1.35}
+.v p{font-size:.83rem;color:var(--ink2);line-height:1.55;margin:0 0 .6rem}
+.v .meta{font-size:.72rem;color:var(--ink3)}
+.v.aperta{border-left-color:var(--blu)}
+.v.in-corso{border-left-color:var(--ambra)}
+.v.fatta{border-left-color:var(--verde);opacity:.5}
+.v.fatta h3{text-decoration:line-through;text-decoration-color:var(--ink3)}
+.v.scartata{opacity:.35}
+.vuoto{color:var(--ink3);font-size:.9rem}
+</style></head><body>
+<h1>Plancia</h1>
+<p class="sub">Quello che hai detto e che non deve andare perso, e quello che resta in mano a te.
+Le idee non hanno una scadenza, hanno un momento: ricompaiono quando quel momento arriva.
+Questa pagina si rigenera da <code>idee.json</code>.</p>
+
+<h2>Cose in mano a te &middot; 4 aperte</h2>
+<div class="griglia"><article class="v aperta"><span class="n">001</span><h3>Collegare Threads: app Meta con use case Threads</h3><p>Due App ID: usare quello Threads. Permessi threads_basic, threads_content_publish, threads_manage_replies, threads_read_replies. Redirect gia&#x27; online: https://accumunation.it/threads-auth.html. Aggiungere @accumunation come Threads Tester e accettare l&#x27;invito da Impostazioni &gt; Autorizzazioni sito web. Poi passare il codice a Claude per lo scambio col token a 60 giorni.</p><div class="meta">threads · entro 2026-08-07 · 7 giorni</div></article><article class="v aperta"><span class="n">002</span><h3>Cancellare i 3 post in evidenza vecchi e ri-fissare quelli corretti</h3><p>Le versioni corrette escono il 31/07 alle 20:00, 20:20, 20:40. I vecchi contengono &#x27;brand italiano&#x27; e &#x27;dietro non c&#x27;e&#x27; un algoritmo&#x27;. L&#x27;API non cancella e non fissa: solo a mano.</p><div class="meta">instagram · entro 2026-08-01 · 1 giorni</div></article><article class="v aperta"><span class="n">003</span><h3>Storie in evidenza: creare le cartelle e metterci le storie segnalate</h3><p>Nessun endpoint API esiste. Ogni ciclo l&#x27;agente storia segnala quali storie meritano un highlight e in quale cartella. Mezzo minuto a settimana.</p><div class="meta">instagram</div></article><article class="v aperta"><span class="n">004</span><h3>Audio in trend sui reel dove serve la distribuzione del suono</h3><p>Muxare la traccia nel video NON equivale a taggare l&#x27;audio in trend: il reel non entra nella pagina audio, nessuno puo&#x27; riusarlo, zero spinta dal trend. Per quei reel il video esce con la sola voce e l&#x27;audio si mette a mano dall&#x27;app. Reel per reel si decide: autonomia (voce+musica nostra) o distribuzione (audio trend a mano).</p><div class="meta">reel</div></article></div>
+
+<h2>Idee e visioni &middot; 6 vive</h2>
+<div class="griglia"><article class="v aperta"><span class="n">005</span><h3>Reel con mentalita&#x27; da guerra, non post animati</h3><p>I reel sono la leva di visibilita&#x27; su cui abbiamo controllo adesso. Non devono essere caroselli che si muovono: servono contenuti potenti, anche da 3 secondi, che colpiscono. Prudenza all&#x27;inizio, ma appena arriva un&#x27;onda buona si pubblica pesante per generare altre onde.</p><div class="meta">reel · torna: subito</div></article><article class="v aperta"><span class="n">006</span><h3>Account satellite che convergono sulla pagina ufficiale</h3><p>Creare altri account (e business account Meta) che pubblicano contenuti anche poco legati ad Accumunation ma ad alto potenziale virale, e portano traffico sull&#x27;account ufficiale via menzioni, hashtag o altro. Apre uno spazio di generazione molto piu&#x27; ampio e fa convergere piu&#x27; canali in uno.</p><div class="meta">strategia · torna: primi 500 follower</div></article><article class="v aperta"><span class="n">007</span><h3>Fantasia grafica quando arrivano le campagne</h3><p>Lo stile ordinato e monotono va bene adesso perche&#x27; siamo in fase di spiegazione e serve un profilo pulito. Quando partono le campagne il feed deve cambiare passo. Da non dimenticare prima di produrre lotti grandi.</p><div class="meta">grafica · torna: primo brand confermato</div></article><article class="v aperta"><span class="n">008</span><h3>Generatore audio: voce del brand + selezione degli spezzoni giusti</h3><p>Pipeline verificata il 31/07: edge-tts voce it-IT-DiegoNeural con tempi parola-per-parola gratis dal motore, librosa per la griglia dei beat, sidechain ducking, loudnorm a -14 LUFS, sottotitoli karaoke bruciati. Un reel da 30s si monta in 22 secondi. Manca: clonazione della voce di Enrico (serve GPU) e una libreria musicale CC nel repo.</p><div class="meta">reel · torna: subito</div></article><article class="v aperta"><span class="n">009</span><h3>Estendere la pubblicazione a Facebook e ai canali collegati</h3><p>Oggi FB ha bio e foto ma non riceve contenuti. Poi vanno collegati i sotto-canali e altri canali ancora, man mano.</p><div class="meta">distribuzione · torna: subito</div></article><article class="v aperta"><span class="n">010</span><h3>Rilevatore d&#x27;onda: alzare il ritmo quando un reel tira</h3><p>Le insights per post sono gia&#x27; leggibili via API. Un controllo giornaliero che confronta un reel col suo andamento normale e, quando supera la soglia, avvisa e alza la cadenza di pubblicazione invece di lasciarla fissa.</p><div class="meta">strategia · torna: quando un reel supera 1000 views</div></article></div>
+</body></html>
