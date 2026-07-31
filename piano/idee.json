@@ -109,6 +109,39 @@
    "scadenza": null,
    "stato": "aperta",
    "nata": "conversazione"
+  },
+  {
+   "id": "011",
+   "tipo": "enrico",
+   "titolo": "Meta for Developers: sbloccare la verifica del numero",
+   "dettaglio": "Il numero 3248671477 e' gia' legato al profilo Facebook, quindi la registrazione sviluppatore non lo puo' verificare da li'. Due vie: (a) accountscenter.facebook.com > Dati personali > Informazioni di contatto, confermare il numero li', poi tornare alla registrazione e il passo Verify passa; (b) verificare con carta di credito, il link 'aggiungendo una carta di credito' sotto il bottone SMS: e' solo una verifica di identita', nessun addebito.",
+   "area": "threads",
+   "quando": "da valutare",
+   "scadenza": "2026-08-07",
+   "stato": "aperta",
+   "nata": "conversazione"
+  },
+  {
+   "id": "012",
+   "tipo": "enrico",
+   "titolo": "I due reel gia' usciti: toglierli dalla griglia o rifarli",
+   "dettaglio": "Hanno il logo vecchio, la copertina vuota e stanno mescolati ai post. Dal menu ... del reel c'e' l'opzione per toglierlo dalla griglia del profilo. Se invece vuoi rifarli col logo nuovo e la copertina con gancio, vanno cancellati e ripubblicati: 165 views su un account da 12 follower non valgono la coerenza del profilo.",
+   "area": "reel",
+   "quando": "da valutare",
+   "scadenza": "2026-08-03",
+   "stato": "aperta",
+   "nata": "conversazione"
+  },
+  {
+   "id": "013",
+   "tipo": "idea",
+   "titolo": "Controllo dei cambiamenti prima di toccare la pubblicazione",
+   "dettaglio": "Enrico: non voglio che si creino problemi con le pubblicazioni in questi momenti decisivi, si deve sapere bene cosa si sta modificando e che conseguenze avra'. Da qui: registro CAMBIAMENTI.md nel repo media (cosa, perche', conseguenza, rischio residuo) e finestra di silenzio 19:00-23:00 Roma in cui non si tocca coda ne' trigger.",
+   "area": "processo",
+   "quando": "subito",
+   "scadenza": null,
+   "stato": "aperta",
+   "nata": "conversazione"
   }
  ]
 }
