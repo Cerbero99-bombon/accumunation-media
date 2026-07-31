@@ -8,7 +8,7 @@
    "area": "threads",
    "quando": "da valutare",
    "scadenza": "2026-08-07",
-   "stato": "aperta",
+   "stato": "fatta",
    "nata": "conversazione"
   },
   {
@@ -107,7 +107,7 @@
    "area": "strategia",
    "quando": "quando un reel supera 1000 views",
    "scadenza": null,
-   "stato": "aperta",
+   "stato": "fatta",
    "nata": "conversazione"
   },
   {
@@ -140,6 +140,17 @@
    "area": "processo",
    "quando": "subito",
    "scadenza": null,
+   "stato": "aperta",
+   "nata": "conversazione"
+  },
+  {
+   "id": "014",
+   "tipo": "enrico",
+   "titolo": "Accettare l'invito da Tester di Threads (e profilo pubblico)",
+   "dettaglio": "App Meta creata: Accumunation Social, App ID 1064328009607198, Threads App ID 1379262880812864. L'invito come Tester di Threads e' IN SOSPESO: si accetta dall'app Threads in Impostazioni > Account > Autorizzazioni sito web (oppure Website permissions) > Inviti. Serve anche che il profilo Threads sia PUBBLICO: il generatore di token di Meta funziona solo su account pubblici. Fatte queste due cose, il token lo genero io dalla dashboard senza altri passaggi.",
+   "area": "threads",
+   "quando": "da valutare",
+   "scadenza": "2026-08-03",
    "stato": "aperta",
    "nata": "conversazione"
   }
