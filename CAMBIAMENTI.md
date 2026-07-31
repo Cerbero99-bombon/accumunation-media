@@ -13,6 +13,23 @@ danno di non farla non sia peggiore: in quel caso si scrive qui perche'.
 
 ---
 
+## 2026-08-01 · Tre reel nuovi per la prova del formato: tre motivi, tre rubriche, tre temi
+**Cosa**: Enrico ha chiesto 4-5 reel di rubriche e temi diversi per giudicare il formato
+("cosa resta e cosa cambia"). Prodotti con il motore e passati dal collaudo:
+- **08-un-capo-su-cinque** (19.0s) · R5 · motivo `pila` · D01+D02+D03: un capo su 5 invenduto,
+  la distruzione, il divieto UE dal 19.07.2026;
+- **09-centotrenta-chili** (13.0s) · R1 · motivo `contatore` · D09: 130 kg di cibo buttati a
+  testa l'anno, 10 nella distribuzione (Eurostat);
+- **10-rispetto-a-cosa** (18.7s) · R2 · motivo `grafico` · D15+D16: la regola del prezzo piu'
+  basso dei 30 giorni, il -50% che vale 0%.
+Motivi nuovi nel motore: `pila`, `contatore`, `grafico` (con `folla` e `conto` fanno cinque).
+Dispensa: D01, D02, D09, D15, D16 marcate usate.
+**Il collaudo ha lavorato anche stavolta**: il 10 e' stato bocciato al primo montaggio
+(finale fermo 2.75s) e corretto. Difetti trovati a occhio sui provini e corretti prima del
+collaudo: partenza vuota del 08, pila destra dentro la colonna delle icone IG, fantasma del
+numero sotto lo slogan nel 09, picco troppo stretto e tremolio fuori tempo nel 10.
+**Coda**: non toccata. I cinque esemplari (06-10) sono il campionario su cui Enrico decide.
+**Rischio**: niente in pubblico.
 ## 2026-07-31 · Il generatore diventa pignolo: motore unico, collaudo, canone. E il primo reel non autoreferenziale
 **Cosa**, in quattro pezzi:
 1. **`tools/stileD/motore.py`** sostituisce `moto.py` (rimosso): scheletro condiviso per tutti i
