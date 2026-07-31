@@ -1,0 +1,7 @@
+{
+ "durata": 1, "fonte":"", "swipe":"GUARDA →",
+ "font_root":"/tmp/repo/tools/assets/fonts",
+ "logo_path":"/tmp/repo/tools/assets/logo/logo-an.png",
+ "parole": [],
+ "scene": [{"a":0,"b":99,"kick":"IL PREZZO BARRATO","h1":"Quanti l'hanno<br>pagato <em>davvero</em><br>quel prezzo?","piccolo":true,"sub":"L'antitrust è andata a contarli."}]
+}
