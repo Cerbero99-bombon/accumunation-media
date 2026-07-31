@@ -1,9 +1,9 @@
 [
- {"t":"Questa offerta scade tra dieci minuti.","rate":"-2%","pitch":"-4Hz","pausa":0.45},
- {"t":"Il tempo scade.","rate":"-8%","pitch":"-6Hz","pausa":0.50},
- {"t":"E non succede niente.","rate":"-12%","pitch":"-8Hz","pausa":0.65},
- {"t":"Uno studio ha contato trecentonovantatré countdown su undicimila siti.","rate":"-2%","pitch":"-4Hz","pausa":0.30},
- {"t":"Molti valevano anche da scaduti.","rate":"-10%","pitch":"-7Hz","pausa":0.55},
- {"t":"Ventidue aziende vendono il trucco, come servizio.","rate":"-8%","pitch":"-6Hz","pausa":0.70},
- {"t":"Il prezzo pieno non si augura a nessuno.","rate":"-14%","pitch":"-8Hz","pausa":0.30}
+ {"t":"Scade tra dieci minuti.","rate":"+2%","pitch":"-3Hz","pausa":0.35},
+ {"t":"Il tempo scade.","rate":"-4%","pitch":"-5Hz","pausa":0.40},
+ {"t":"E non succede niente.","rate":"-8%","pitch":"-7Hz","pausa":0.55},
+ {"t":"Trecentonovantatré countdown, su undicimila siti.","rate":"+4%","pitch":"-3Hz","pausa":0.25},
+ {"t":"Molti validi anche da scaduti.","rate":"-4%","pitch":"-6Hz","pausa":0.50},
+ {"t":"Ventidue aziende vendono il trucco come servizio.","rate":"+0%","pitch":"-4Hz","pausa":0.60},
+ {"t":"Il prezzo pieno non si augura a nessuno.","rate":"-12%","pitch":"-8Hz","pausa":0.30}
 ]
