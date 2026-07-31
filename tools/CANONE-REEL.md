@@ -80,3 +80,37 @@ Un reel e' consegnabile solo con TUTTI questi pezzi:
 
 Se il collaudo boccia, si corregge e si ripete. Se boccia tre volte per lo stesso motivo,
 il difetto e' nel motore o nel canone: si corregge LI'.
+
+
+---
+
+# Aggiunta del 01/08/2026 — i tre cancelli del significato
+
+La revisione di Enrico sui reel 08-10 ha trovato errori che i controlli di forma non vedono:
+la voce che dice "potati" invece di "buttati", la pila che mostrava 1 su 6 dicendo 1 su 5,
+un copione che butta due numeri e chiude senza senso. Da qui in poi:
+
+## 1. Il cancello ASR (bloccante, automatico)
+`tools/asr_check.py`, sulla macchina con rete, SUBITO dopo `vox.py`, sui singoli blocchi
+`b*.wav`. Se una parola esce storpiata si riscrive il blocco, non si monta.
+**Causa nota**: Remy e' una voce multilingue francese; sui blocchi corti sbaglia i fonemi.
+**Regola dei blocchi: mai sotto le 4 parole.** L'effetto "parola sola" si fa con le pause.
+Parole gia' bocciate: "Buttati" da solo, "Mai indossata" da sola, "anti-trust"
+(dire "l'Autorità garante"). L'elisione di "a" in "augura a nessuno" e' una liaison
+naturale, non un difetto.
+
+## 2. Il conto visivo (a occhio, sul provino)
+Ogni claim numerico detto o scritto va CONTATO sull'ultimo fotogramma: se dici 1 su 5,
+in scena il rapporto e' 4:1, e chi sparisce deve lasciare traccia visibile (brandelli).
+Un reel si guarda in pausa: il fotogramma fermo deve reggere il conteggio.
+
+## 3. La prova del senso (prima di generare la voce)
+Ogni copione, riletto da capo: problema -> fatto -> aggancio -> slogan. Se dopo l'ultimo
+fatto la reazione e' "e quindi?", manca il beat di aggancio e il copione e' rotto.
+Un reel non e' un elenco di numeri: e' un fatto che si chiude.
+
+## Trappole di scena (viste sui fotogrammi, 01/08/2026)
+- `velo_alto: false` nella spec per i motivi a oggetto centrale: il velo taglia l'oggetto.
+- I badge (multa, sigillo) mai sotto y=1540: la UI di Instagram li copre. Si appoggiano
+  SULL'oggetto (sulla card, sul cartellino), come un avviso.
+- Niente elementi vivi sopra la riga della fonte (y~1506) ne' sopra il dominio in chiusura.

@@ -13,6 +13,24 @@ danno di non farla non sia peggiore: in quel caso si scrive qui perche'.
 
 ---
 
+## 2026-08-01 · La revisione di Enrico sui reel 08-10, la causa vera, e i reel 11-14
+**Cosa ha trovato Enrico**: (1) la pila diceva "1 su 5" e mostrava ~1 su 6, perche' i capi
+distrutti sparivano dal conteggio; (2) tratti di voce storpiati ("Buttati" letto "potati",
+"Mai indossata" irriconoscibile); (3) il reel 09 buttava due numeri e chiudeva senza senso;
+(4) tre reel troppo simili tra loro (tutti numerone-su-fondo-scuro).
+**La causa di fondo**: i cancelli controllavano la FORMA (pixel, movimento, OCR, loudness),
+nessuno controllava il SIGNIFICATO: nessuno riascoltava l'audio, contava gli oggetti in
+scena, o rileggeva il copione chiedendosi "e quindi?".
+**Cosa e' stato montato**: `tools/asr_check.py` (riascolto bloccante di ogni blocco, gia'
+attivo: ha bocciato "anti-trust" letto "antitrast" prima che finisse in un video); regola
+dei blocchi >=4 parole; conto visivo sul fotogramma fermo; prova del senso sul copione;
+`velo_alto:false` per i motivi a oggetto. Tutto scritto in `tools/CANONE-REEL.md`.
+**Prodotti (collaudo + ASR PASS)**: 11-mai-esistito (cartellino, R5, D14) · 12-ottantacinque-
+centesimi (confronto, R5, D05) · 13-countdown-che-riparte (interfaccia, R6, D11) ·
+14-scarsita-funziona (domanda, R3, D19). Quattro composizioni diverse, niente numerone.
+**I reel 08-10 restano fuori dalla coda**: vanno rigenerati coi cancelli nuovi dopo il
+giudizio di Enrico sul formato. Il 06 (folla) ha l'audio pulito, resta valido.
+**Coda**: non toccata.
 ## 2026-08-01 · Tre reel nuovi per la prova del formato: tre motivi, tre rubriche, tre temi
 **Cosa**: Enrico ha chiesto 4-5 reel di rubriche e temi diversi per giudicare il formato
 ("cosa resta e cosa cambia"). Prodotti con il motore e passati dal collaudo:

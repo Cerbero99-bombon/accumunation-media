@@ -524,7 +524,7 @@ MOTIVO = (function(){
   return {
     init(){
       document.getElementById('mezzo').innerHTML =
-        '<div id="multa" style="position:absolute;left:150px;right:150px;top:1560px;text-align:center;'+
+        '<div id="multa" style="position:absolute;left:210px;right:210px;top:1262px;text-align:center;'+
         'font-family:\'Space Grotesk\';font-weight:700;font-size:44px;line-height:1.2;color:#0A2418;'+
         'background:#1FB877;border-radius:26px;padding:24px 16px;opacity:0"></div>';
       document.getElementById('multa').textContent=cfg.multa;
@@ -545,12 +545,12 @@ MOTIVO = (function(){
       if(str>0){
         tag(ctx,'#221B14');
         ctx.save(); ctx.rotate(-0.10);
-        ctx.font='700 92px "Space Grotesk"'; ctx.textAlign='center';
+        ctx.font='700 76px "Space Grotesk"'; ctx.textAlign='center';
         ctx.globalAlpha=Math.min(1,str*1.6);
         ctx.strokeStyle='#FBF8F2'; ctx.lineWidth=4;
-        ctx.strokeRect(-236,-136,472,240);
+        ctx.strokeRect(-212,-122,424,214);
         ctx.fillStyle='#FBF8F2';
-        ctx.fillText('MAI',0,-42); ctx.fillText('ESISTITO',0,66);
+        ctx.fillText('MAI',0,-36); ctx.fillText('ESISTITO',0,56);
         ctx.restore();
       }
       // la faccia davanti: prezzo barrato e sconto urlato; si strappa e cade
@@ -591,12 +591,12 @@ MOTIVO_CONFRONTO = r"""
 MOTIVO = (function(){
   const cfg = CFG;
   let seed=41; function rnd(){seed=(seed*1103515245+12345)&0x7fffffff;return seed/0x7fffffff;}
-  const DROP=[];                        // pacchi che cadono a sinistra, uno ogni 1.7s
-  for(let i=0;i<12;i++) DROP.push({t0:0.4+i*1.7, x:270+(rnd()-.5)*120, rot:(rnd()-.5)*0.6});
-  function pacco(x,y,s,rot,al){
+  const DROP=[];                        // pacchi che cadono a sinistra, uno ogni 1.1s
+  for(let i=0;i<17;i++) DROP.push({t0:0.3+i*1.1, x:270+(rnd()-.5)*130, rot:(rnd()-.5)*0.7});
+  function pacco(x,y,s,rot,al,fill,nastro){
     ctx.save(); ctx.translate(x,y); ctx.rotate(rot); ctx.scale(s,s); ctx.globalAlpha=al;
-    ctx.fillStyle='#B5A896'; ctx.fillRect(-70,-52,140,104);
-    ctx.fillStyle='#7D7161'; ctx.fillRect(-70,-10,140,20);       // il nastro
+    ctx.fillStyle=fill||'#B5A896'; ctx.fillRect(-70,-52,140,104);
+    ctx.fillStyle=nastro||'#7D7161'; ctx.fillRect(-70,-10,140,20);       // il nastro
     ctx.strokeStyle='rgba(22,18,13,.35)'; ctx.lineWidth=3; ctx.strokeRect(-70,-52,140,104);
     ctx.restore();
   }
@@ -605,8 +605,8 @@ MOTIVO = (function(){
       document.getElementById('mezzo').innerHTML =
         '<div id="tsx" class="col" style="left:60px"></div><div id="tdx" class="col" style="right:60px"></div>'+
         '<div id="psx" class="pr" style="left:60px"></div><div id="pdx" class="pr" style="right:60px"></div>'+
-        '<div id="conta20" style="position:absolute;top:1560px;left:0;right:0;text-align:center;'+
-        'font-weight:800;font-size:40px;color:#FBF8F2;opacity:0"></div>'+
+        '<div id="conta20" style="position:absolute;top:1462px;left:60px;width:440px;text-align:center;'+
+        'font-weight:800;font-size:38px;color:#FBF8F2;opacity:0"></div>'+
         '<style>.col{position:absolute;top:640px;width:440px;text-align:center;'+
         'font-family:Manrope;font-weight:800;font-size:44px;letter-spacing:2px;color:#B5A896}'+
         '.pr{position:absolute;top:1330px;width:440px;text-align:center;'+
@@ -621,26 +621,26 @@ MOTIVO = (function(){
       const fin=Math.min(1,Math.max(0,(t-SLOG)/0.8));
       const zoom=1+0.05*(t/DUR)+0.02*Math.sin(t*1.25)*fin;
       ctx.save(); ctx.translate(540,1150); ctx.scale(zoom,zoom); ctx.translate(-540,-1150);
-      ctx.strokeStyle='rgba(251,248,242,.14)'; ctx.lineWidth=3;   // il confine
+      ctx.strokeStyle='rgba(251,248,242,'+(t>SLOG?'.04':'.14')+')'; ctx.lineWidth=3;   // il confine
       ctx.beginPath(); ctx.moveTo(540,660); ctx.lineTo(540,1520); ctx.stroke();
       // sinistra: i pacchi cadono e si sfasciano; i brandelli restano
       let rotti=0;
       for(const d of DROP){
         if(t<d.t0) continue;
-        const p=Math.min(1,(t-d.t0)/0.7), e=p*p;
-        if(p<1){ pacco(d.x, 700+e*560, 1, d.rot*p*2, 1); }
+        const p=Math.min(1,(t-d.t0)/0.65), e=p*p;
+        if(p<1){ pacco(d.x, 690+e*540, 1.25, d.rot*p*2, 1); }
         else rotti++;
       }
-      for(let k=0;k<Math.min(rotti*6,72);k++){                     // il mucchio di brandelli
-        ctx.globalAlpha=0.7; ctx.fillStyle='#7D7161';
-        ctx.fillRect(120+((k*67)%330), 1268-((k*29)%3)*14-((k/6)|0)*7, 16, 11);
+      for(let k=0;k<Math.min(rotti*7,84);k++){                     // il mucchio di brandelli
+        ctx.globalAlpha=0.85; ctx.fillStyle='#B5A896';
+        ctx.fillRect(105+((k*67)%340), 1262-((k*29)%3)*16-((k/7)|0)*9, 19, 13);
       }
-      // destra: un pacco solo, intatto, che respira
-      pacco(810, 1210+Math.sin(t*1.1)*6, 1.35, 0.02*Math.sin(t*0.9), 1);
-      const gl=ctx.createRadialGradient(810,1210,10,810,1210,260);
-      gl.addColorStop(0,'rgba(31,184,119,'+(0.10+0.05*Math.sin(t*1.5)).toFixed(3)+')');
+      // destra: un pacco solo, intatto, che respira. E' quello buono: crema e nastro verde
+      const gl=ctx.createRadialGradient(810,1200,10,810,1200,290);
+      gl.addColorStop(0,'rgba(31,184,119,'+(0.16+0.07*Math.sin(t*1.5)).toFixed(3)+')');
       gl.addColorStop(1,'rgba(31,184,119,0)');
-      ctx.fillStyle=gl; ctx.globalAlpha=1; ctx.fillRect(560,940,520,560);
+      ctx.fillStyle=gl; ctx.globalAlpha=1; ctx.fillRect(540,900,540,600);
+      pacco(810, 1200+Math.sin(t*1.1)*7, 1.5, 0.025*Math.sin(t*0.9), 1, '#FBF8F2', '#1FB877');
       ctx.restore();
       velo();
       const c2=document.getElementById('conta20');
@@ -648,6 +648,9 @@ MOTIVO = (function(){
       c2.style.opacity=(cp*(t>SLOG?Math.max(0,1-(t-SLOG)*1.4):1)).toFixed(2);
       document.getElementById('psx').style.color = t>1.0 ? '#FBF8F2' : '#B5A896';
       document.getElementById('pdx').style.color = '#1FB877';
+      const via=(t>SLOG?Math.max(0.15,1-(t-SLOG)*1.6):1).toFixed(2);   // largo allo slogan
+      for(const id of ['tsx','tdx','psx','pdx'])
+        document.getElementById(id).style.opacity=via;
     }
   };
 })();
@@ -661,10 +664,12 @@ MOTIVO_INTERFACCIA = r"""
 MOTIVO = (function(){
   const cfg = CFG;
   function resto(t){
-    let da=0.0;
-    for(const r of cfg.reset){ if(t>=r) da=r; }
-    const s=Math.max(0, cfg.secondi - (t-da));
-    return s;
+    // prima del primo reset il timer sta MORENDO (arriva a zero proprio quando la voce
+    // dice "ecco"); al reset riparte da capo, da cfg.secondi pieni. E' la bugia in scena.
+    const r0=cfg.reset[0];
+    if(t<r0) return Math.max(0, r0-t);
+    let da=r0; for(const r of cfg.reset){ if(t>=r) da=r; }
+    return Math.max(0, cfg.secondi-(t-da));
   }
   return {
     init(){
@@ -684,7 +689,7 @@ MOTIVO = (function(){
         'font-family:\'Space Grotesk\';font-weight:700;font-size:56px;letter-spacing:1px;'+
         'color:#16120D;background:#FBF8F2;border-radius:18px;padding:14px 30px;'+
         'font-variant-numeric:tabular-nums"></div></div>'+
-        '<div id="multa2" style="position:absolute;left:150px;right:150px;top:1590px;text-align:center;'+
+        '<div id="multa2" style="position:absolute;left:150px;right:150px;top:1372px;text-align:center;'+
         'font-family:\'Space Grotesk\';font-weight:700;font-size:44px;color:#0A2418;'+
         'background:#1FB877;border-radius:26px;padding:24px 16px;opacity:0"></div>';
       document.getElementById('pz').innerHTML=cfg.prezzo;
@@ -725,7 +730,7 @@ MOTIVO = (function(){
   const cfg = CFG;
   let seed=53; function rnd(){seed=(seed*1103515245+12345)&0x7fffffff;return seed/0x7fffffff;}
   const ORD=[]; for(let i=0;i<cfg.dots_n;i++) ORD.push(rnd());
-  const REP=[]; for(let i=0;i<8;i++) REP.push({dy:i*118, dx:(i%2?36:-36), o:rnd()*0.25});
+  const REP=[]; for(let i=0;i<6;i++) REP.push({dy:i*105, dx:(i%2?36:-36), o:rnd()*0.25});
   return {
     init(){
       document.getElementById('mezzo').innerHTML =
@@ -733,7 +738,7 @@ MOTIVO = (function(){
         'font-family:\'Space Grotesk\';font-weight:700;font-size:300px;color:#1FB877;opacity:0">?</div>'+
         '<div id="pills" style="position:absolute;top:940px;left:0;right:0"></div>';
       let h='';
-      for(let i=0;i<9;i++) h+='<div class="pl" style="top:'+(i? 0:0)+'px"></div>';
+      for(let i=0;i<7;i++) h+='<div class="pl"></div>';
       document.getElementById('pills').innerHTML=
         '<style>.pl{position:absolute;left:0;right:0;margin:0 auto;width:640px;text-align:center;'+
         "font-family:Manrope;font-weight:800;font-size:54px;letter-spacing:2px;color:#16120D;"+
@@ -755,12 +760,12 @@ MOTIVO = (function(){
         ctx.globalAlpha = on ? 0.95 : 0.18;
         ctx.fillStyle = on ? '#1FB877' : '#B5A896';
         const puls = on ? 1+0.10*Math.sin(t*2.2+i*1.7) : 1;
-        ctx.fillRect(198+c*54, 1560-((r+1)*46)*1, 14*puls, 34*puls);
+        ctx.fillRect(198+c*54, 1398-((r+1)*46)*1, 14*puls, 34*puls);
       }
       if(dp>0){
         ctx.globalAlpha=Math.min(1,dp*2); ctx.fillStyle='#B5A896';
         ctx.font='800 30px Manrope'; ctx.textAlign='left';
-        ctx.fillText('37 studi · 335 misure', 198, 1622);
+        ctx.fillText('37 studi · 335 misure', 198, 1452);
       }
       ctx.restore();
       velo();
@@ -772,14 +777,15 @@ MOTIVO = (function(){
           el.style.opacity=(t>SLOG?Math.max(0.2,1-(t-SLOG)*1.3):1).toFixed(2);
           el.style.transform='scale('+(1+0.045*Math.sin(t*3.1))+')';
         } else {
+          const OFF=[-105,105,-210,210,-315,-420];   // giu' massimo due file: sotto ci sono le tacche
           const r=REP[i-1];
-          el.style.opacity=(rp*(0.45-r.o*0.3)*(t>SLOG?Math.max(0.2,1-(t-SLOG)*1.3):1)).toFixed(2);
-          el.style.transform='translate('+(r.dx*rp)+'px,'+((i%2?1:-1)*Math.ceil(i/2)*118*rp)+'px) scale('+(1-0.05*Math.ceil(i/2))+')';
+          el.style.opacity=(rp*(0.45-r.o*0.3)*(t>SLOG?Math.max(0.06,1-(t-SLOG)*2.2):1)).toFixed(2);
+          el.style.transform='translate('+(r.dx*rp)+'px,'+(OFF[i-1]*rp)+'px) scale('+(1-0.045*Math.ceil(i/2))+')';
         }
       });
       const q=document.getElementById('qmark');
       const qp=Math.min(1,t/0.5);
-      q.style.opacity=((t<cfg.dots_a?qp:Math.max(0.25,1-(t-cfg.dots_a)))* (t>SLOG?Math.max(0,1-(t-SLOG)*1.6):1)).toFixed(2);
+      q.style.opacity=((t<cfg.dots_a?qp:Math.max(0,1-(t-cfg.dots_a)*1.2))* (t>SLOG?0:1)).toFixed(2);
       q.style.transform='scale('+(0.7+0.3*ease(qp)+0.03*Math.sin(t*1.9)).toFixed(3)+') rotate('+(4*Math.sin(t*1.1)).toFixed(1)+'deg)';
     }
   };
@@ -850,9 +856,15 @@ function ease(x){return x<0?0:x>1?1:1-Math.pow(1-x,3);}
 function easeIO(x){return x<0?0:x>1?1:(x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2);}
 // velo caldo sopra e sotto la fascia centrale: stacca il disegno dal testo
 function velo(){
-  const vg=ctx.createLinearGradient(0,1010,0,1420);
-  vg.addColorStop(0,'rgba(22,18,13,.92)'); vg.addColorStop(1,'rgba(22,18,13,0)');
-  ctx.fillStyle=vg; ctx.fillRect(0,1010,1080,410);
+  // Il velo alto separa il testo dalla folla nei motivi "densi" (folla, conto). Nei motivi
+  // a oggetto centrale (cartellino, card...) taglierebbe l'oggetto a meta': si spegne
+  // dalla spec con "velo_alto": false. Trovato sul timbro MAI ESISTITO, oscurato a meta'.
+  ctx.globalAlpha=1;
+  if(CFG.velo_alto!==false){
+    const vg=ctx.createLinearGradient(0,1010,0,1420);
+    vg.addColorStop(0,'rgba(22,18,13,.92)'); vg.addColorStop(1,'rgba(22,18,13,0)');
+    ctx.fillStyle=vg; ctx.fillRect(0,1010,1080,410);
+  }
   const vb=ctx.createLinearGradient(0,1810,0,1920);
   vb.addColorStop(0,'rgba(22,18,13,0)'); vb.addColorStop(1,'rgba(22,18,13,.9)');
   ctx.fillStyle=vb; ctx.fillRect(0,1810,1080,110);
