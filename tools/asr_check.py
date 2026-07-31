@@ -12,10 +12,11 @@ si riscrive il blocco (piu' contesto, grafia fonetica) e si rigenera.
 import sys, json, re, unicodedata
 from faster_whisper import WhisperModel
 
-NUM = {"ottantacinque":"85","trentasette":"37","trecentomila":"300000","venti":"20",
-       "duemiladiciannove":"2019","duemilaventitre":"2023","centotrenta":"130",
-       "cinquanta":"50","diciannove":"19","cinquecento":"500","trecentonovantatre":"393",
-       "novanta":"90","sette":"7","dieci":"10","cento":"100"}
+NUM = {"ottantacinque":["85"],"trentasette":["37"],"trecentomila":["300000","300mila"],
+       "venti":["20"],"duemiladiciannove":["2019"],"duemilaventitre":["2023"],
+       "centotrenta":["130"],"cinquanta":["50"],"diciannove":["19"],"cinquecento":["500"],
+       "trecentonovantatre":["393"],"novanta":["90"],"dieci":["10"],"cento":["100"],
+       "duemilioni":["2milioni"],"ventimila":["20mila","20000"]}
 
 def deacc(s): return ''.join(c for c in unicodedata.normalize('NFD',s)
                              if unicodedata.category(c)!='Mn')
@@ -45,7 +46,7 @@ for i,b in enumerate(spec):
         if len(w)<4: continue
         if any(lev(w,x)<=1 for x in tw): continue
         if w in joined: continue
-        if w in NUM and NUM[w] in joined: continue
+        if w in NUM and any(v in joined for v in NUM[w]): continue
         manca.append(w)
     if manca: falliti += 1
     print(f"[{'FAIL' if manca else 'ok  '}] b{i:02d} atteso: {b['t']}")
