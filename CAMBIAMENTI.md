@@ -13,6 +13,31 @@ danno di non farla non sia peggiore: in quel caso si scrive qui perche'.
 
 ---
 
+## 2026-07-31 · Il generatore diventa pignolo: motore unico, collaudo, canone. E il primo reel non autoreferenziale
+**Cosa**, in quattro pezzi:
+1. **`tools/stileD/motore.py`** sostituisce `moto.py` (rimosso): scheletro condiviso per tutti i
+   reel a movimento continuo + "motivi" intercambiabili (`folla`, `conto`). Un reel nuovo = un
+   motivo o una spec nuova, non un renderer nuovo.
+2. **`tools/collaudo.py`**: cancello automatico prima della consegna. Boccia da solo: formato,
+   durata oltre i 20s, loudness fuori da -14 LUFS, video fermo oltre 1.5s, fondo navy, testo
+   nelle zone coperte dalla UI di Instagram, affermazioni bandite (OCR), voce tagliata.
+   Provato sul vecchio reel 03: bocciato per 4 motivi giusti. Sul 06: PASS.
+3. **`tools/CANONE-REEL.md`**: cosa deve esserci in ogni reel, compresa la regola nuova sul
+   contenuto: **i reel parlano al pubblico di cose vere e interessanti (dispensa), non di noi**.
+   Il collegamento ad Accumunation sta nella chiusura. Richiesto da Enrico oggi.
+4. **`social/reel/07-countdown-scaduto.mp4`** + cover: primo reel col motivo `conto`, dal fatto
+   **D18 della dispensa** (Princeton: 393 countdown su 11.000 siti, molti validi anche da
+   scaduti, 22 aziende vendono il trucco). 19.8s, PASS al collaudo, fonte a schermo.
+   D18 marcata usata nella dispensa.
+**Perche'**: richiesta esplicita di Enrico (31/07 sera): la qualita' deve stare nel generatore,
+la sua revisione e' un plus; e i contenuti dei reel non devono essere autoreferenziali.
+**Il collaudo ha gia' lavorato**: il primo montaggio del 07 e' stato BOCCIATO (2.5s fermi nel
+finale) e corretto prima di arrivare a Enrico. Esattamente il compito che ha.
+**Reel 06 (stesso-prezzo)**: resta nel repo come dimostrazione dello stile, contenuto giudicato
+troppo banale per uscire. NON va in coda.
+**Coda**: non toccata. Il 07 aspetta il via di Enrico sul primo esemplare del formato; dal
+prossimo, collaudo PASS = va in coda da solo.
+**Rischio se va storto**: niente in pubblico. Tutto sta nel repo.
 ## 2026-07-31 · Stile D rivisto (v2) e primo reel a movimento continuo finito
 **Cosa**: riscritto `tools/stileD/moto.py` e prodotto `social/reel/06-stesso-prezzo-per-tutti.mp4`
 (17,0 s, 1080x1920, -14 LUFS) con la sua copertina 9:16.

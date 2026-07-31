@@ -1,78 +1,68 @@
 # Stile D — "Movimento continuo"
 
 Non e' una sequenza di immagini con le dissolvenze: e' **una sola inquadratura che si muove per
-tutta la durata**. Nasce dalla critica di Enrico agli stili precedenti, che erano slideshow scritte
-bene ma restavano slideshow.
+tutta la durata**. Nasce dalla critica di Enrico agli stili precedenti, che erano slideshow
+scritte bene ma restavano slideshow.
 
-## L'idea visiva
+**Le regole complete di contenuto e qualita' stanno in `tools/CANONE-REEL.md`.**
+**Il cancello automatico e' `tools/collaudo.py`: nessun reel si consegna senza PASS.**
 
-E' il meccanismo stesso di Accumunation, mostrato invece che raccontato: **le persone si accumulano
-dal basso e il prezzo scende fisicamente verso di loro**. Nessun taglio, nessuna dissolvenza.
-Chi guarda capisce prima di leggere.
+## Com'e' fatto
 
-- La folla e' disegnata su canvas: 500 figure che entrano dal basso con traiettorie e ritardi
-  diversi. **Serve la prospettiva**: la fila davanti grande e opaca, quelle dietro sempre piu'
-  piccole e velate (scala e passo che calano del 7% a fila). Senza, si legge come una texture
-  verde e non come gente.
-- La folla entra **dal centro verso i lati**, fila per fila: si aggrega attorno alla prima persona.
-  Se entra da un capo, i primi secondi hanno gente in un angolo e il resto vuoto.
-- Il prezzo e' un elemento che **cambia posizione**, non solo valore: parte in alto e scende
-  addosso alla folla. Deve fermarsi sopra la folla, mai dentro.
-- La camera spinge, e spinge **di piu' nella seconda meta'**, quando la folla e' completa.
-- Il testo entra **a frasi**, con accesa la parola che la voce sta pronunciando in quell'istante.
-  A parola singola sembra un sottotitolo smarrito.
+`motore.py` e' lo scheletro unico: palette calda del brand, testo del parlato a frasi con la
+parola pronunciata accesa, riga della fonte, chiusura slogan + dominio, zone sicure di
+Instagram, camera che spinge. Quello che cambia da reel a reel e' il **motivo**, un blocco JS
+registrato dentro `motore.py`:
 
-## Le tre trappole gia' pagate (revisione v2, 31/07/2026)
+| Motivo | Cosa si muove | Quando usarlo |
+|---|---|---|
+| `folla` | le persone si accumulano, il prezzo scende loro addosso | il meccanismo di Accumunation (spec: `spec-moto.json`) |
+| `conto` | un countdown scade, non succede niente, poi il muro dei countdown a zero | urgenza finta, dark pattern (spec: `spec-conto.json`) |
 
-Tutte e tre sono uscite **guardando i fotogrammi**, nessuna dal codice.
+Un reel nuovo su un fatto nuovo = di solito **una spec nuova** su un motivo esistente.
+Un motivo nuovo si scrive quando il fatto ha una meccanica visiva diversa (una timeline, un
+confronto a due colonne...). Interfaccia: `init()` + `draw(t)`, con `CFG`, `ctx`, `ease`,
+`easeIO`, `velo()` gia' disponibili.
 
-1. **Palette sbagliata.** La v1 era su navy `#0b1220`, cioe' esattamente l'errore del 28/07 gia'
-   scritto in `references/brand.md`. Il fondo social e' il carbone **caldo** `#16120D`, testo crema
-   `#FBF8F2`, verde `#1FB877`. Prima di scrivere un colore a mano, rileggere quel file.
-2. **Il vuoto.** La folla arrivava a meta' schermo e sotto restava un buco nero per tutto il reel.
-   La folla deve salire fino a ~1200 e il prezzo scendere a incontrarla.
-3. **Il video fermo dopo il settimo secondo.** Le soglie portano a 500 quando la voce dice
-   "cinquecento", cioe' a 7 secondi su 17: da li' in poi, senza contromisure, non si muove piu'
-   niente. Servono il **respiro** delle figure (oscillazione lentissima, ~2.6px), la spinta di
-   camera che accelera e il prezzo che continua a calare di posizione fino all'ultimo fotogramma.
+## Il rito
 
-Regola generale: montare un provino a contatto di 12 fotogrammi e **guardarlo**, poi un crop a
-piena risoluzione della zona folla. A 340px di anteprima la prospettiva non si giudica.
+    python3 tools/stileD/motore.py spec.json out.html
+    python3 tools/stileD/shoot.py out.html <dir> <durata>     # ~50s per 20s di video
+    # audio: catena di tools/stileB/LEGGIMI.md (ducking + loudnorm 2 passate -> -14 LUFS)
+    python3 tools/collaudo.py FINAL.mp4 words.json --cover cover.jpg
+    # PASS -> guardare COMUNQUE il provino a contatto -> consegna
+
+I sottotitoli bruciati **non servono**: il testo a frasi e' gia' sincronizzato col parlato.
 
 ## Il ritmo lo detta il parlato
 
-Le soglie della folla (`soglie` nella spec) sono agganciate ai tempi delle parole, non scelte a
-occhio: la folla parte quando la voce dice "guarda cosa succede" e finisce quando dice
-"cinquecento". Se il video non segue il parlato, l'occhio se ne accorge subito anche senza capire
-perche'.
+Ogni evento visivo (soglie della folla, lo zero del countdown, il muro, i 22 accesi) e'
+agganciato ai tempi di `words.json`, mai scelto a occhio. Il campo `parole` della spec e'
+words.json **tal quale**, quarto campo compreso: e' l'indice di frase, serve al testo a schermo.
 
-Il campo `parole` della spec e' **`words.json` tal quale**, quarto campo compreso: e' l'indice di
-frase, e serve a raggruppare il testo a schermo. Non va tolto.
+## Trappole gia' pagate (tutte viste sui fotogrammi, mai dal codice)
 
-## Numeri a schermo
-
-Il prezzo segue la scala canonica **100 / 85 / 72 / 62**, dentro la banda R-025. Il contatore di
-persone e' un esempio del meccanismo, non traction: in alto a destra resta fissa la dicitura
-**"esempio illustrativo"**, che e' l'equivalente del campo `note` dei caroselli. Non toglierla.
-
-## Come si monta
-
-    python3 tools/stileD/moto.py tools/stileD/spec-moto.json out.html
-    python3 tools/stileD/shoot.py out.html <dir> <durata>       # ~48s per 17 secondi di video
-    # video muto dai frame a 30fps, poi la catena audio di tools/stileB/LEGGIMI.md
-    # (ducking sidechain + loudnorm a due passate -> -14 LUFS)
-
-I sottotitoli bruciati **non servono**: il testo grande e' gia' a schermo e sincronizzato. Montare
-anche `subs.ass` fa dire due volte la stessa cosa.
+1. **Palette**: la v1 era navy `#0b1220`, l'errore del 28/07 ripetuto. Fondo `#16120D`, sempre.
+2. **Folla come texture**: senza prospettiva (file davanti grandi e opache, dietro piccole e
+   velate) 500 figure sembrano un pattern, non gente. E la folla entra **dal centro**, non da
+   un bordo: "una persona sola" deve vedersi, al centro, grande.
+3. **Video fermo**: quando l'azione principale finisce presto, il resto DEVE respirare
+   (oscillazioni, camera che accelera, muro che vibra). Il collaudo boccia oltre 1.5s fermi —
+   ha gia' bocciato il primo montaggio del reel 07 (finale immobile per 2.5s).
+4. **Alpha del canvas**: un `globalAlpha` fuori da [0,1] viene IGNORATO e resta quello del
+   disegno prima: il muro tornava a piena luce sotto lo slogan. Clampare sempre.
+5. **UI di Instagram**: gli ultimi ~380px in basso e la colonna destra sono coperti da caption
+   e icone. Niente footer: il dominio sta nella chiusura. "SALVA IL POST" e' roba da carosello,
+   nei reel non esiste.
 
 ## Durata
 
-**Sotto i 20 secondi.** Enrico considera 30+ un'eccezione, non la norma. Un copione da 6 frasi
-corte con pause da 0.12-0.32 secondi sta in 17 secondi e non annoia. Le pause lunghe da "regia
-teatrale" (0.8s) rallentano il video e vanno usate solo dove il silenzio e' il contenuto.
+**Sotto i 20 secondi**, misurati, non stimati: la voce con le pause di regia esce sempre piu'
+lunga del previsto (il copione del 07 e' passato da 25.4 a 20.2s in tre tagli successivi).
+Si taglia il copione, non si accetta il video lungo.
 
 ## Copertina
 
-JPEG 9:16 a parte, non un fotogramma del video: il primo fotogramma e' quasi vuoto per costruzione.
-Qui il colore **puo' stonare** col dark del feed, e' voluto (fondo verde pieno, testo inchiostro),
-purche' restino il marchio e il carattere. Gancio in due righe con i due prezzi.
+JPEG 9:16 a parte, mai un fotogramma del video. Qui il colore **puo'** stonare col dark del
+feed (fondo verde pieno, testo inchiostro): serve a fermare il pollice. Restano il marchio e
+il carattere. Gancio scritto, non decorativo.
