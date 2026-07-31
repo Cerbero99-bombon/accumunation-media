@@ -46,3 +46,15 @@ traduzione ha un numero dentro.
 L'audio in trend di Instagram. Muxare una traccia **non e'** taggare un audio in trend: il reel non
 entra nella pagina del suono. Si sceglie reel per reel: autonomia (musica nostra) o distribuzione
 (video con la sola voce e traccia messa a mano dall'app).
+
+## Sottotitoli: mai ripetere cio' che e' gia' scritto
+
+Ogni scena dichiara il proprio testo visibile (`h1`, `sub`, `kick`, `prezzo`), ripulito da tag e
+punteggiatura. Prima di mostrare un gruppo di sottotitolo, il template confronta le sue parole piene
+(piu' di 2 lettere) con quello che in quell'istante e' gia' sullo schermo: **se meta' o piu' sono
+gia' scritte, il sottotitolo tace**. Il risultato e' che il testo grande e il sottotitolo si
+alternano invece di sovrapporsi, e lo schermo non dice mai due volte la stessa cosa.
+
+Regola pratica quando si scrive una spec: se una scena ha un `h1` che e' quasi il parlato, non
+metterci anche il `sub` che lo ripete. Il filtro copre l'errore, ma una scena scritta bene non ne
+ha bisogno.

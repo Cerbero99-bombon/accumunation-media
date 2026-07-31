@@ -105,8 +105,18 @@ function setT(t){
   if(found<0){ for(let i=WD.length-1;i>=0;i--){ if(t>WD[i][1]&&t-WD[i][1]<0.95){found=i;break;} } }
   if(found>=0){
     const g=WD[found][3];
-    for(let i=0;i<WD.length;i++) if(WD[i][3]===g)
-      html+='<b class="'+(i===found?'on':'')+'">'+WD[i][2]+'</b> ';
+    // testo gia' visibile sullo schermo in questo istante
+    let vis='';
+    for(let i=0;i<SC.length;i++) if(t>=SC[i].a-0.16 && t<=SC[i].b+0.16) vis+=' '+SC[i].vis;
+    // parole del gruppo, ripulite
+    const gruppo=[]; for(let i=0;i<WD.length;i++) if(WD[i][3]===g) gruppo.push(i);
+    const pulisci=w=>w.toLowerCase().replace(/[^0-9a-zàèéìòùç']/g,'');
+    let piene=0, gia=0;
+    gruppo.forEach(i=>{const w=pulisci(WD[i][2]); if(w.length>2){piene++; if(vis.indexOf(w)>=0) gia++;}});
+    // se meta' o piu' delle parole piene sono gia' scritte, il sottotitolo tace
+    const doppione = piene>0 && (gia/piene)>=0.5;
+    if(!doppione) gruppo.forEach(i=>{
+      html+='<b class="'+(i===found?'on':'')+'">'+WD[i][2]+'</b> ';});
   }
   st.innerHTML=html;
   // riga fonte
@@ -139,7 +149,17 @@ def build(spec):
             body += f'<p class="sub">{s["sub"]}</p>'
         corpi.append(f'<div class="scena">{body}</div>')
 
-    js = (JS.replace("__SCENE__", json.dumps([{"a": s["a"], "b": s["b"]} for s in scene]))
+    import re as _re
+    def visibile(s):
+        pezzi = [s.get("h1", ""), s.get("sub", ""), s.get("kick", ""), str(s.get("prezzo", ""))]
+        t = " ".join(pezzi)
+        t = _re.sub(r"<[^>]+>", " ", t)
+        t = t.replace("&euro;", "euro").replace("&nbsp;", " ")
+        t = _re.sub(r"[^0-9a-zA-Zàèéìòùç' ]", " ", t.lower())
+        return " ".join(w for w in t.split() if len(w) > 2)
+
+    js = (JS.replace("__SCENE__", json.dumps(
+              [{"a": s["a"], "b": s["b"], "vis": visibile(s)} for s in scene]))
             .replace("__WORDS__", json.dumps(spec["parole"], ensure_ascii=False))
             .replace("__DUR__", str(spec["durata"]))
             .replace("__FONTE__", str(spec.get("fonte_da", 1e9))))
