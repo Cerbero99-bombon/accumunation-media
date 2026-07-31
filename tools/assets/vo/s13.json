@@ -1,0 +1,7 @@
+[
+ {"t":"Guarda questo countdown: sta per scadere.","rate":"+0%","pitch":"-4Hz","pausa":0.55},
+ {"t":"Ecco: è appena ripartito da capo.","rate":"-4%","pitch":"-5Hz","pausa":0.40},
+ {"t":"Stesse condizioni, stesso prezzo di prima.","rate":"-4%","pitch":"-5Hz","pausa":0.45},
+ {"t":"Per questo trucco: due milioni di sanzione.","rate":"-6%","pitch":"-6Hz","pausa":0.55},
+ {"t":"Il prezzo pieno non si augura a nessuno.","rate":"-10%","pitch":"-7Hz","pausa":0.30}
+]
