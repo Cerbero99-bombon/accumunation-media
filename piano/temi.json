@@ -1,0 +1,1016 @@
+{
+ "vantaggi": [
+  "Rischio zero",
+  "Prezzo che scende",
+  "Trasparenza",
+  "Stesso prezzo",
+  "Passaparola",
+  "Selezione",
+  "Niente fretta",
+  "Zero spreco",
+  "Nessun profiling",
+  "Il brand non rischia"
+ ],
+ "temi": [
+  {
+   "id": "001",
+   "riga": "Rischio zero",
+   "colonna": "Rischio zero",
+   "tema": "Cosa succede ai tuoi soldi tra la prenotazione e la consegna",
+   "stato": "pubblicato",
+   "post": "pin3-garantito",
+   "formato": "carosello",
+   "data": "2026-07-29"
+  },
+  {
+   "id": "002",
+   "riga": "Rischio zero",
+   "colonna": "Prezzo che scende",
+   "tema": "Se il prezzo scende dopo che hai prenotato, tu che fai",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "003",
+   "riga": "Rischio zero",
+   "colonna": "Trasparenza",
+   "tema": "Dove sta il tuo acconto mentre aspetti, in chiaro",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "004",
+   "riga": "Rischio zero",
+   "colonna": "Stesso prezzo",
+   "tema": "Il rimborso vale uguale per il primo e per l'ultimo",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "005",
+   "riga": "Rischio zero",
+   "colonna": "Passaparola",
+   "tema": "Hai invitato gente e la campagna non parte: che fine fa il credito",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "006",
+   "riga": "Rischio zero",
+   "colonna": "Selezione",
+   "tema": "Il rischio piu grande non e il prezzo, e il brand sbagliato",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "007",
+   "riga": "Rischio zero",
+   "colonna": "Niente fretta",
+   "tema": "Nessuno ti mette fretta perche non serve a niente",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "008",
+   "riga": "Rischio zero",
+   "colonna": "Zero spreco",
+   "tema": "Se non si parte non si produce, e nessuno ci rimette",
+   "stato": "pubblicato",
+   "post": "02-e-se-non-si-parte",
+   "formato": "reel",
+   "data": "2026-08-02"
+  },
+  {
+   "id": "009",
+   "riga": "Rischio zero",
+   "colonna": "Nessun profiling",
+   "tema": "Il rimborso non dipende da chi sei o da quanto hai speso",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "010",
+   "riga": "Rischio zero",
+   "colonna": "Il brand non rischia",
+   "tema": "Il tuo acconto e la certezza che permette al brand di partire",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "011",
+   "riga": "Prezzo che scende",
+   "colonna": "Rischio zero",
+   "tema": "Un prezzo che scende non e una promessa: e una soglia",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "012",
+   "riga": "Prezzo che scende",
+   "colonna": "Prezzo che scende",
+   "tema": "Perche lo stesso identico prodotto ha due prezzi diversi",
+   "stato": "pubblicato",
+   "post": "03-non-e-uno-sconto",
+   "formato": "reel",
+   "data": "2026-07-30"
+  },
+  {
+   "id": "013",
+   "riga": "Prezzo che scende",
+   "colonna": "Trasparenza",
+   "tema": "Il prezzo scende: ti facciamo vedere di quanto e da dove",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "014",
+   "riga": "Prezzo che scende",
+   "colonna": "Stesso prezzo",
+   "tema": "Lo sconto retroattivo, spiegato con un disegno",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "015",
+   "riga": "Prezzo che scende",
+   "colonna": "Passaparola",
+   "tema": "Due leve diverse: il gruppo abbassa, il tuo codice accumula",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "016",
+   "riga": "Prezzo che scende",
+   "colonna": "Selezione",
+   "tema": "Perche non prendiamo il brand che offre lo sconto piu grosso",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "017",
+   "riga": "Prezzo che scende",
+   "colonna": "Niente fretta",
+   "tema": "Il prezzo non sale se aspetti l'ultimo giorno",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "018",
+   "riga": "Prezzo che scende",
+   "colonna": "Zero spreco",
+   "tema": "L'invenduto lo paghi tu, dentro il prezzo pieno",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "019",
+   "riga": "Prezzo che scende",
+   "colonna": "Nessun profiling",
+   "tema": "Nessun prezzo dinamico: non paghi in base al tuo profilo",
+   "stato": "pubblicato",
+   "post": "07-i-cosa-non-facciamo",
+   "formato": "carosello",
+   "data": "2026-07-30"
+  },
+  {
+   "id": "020",
+   "riga": "Prezzo che scende",
+   "colonna": "Il brand non rischia",
+   "tema": "Come fa un brand ad abbassare senza rimetterci",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "021",
+   "riga": "Trasparenza",
+   "colonna": "Rischio zero",
+   "tema": "Cosa ti diciamo prima che tu metta un euro",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "022",
+   "riga": "Trasparenza",
+   "colonna": "Prezzo che scende",
+   "tema": "Da dove viene il prezzo di listino, che e la base di tutto",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "023",
+   "riga": "Trasparenza",
+   "colonna": "Trasparenza",
+   "tema": "Il prezzo di listino non e un'opinione: da dove lo prendiamo",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "024",
+   "riga": "Trasparenza",
+   "colonna": "Stesso prezzo",
+   "tema": "Il listino e pubblico prima che tu prenoti",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "025",
+   "riga": "Trasparenza",
+   "colonna": "Passaparola",
+   "tema": "Quanto vale il tuo codice, in euro, scritto",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "026",
+   "riga": "Trasparenza",
+   "colonna": "Selezione",
+   "tema": "Perche diciamo di no a un brand, con esempi veri",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "027",
+   "riga": "Trasparenza",
+   "colonna": "Niente fretta",
+   "tema": "Le date le diciamo quando le sappiamo, non prima",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "028",
+   "riga": "Trasparenza",
+   "colonna": "Zero spreco",
+   "tema": "Quanti pezzi si producono, e perche proprio quel numero",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "029",
+   "riga": "Trasparenza",
+   "colonna": "Nessun profiling",
+   "tema": "Le stesse informazioni per tutti, nello stesso momento",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "030",
+   "riga": "Trasparenza",
+   "colonna": "Il brand non rischia",
+   "tema": "Cosa vede il brand del suo andamento, in tempo reale",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "031",
+   "riga": "Stesso prezzo",
+   "colonna": "Rischio zero",
+   "tema": "Il prezzo e uguale per tutti anche quando qualcosa va storto",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "032",
+   "riga": "Stesso prezzo",
+   "colonna": "Prezzo che scende",
+   "tema": "Retroattivo vuol dire che il tuo prezzo si aggiorna da solo",
+   "stato": "pubblicato",
+   "post": "pin2-meno",
+   "formato": "carosello",
+   "data": "2026-07-29"
+  },
+  {
+   "id": "033",
+   "riga": "Stesso prezzo",
+   "colonna": "Trasparenza",
+   "tema": "Il prezzo di tutti e scritto sulla stessa pagina",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "034",
+   "riga": "Stesso prezzo",
+   "colonna": "Stesso prezzo",
+   "tema": "Chi arriva prima non paga di piu. Piu raro di quanto sembri",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "035",
+   "riga": "Stesso prezzo",
+   "colonna": "Passaparola",
+   "tema": "Chi porta gente non ha un prezzo migliore: ha un credito",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "036",
+   "riga": "Stesso prezzo",
+   "colonna": "Selezione",
+   "tema": "Nessun brand paga per stare in vetrina davanti agli altri",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "037",
+   "riga": "Stesso prezzo",
+   "colonna": "Niente fretta",
+   "tema": "Chi prenota l'ultimo giorno paga come chi ha prenotato per primo",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "038",
+   "riga": "Stesso prezzo",
+   "colonna": "Zero spreco",
+   "tema": "E il gruppo a decidere quanti pezzi esistono",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "039",
+   "riga": "Stesso prezzo",
+   "colonna": "Nessun profiling",
+   "tema": "Nessuno vede un prezzo diverso dal tuo",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "040",
+   "riga": "Stesso prezzo",
+   "colonna": "Il brand non rischia",
+   "tema": "Un prezzo solo semplifica la vita anche a chi produce",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "041",
+   "riga": "Passaparola",
+   "colonna": "Rischio zero",
+   "tema": "Invitare non ti espone a niente: il credito matura solo se saldano",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "042",
+   "riga": "Passaparola",
+   "colonna": "Prezzo che scende",
+   "tema": "Il credito non abbassa il prezzo: si somma dopo",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "043",
+   "riga": "Passaparola",
+   "colonna": "Trasparenza",
+   "tema": "Il 5% e scritto: quanto prendi e quando lo prendi",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "044",
+   "riga": "Passaparola",
+   "colonna": "Stesso prezzo",
+   "tema": "Il tuo credito non toglie niente a nessun altro",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "045",
+   "riga": "Passaparola",
+   "colonna": "Passaparola",
+   "tema": "Il tuo codice non e un referral: e un credito che resta tuo",
+   "stato": "pubblicato",
+   "post": "05-f-credito-passaparola",
+   "formato": "carosello",
+   "data": "2026-08-05"
+  },
+  {
+   "id": "046",
+   "riga": "Passaparola",
+   "colonna": "Selezione",
+   "tema": "Consigli solo quello che hai scelto tu per primo",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "047",
+   "riga": "Passaparola",
+   "colonna": "Niente fretta",
+   "tema": "Il credito non scade, quindi non c'e da correre",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "048",
+   "riga": "Passaparola",
+   "colonna": "Zero spreco",
+   "tema": "Un amico in piu e un pezzo in meno che resta invenduto",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "049",
+   "riga": "Passaparola",
+   "colonna": "Nessun profiling",
+   "tema": "Il credito e uguale per tutti: non premiamo chi ha piu follower",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "050",
+   "riga": "Passaparola",
+   "colonna": "Il brand non rischia",
+   "tema": "Il passaparola porta al brand clienti che nessuna pubblicita compra",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "051",
+   "riga": "Selezione",
+   "colonna": "Rischio zero",
+   "tema": "Il filtro sui brand e la prima assicurazione che hai",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "052",
+   "riga": "Selezione",
+   "colonna": "Prezzo che scende",
+   "tema": "Non scegliamo chi sconta di piu, scegliamo chi regge la soglia",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "053",
+   "riga": "Selezione",
+   "colonna": "Trasparenza",
+   "tema": "I criteri di selezione sono pubblici e li puoi contestare",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "054",
+   "riga": "Selezione",
+   "colonna": "Stesso prezzo",
+   "tema": "Ogni brand ha le stesse regole, grande o piccolo",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "055",
+   "riga": "Selezione",
+   "colonna": "Passaparola",
+   "tema": "Un brand che sceglieresti e un brand che consiglieresti",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "056",
+   "riga": "Selezione",
+   "colonna": "Selezione",
+   "tema": "I tre filtri che un brand deve passare",
+   "stato": "pubblicato",
+   "post": "04-c-selezione-brand",
+   "formato": "carosello",
+   "data": "2026-07-30"
+  },
+  {
+   "id": "057",
+   "riga": "Selezione",
+   "colonna": "Niente fretta",
+   "tema": "Aspettiamo il brand giusto, anche per mesi",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "058",
+   "riga": "Selezione",
+   "colonna": "Zero spreco",
+   "tema": "Chi produce su ordine e chi produce su previsione",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "059",
+   "riga": "Selezione",
+   "colonna": "Nessun profiling",
+   "tema": "Nessun brand entra pagando per essere spinto",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "060",
+   "riga": "Selezione",
+   "colonna": "Il brand non rischia",
+   "tema": "Perche diciamo di no a chi vuole solo smaltire stock",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "061",
+   "riga": "Niente fretta",
+   "colonna": "Rischio zero",
+   "tema": "Senza fretta non prendi decisioni che ti pentirai di aver preso",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "062",
+   "riga": "Niente fretta",
+   "colonna": "Prezzo che scende",
+   "tema": "Il tempo lavora per te: piu passa, piu il prezzo puo scendere",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "063",
+   "riga": "Niente fretta",
+   "colonna": "Trasparenza",
+   "tema": "Preferiamo dire non lo so ancora che inventare una data",
+   "stato": "pubblicato",
+   "post": "07-i-cosa-non-facciamo",
+   "formato": "carosello",
+   "data": "2026-07-30"
+  },
+  {
+   "id": "064",
+   "riga": "Niente fretta",
+   "colonna": "Stesso prezzo",
+   "tema": "Nessun vantaggio a prenotare per primo, quindi nessuna corsa",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "065",
+   "riga": "Niente fretta",
+   "colonna": "Passaparola",
+   "tema": "Nessun countdown sul tuo credito",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "066",
+   "riga": "Niente fretta",
+   "colonna": "Selezione",
+   "tema": "La stagione giusta, non il momento giusto per vendere",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "067",
+   "riga": "Niente fretta",
+   "colonna": "Niente fretta",
+   "tema": "Perche non troverai mai un countdown",
+   "stato": "pubblicato",
+   "post": "07-i-cosa-non-facciamo",
+   "formato": "carosello",
+   "data": "2026-07-30"
+  },
+  {
+   "id": "068",
+   "riga": "Niente fretta",
+   "colonna": "Zero spreco",
+   "tema": "Il tempo serve a fare i conti giusti su quanto produrre",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "069",
+   "riga": "Niente fretta",
+   "colonna": "Nessun profiling",
+   "tema": "Niente notifiche costruite per spingerti a chiudere",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "070",
+   "riga": "Niente fretta",
+   "colonna": "Il brand non rischia",
+   "tema": "Una finestra decisa dalla stagione, non dal bisogno di cassa",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "071",
+   "riga": "Zero spreco",
+   "colonna": "Rischio zero",
+   "tema": "Produrre solo il venduto toglie rischio a tutti e due i lati",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "072",
+   "riga": "Zero spreco",
+   "colonna": "Prezzo che scende",
+   "tema": "L'invenduto e la voce nascosta dentro ogni prezzo pieno",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "073",
+   "riga": "Zero spreco",
+   "colonna": "Trasparenza",
+   "tema": "Quanti pezzi, deciso da cosa, comunicato quando",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "074",
+   "riga": "Zero spreco",
+   "colonna": "Stesso prezzo",
+   "tema": "Il gruppo decide il numero, non l'ufficio acquisti",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "075",
+   "riga": "Zero spreco",
+   "colonna": "Passaparola",
+   "tema": "Ogni persona in piu sposta la soglia piu vicino",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "076",
+   "riga": "Zero spreco",
+   "colonna": "Selezione",
+   "tema": "Chi produce su ordine puo permettersi di fare meno pezzi e meglio",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "077",
+   "riga": "Zero spreco",
+   "colonna": "Niente fretta",
+   "tema": "Nessun magazzino da svuotare a fine stagione",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "078",
+   "riga": "Zero spreco",
+   "colonna": "Zero spreco",
+   "tema": "Si produce quello che e gia venduto",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "079",
+   "riga": "Zero spreco",
+   "colonna": "Nessun profiling",
+   "tema": "Non ti spingiamo a comprare per liberare un magazzino",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "080",
+   "riga": "Zero spreco",
+   "colonna": "Il brand non rischia",
+   "tema": "Zero rimanenze e la ragione per cui il brand accetta di scendere",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "081",
+   "riga": "Nessun profiling",
+   "colonna": "Rischio zero",
+   "tema": "Il tuo rischio non cambia in base a quanto hai comprato prima",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "082",
+   "riga": "Nessun profiling",
+   "colonna": "Prezzo che scende",
+   "tema": "Il prezzo lo fa il gruppo, non la tua cronologia",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "083",
+   "riga": "Nessun profiling",
+   "colonna": "Trasparenza",
+   "tema": "Non raccogliamo dati per decidere quanto farti pagare",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "084",
+   "riga": "Nessun profiling",
+   "colonna": "Stesso prezzo",
+   "tema": "Stesso prezzo, stessa pagina, stesso momento",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "085",
+   "riga": "Nessun profiling",
+   "colonna": "Passaparola",
+   "tema": "Il credito vale uguale per chi ha 10 amici e chi ne ha 1000",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "086",
+   "riga": "Nessun profiling",
+   "colonna": "Selezione",
+   "tema": "Nemmeno i brand vengono ordinati da un algoritmo di resa",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "087",
+   "riga": "Nessun profiling",
+   "colonna": "Niente fretta",
+   "tema": "Nessuna notifica calibrata sul tuo momento debole",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "088",
+   "riga": "Nessun profiling",
+   "colonna": "Zero spreco",
+   "tema": "La soglia e un numero pubblico, non una stima interna",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "089",
+   "riga": "Nessun profiling",
+   "colonna": "Nessun profiling",
+   "tema": "Il prezzo non dipende da chi sei",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "090",
+   "riga": "Nessun profiling",
+   "colonna": "Il brand non rischia",
+   "tema": "Anche il brand vede gli stessi numeri che vedi tu",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "091",
+   "riga": "Il brand non rischia",
+   "colonna": "Rischio zero",
+   "tema": "Il brand non anticipa un euro: produce solo a soglia raggiunta",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "092",
+   "riga": "Il brand non rischia",
+   "colonna": "Prezzo che scende",
+   "tema": "Come si abbassa il prezzo senza toccare il margine a pezzo",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "093",
+   "riga": "Il brand non rischia",
+   "colonna": "Trasparenza",
+   "tema": "Cosa firma davvero un brand quando entra in campagna",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "094",
+   "riga": "Il brand non rischia",
+   "colonna": "Stesso prezzo",
+   "tema": "Un prezzo unico e piu semplice da gestire anche per chi produce",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "095",
+   "riga": "Il brand non rischia",
+   "colonna": "Passaparola",
+   "tema": "I clienti che porta il passaparola costano zero al brand",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "096",
+   "riga": "Il brand non rischia",
+   "colonna": "Selezione",
+   "tema": "Il brand non compra visibilita: la ottiene passando i filtri",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "097",
+   "riga": "Il brand non rischia",
+   "colonna": "Niente fretta",
+   "tema": "Nessuna pressione a chiudere prima che la stagione sia giusta",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "098",
+   "riga": "Il brand non rischia",
+   "colonna": "Zero spreco",
+   "tema": "Vendere prima di produrre cambia il mestiere",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "099",
+   "riga": "Il brand non rischia",
+   "colonna": "Nessun profiling",
+   "tema": "Il brand non paga per stare piu in alto di un altro",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  },
+  {
+   "id": "100",
+   "riga": "Il brand non rischia",
+   "colonna": "Il brand non rischia",
+   "tema": "Zero anticipi, volume garantito, nessuna svendita",
+   "stato": "libero",
+   "post": null,
+   "formato": null,
+   "data": null
+  }
+ ]
+}
