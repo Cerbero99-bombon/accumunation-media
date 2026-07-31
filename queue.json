@@ -100,14 +100,15 @@
   },
   {
    "id": "02-e-se-non-si-parte",
-   "quando": "2026-08-02 20:00 Roma",
+   "quando": "2026-07-30 23:30 Roma",
    "tipo": "reel",
    "titolo": "Reel — E se non si parte",
    "caption": "Cosa succede se non raggiungiamo la soglia?\nTi torna tutto indietro. Garantito, nessun modulo, nessuna sorpresa.\nLe condizioni sono tutte scritte, link in bio.\n\n🫂\n\n#accumunation #garantito #rimborso #trasparenza #fiducia #acquistocollettivo",
    "media": [
     "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/reel/02-e-se-non-si-parte.mp4"
    ],
-   "pubblicato": false
+   "pubblicato": true,
+   "permalink": "https://www.instagram.com/reel/DbbWBT8CphP/"
   },
   {
    "id": "04-c-selezione-brand",
@@ -127,19 +128,19 @@
   },
   {
    "id": "03-non-e-uno-sconto",
-   "quando": "2026-07-30 20:00 Roma",
+   "quando": "2026-08-04 20:00 Roma",
    "tipo": "reel",
    "titolo": "Reel — Non è uno sconto",
    "caption": "Non stiamo facendo sconti. Stiamo facendo matematica.\nLa differenza tra una promozione finta e un listino a quantita' vero.\nLink in bio.\n\n🫂\n\n#accumunation #trasparenza #preordine #consumoconsapevole #noaisconti",
    "media": [
     "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/reel/03-non-e-uno-sconto.mp4"
    ],
-   "pubblicato": true,
+   "pubblicato": false,
    "permalink": "https://www.instagram.com/p/DbbV4cjnYXM/"
   },
   {
    "id": "05-f-credito-passaparola",
-   "quando": "2026-08-05 20:00 Roma",
+   "quando": "2026-08-02 20:00 Roma",
    "tipo": "carosello",
    "titolo": "F — Credito passaparola",
    "caption": "Porti un amico, tutti e due ci guadagnate. Letteralmente.\nNon è marketing, è come funziona il credito passaparola su Accumunation.\nDettagli → link in bio.\n\n🫂\n\n#accumunation #passaparola #acquistocollettivo #preordine #consumoconsapevole",
@@ -154,7 +155,7 @@
   },
   {
    "id": "03-g-non-e-uno-sconto",
-   "quando": "2026-08-08 20:00 Roma",
+   "quando": "2026-07-30 20:34 Roma",
    "tipo": "carosello",
    "titolo": "G — Non è uno sconto",
    "caption": "Non stiamo facendo sconti. Stiamo facendo matematica.\nLa differenza tra una promozione finta e un listino a quantità vero → link in bio.\n\n🫂\n\n#accumunation #trasparenza #preordine #consumoconsapevole #noaisconti",
@@ -165,11 +166,12 @@
     "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/evergreen/03-g-non-e-uno-sconto/slide-04.jpg",
     "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/evergreen/03-g-non-e-uno-sconto/slide-05.jpg"
    ],
-   "pubblicato": false
+   "pubblicato": true,
+   "permalink": "https://www.instagram.com/p/DbbV4cjnYXM/"
   },
   {
    "id": "06-h-perche-esiste",
-   "quando": "2026-08-11 20:00 Roma",
+   "quando": "2026-08-06 20:00 Roma",
    "tipo": "carosello",
    "titolo": "H — Perché esiste",
    "caption": "L'ho fondata perché ero stanco di scegliere tra prezzo pieno e svendita.\nPerché esiste Accumunation, in poche righe.\nLink in bio.\n\n🫂\n\n#accumunation #founder #storiavera #preordine #consumoconsapevole",
