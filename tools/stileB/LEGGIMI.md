@@ -58,3 +58,26 @@ alternano invece di sovrapporsi, e lo schermo non dice mai due volte la stessa c
 Regola pratica quando si scrive una spec: se una scena ha un `h1` che e' quasi il parlato, non
 metterci anche il `sub` che lo ripete. Il filtro copre l'errore, ma una scena scritta bene non ne
 ha bisogno.
+
+## Espressivita': si ottiene dalla regia, non dalla voce
+
+Una voce sintetica letta tutta d'un fiato suona piatta, e se la si accelera suona enfatica: sono i
+due modi in cui si capisce che e' finta. La soluzione non e' cercare una voce migliore, e' **dirigere
+la lettura**. `vox.py` legge **una frase alla volta**, e ogni frase ha:
+
+- il suo **ritmo** (`rate`): la frase chiave va lenta, quella di servizio va normale;
+- il suo **tono** (`pitch`): si scende sui punti che devono pesare;
+- la sua **pausa dopo** (`pausa`): il silenzio prima di un numero vale piu' di qualsiasi enfasi.
+
+Esempio dal primo reel: "Zero." letta a **-22%** e **-10Hz**, con 0.55 secondi di silenzio prima e
+dopo. Da sola quella parola occupa un secondo di video e non serve nient'altro.
+
+I blocchi vengono poi cuciti con i silenzi veri, e `words.json` esce con i **tempi assoluti gia'
+corretti**: le scene si agganciano a quelli, quindi il montaggio resta sincronizzato anche se si
+cambia il ritmo di una frase sola.
+
+Regola pratica: **un blocco = una frase = un gruppo di sottotitolo**. Cosi' i tre livelli (voce,
+testo grande, sottotitolo) sono d'accordo per costruzione.
+
+Voce scelta: `fr-FR-RemyMultilingualNeural`. Per le parole che una voce non italiana storpia si
+scrive la grafia che la fa leggere giusta (es. `l'anti-trust` invece di `l'antitrust`).
