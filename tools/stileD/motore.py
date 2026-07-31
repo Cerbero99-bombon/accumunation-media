@@ -320,12 +320,12 @@ MOTIVO = (function(){
           col='#FBF8F2'; al=0.95;
           const posa=c.t0+CADUTA;
           if(t>cfg.distru_a && posa+0.7<cfg.vieta_a && t>posa+0.7){
-            const d=Math.min(1,(t-posa-0.7)/0.6);   // si sbriciola
-            al=0.95*(1-d); y+=d*46;
-            if(d>=1) continue;
+            const d=Math.min(1,(t-posa-0.7)/0.6);   // si sbriciola, ma i brandelli RESTANO:
+            al=0.95*(1-d); y+=d*46;                 // il rapporto 1-su-5 deve reggere il conteggio
             ctx.fillStyle='#B5A896';
-            for(let k=0;k<5;k++){ ctx.globalAlpha=(1-d)*0.7;
-              ctx.fillRect(x-30+k*15, y+50+d*90+k*7, 9, 9); }
+            for(let k=0;k<7;k++){ ctx.globalAlpha=Math.min(0.75,d*1.2)*0.75;
+              ctx.fillRect(c.tx-44+k*14+((k*37)%11), 1452-((k*13)%3)*8, 12, 10); }
+            if(d>=1) continue;
           }
         } else { col='#7D7161'; al=0.78; }
         capo(x,y+br,c.s*(0.9+0.1*e),c.rot*(1-e*0.6),col,al);
@@ -502,8 +502,293 @@ MOTIVO = (function(){
 })();
 """
 
+
+MOTIVO_CARTELLINO = r"""
+// CARTELLINO — un cartellino prezzo appeso che oscilla. Lo sconto e' vistoso, il prezzo
+// barrato e' li'... poi la faccia si strappa e dietro c'e' la verita': MAI ESISTITO.
+// cfg: { sconto:"-70%", prezzo:"299 €", strappo_a, multa_a, multa:"Antitrust · 300.000 € di sanzione" }
+MOTIVO = (function(){
+  const cfg = CFG;
+  const CX=540, CY=1060, TW=560, TH=680;      // centro e misure del cartellino
+  function tag(ctx,fill){
+    ctx.beginPath();
+    const r=36, x=-TW/2, y=-TH/2;
+    ctx.moveTo(x+r,y); ctx.arcTo(x+TW,y,x+TW,y+TH,r); ctx.arcTo(x+TW,y+TH,x,y+TH,r);
+    ctx.arcTo(x,y+TH,x,y,r); ctx.arcTo(x,y,x+TW,y,r); ctx.closePath();
+    ctx.fillStyle=fill; ctx.fill();
+    ctx.strokeStyle='rgba(251,248,242,.18)'; ctx.lineWidth=3; ctx.stroke();
+    ctx.beginPath(); ctx.arc(0,y+64,26,0,6.2832);    // l'occhiello
+    ctx.fillStyle='#16120D'; ctx.fill();
+    ctx.strokeStyle='rgba(251,248,242,.3)'; ctx.stroke();
+  }
+  return {
+    init(){
+      document.getElementById('mezzo').innerHTML =
+        '<div id="multa" style="position:absolute;left:150px;right:150px;top:1560px;text-align:center;'+
+        'font-family:\'Space Grotesk\';font-weight:700;font-size:44px;line-height:1.2;color:#0A2418;'+
+        'background:#1FB877;border-radius:26px;padding:24px 16px;opacity:0"></div>';
+      document.getElementById('multa').textContent=cfg.multa;
+    },
+    draw(t){
+      const fin=Math.min(1,Math.max(0,(t-SLOG)/0.8));
+      const zoom=1+0.05*(t/DUR)+0.02*Math.sin(t*1.2)*fin;
+      ctx.save(); ctx.translate(540,1060); ctx.scale(zoom,zoom); ctx.translate(-540,-1060);
+      // il filo
+      const sw=Math.sin(t*1.35)*0.10*Math.exp(-t*0.05);          // il pendolo, non si ferma mai
+      ctx.strokeStyle='#7D7161'; ctx.lineWidth=4;
+      ctx.beginPath(); ctx.moveTo(540,150);
+      ctx.lineTo(540+Math.sin(sw)*(CY-TH/2+64-150), CY-TH/2+64); ctx.stroke();
+      ctx.save(); ctx.translate(540,150); ctx.rotate(sw); ctx.translate(-540,-150);
+      ctx.translate(CX,CY);
+      const str=ease(Math.min(1,Math.max(0,(t-cfg.strappo_a)/0.8)));
+      // il retro: appare da sotto lo strappo
+      if(str>0){
+        tag(ctx,'#221B14');
+        ctx.save(); ctx.rotate(-0.10);
+        ctx.font='700 92px "Space Grotesk"'; ctx.textAlign='center';
+        ctx.globalAlpha=Math.min(1,str*1.6);
+        ctx.strokeStyle='#FBF8F2'; ctx.lineWidth=4;
+        ctx.strokeRect(-236,-136,472,240);
+        ctx.fillStyle='#FBF8F2';
+        ctx.fillText('MAI',0,-42); ctx.fillText('ESISTITO',0,66);
+        ctx.restore();
+      }
+      // la faccia davanti: prezzo barrato e sconto urlato; si strappa e cade
+      if(str<1){
+        ctx.save();
+        ctx.translate(str*140, str*760);                 // cade
+        ctx.rotate(str*0.9);                              // ruotando
+        ctx.globalAlpha=1-str*0.85;
+        tag(ctx,'#221B14');
+        ctx.textAlign='center';
+        ctx.fillStyle='#1FB877'; ctx.font='700 150px "Space Grotesk"';
+        ctx.fillText(cfg.sconto,0,-64);
+        ctx.fillStyle='#B5A896'; ctx.font='700 96px "Space Grotesk"';
+        ctx.fillText(cfg.prezzo,0,110);
+        const w=ctx.measureText(cfg.prezzo).width;
+        ctx.strokeStyle='#B5A896'; ctx.lineWidth=8;
+        ctx.beginPath(); ctx.moveTo(-w/2-16,80); ctx.lineTo(w/2+16,96); ctx.stroke();
+        ctx.fillStyle='#7D7161'; ctx.font='600 34px Manrope';
+        ctx.fillText('OUTLET',0,224);
+        ctx.restore();
+      }
+      ctx.restore(); ctx.restore();
+      velo();
+      const m=document.getElementById('multa');
+      const mp=Math.min(1,Math.max(0,(t-cfg.multa_a)/0.45));
+      m.style.opacity=(mp*(t>SLOG+0.6?Math.max(0.55,1-(t-SLOG-0.6)):1)).toFixed(2);
+      m.style.transform='scale('+(0.85+0.15*ease(mp)+0.012*Math.sin(t*2.2)).toFixed(3)+')';
+    }
+  };
+})();
+"""
+
+MOTIVO_CONFRONTO = r"""
+// CONFRONTO — due colonne, una scelta. A sinistra i pacchi cadono e finiscono in brandelli,
+// e costa poco; a destra il pacco resta li', intatto, e costa di piu'. La scelta la fa il prezzo.
+// cfg: { sx:{titolo:'DISTRUGGERLO', prezzo:'0,85 €'}, dx:{titolo:'DONARLO', prezzo:'di piuù'},
+//        conta_a: quando appare la riga dei 20 milioni, conta:'20 milioni l'anno' }
+MOTIVO = (function(){
+  const cfg = CFG;
+  let seed=41; function rnd(){seed=(seed*1103515245+12345)&0x7fffffff;return seed/0x7fffffff;}
+  const DROP=[];                        // pacchi che cadono a sinistra, uno ogni 1.7s
+  for(let i=0;i<12;i++) DROP.push({t0:0.4+i*1.7, x:270+(rnd()-.5)*120, rot:(rnd()-.5)*0.6});
+  function pacco(x,y,s,rot,al){
+    ctx.save(); ctx.translate(x,y); ctx.rotate(rot); ctx.scale(s,s); ctx.globalAlpha=al;
+    ctx.fillStyle='#B5A896'; ctx.fillRect(-70,-52,140,104);
+    ctx.fillStyle='#7D7161'; ctx.fillRect(-70,-10,140,20);       // il nastro
+    ctx.strokeStyle='rgba(22,18,13,.35)'; ctx.lineWidth=3; ctx.strokeRect(-70,-52,140,104);
+    ctx.restore();
+  }
+  return {
+    init(){
+      document.getElementById('mezzo').innerHTML =
+        '<div id="tsx" class="col" style="left:60px"></div><div id="tdx" class="col" style="right:60px"></div>'+
+        '<div id="psx" class="pr" style="left:60px"></div><div id="pdx" class="pr" style="right:60px"></div>'+
+        '<div id="conta20" style="position:absolute;top:1560px;left:0;right:0;text-align:center;'+
+        'font-weight:800;font-size:40px;color:#FBF8F2;opacity:0"></div>'+
+        '<style>.col{position:absolute;top:640px;width:440px;text-align:center;'+
+        'font-family:Manrope;font-weight:800;font-size:44px;letter-spacing:2px;color:#B5A896}'+
+        '.pr{position:absolute;top:1330px;width:440px;text-align:center;'+
+        "font-family:'Space Grotesk';font-weight:700;font-size:110px;letter-spacing:-4px;color:#FBF8F2}</style>";
+      document.getElementById('tsx').textContent=cfg.sx.titolo;
+      document.getElementById('tdx').textContent=cfg.dx.titolo;
+      document.getElementById('psx').innerHTML=cfg.sx.prezzo;
+      document.getElementById('pdx').innerHTML=cfg.dx.prezzo;
+      document.getElementById('conta20').textContent=cfg.conta;
+    },
+    draw(t){
+      const fin=Math.min(1,Math.max(0,(t-SLOG)/0.8));
+      const zoom=1+0.05*(t/DUR)+0.02*Math.sin(t*1.25)*fin;
+      ctx.save(); ctx.translate(540,1150); ctx.scale(zoom,zoom); ctx.translate(-540,-1150);
+      ctx.strokeStyle='rgba(251,248,242,.14)'; ctx.lineWidth=3;   // il confine
+      ctx.beginPath(); ctx.moveTo(540,660); ctx.lineTo(540,1520); ctx.stroke();
+      // sinistra: i pacchi cadono e si sfasciano; i brandelli restano
+      let rotti=0;
+      for(const d of DROP){
+        if(t<d.t0) continue;
+        const p=Math.min(1,(t-d.t0)/0.7), e=p*p;
+        if(p<1){ pacco(d.x, 700+e*560, 1, d.rot*p*2, 1); }
+        else rotti++;
+      }
+      for(let k=0;k<Math.min(rotti*6,72);k++){                     // il mucchio di brandelli
+        ctx.globalAlpha=0.7; ctx.fillStyle='#7D7161';
+        ctx.fillRect(120+((k*67)%330), 1268-((k*29)%3)*14-((k/6)|0)*7, 16, 11);
+      }
+      // destra: un pacco solo, intatto, che respira
+      pacco(810, 1210+Math.sin(t*1.1)*6, 1.35, 0.02*Math.sin(t*0.9), 1);
+      const gl=ctx.createRadialGradient(810,1210,10,810,1210,260);
+      gl.addColorStop(0,'rgba(31,184,119,'+(0.10+0.05*Math.sin(t*1.5)).toFixed(3)+')');
+      gl.addColorStop(1,'rgba(31,184,119,0)');
+      ctx.fillStyle=gl; ctx.globalAlpha=1; ctx.fillRect(560,940,520,560);
+      ctx.restore();
+      velo();
+      const c2=document.getElementById('conta20');
+      const cp=Math.min(1,Math.max(0,(t-cfg.conta_a)/0.5));
+      c2.style.opacity=(cp*(t>SLOG?Math.max(0,1-(t-SLOG)*1.4):1)).toFixed(2);
+      document.getElementById('psx').style.color = t>1.0 ? '#FBF8F2' : '#B5A896';
+      document.getElementById('pdx').style.color = '#1FB877';
+    }
+  };
+})();
+"""
+
+MOTIVO_INTERFACCIA = r"""
+// INTERFACCIA — lo schermo non mente: la card di un negozio online, il countdown che
+// scade... e riparte da capo. Due volte, perche' una potrebbe sembrare un caso.
+// cfg: { prezzo:'89 €', secondi:9, reset:[t1,t2] istanti dei reset, multa_a,
+//        multa:'Antitrust · 2.000.000 € di sanzione' }
+MOTIVO = (function(){
+  const cfg = CFG;
+  function resto(t){
+    let da=0.0;
+    for(const r of cfg.reset){ if(t>=r) da=r; }
+    const s=Math.max(0, cfg.secondi - (t-da));
+    return s;
+  }
+  return {
+    init(){
+      document.getElementById('mezzo').innerHTML =
+        '<div id="card" style="position:absolute;left:110px;right:110px;top:640px;height:880px;'+
+        'background:#221B14;border:3px solid rgba(251,248,242,.14);border-radius:34px;overflow:hidden">'+
+        '<div style="height:78px;background:rgba(251,248,242,.07);display:flex;align-items:center;padding-left:30px">'+
+        '<span style="width:18px;height:18px;border-radius:50%;background:#7D7161;margin-right:12px"></span>'+
+        '<span style="width:18px;height:18px;border-radius:50%;background:#7D7161;margin-right:12px"></span>'+
+        '<span style="width:18px;height:18px;border-radius:50%;background:#7D7161"></span></div>'+
+        '<div style="margin:44px 50px 0;height:250px;border-radius:22px;background:rgba(251,248,242,.08)"></div>'+
+        '<div style="margin:34px 50px 0;height:26px;width:60%;border-radius:13px;background:rgba(251,248,242,.14)"></div>'+
+        '<div style="margin:18px 50px 0;height:26px;width:42%;border-radius:13px;background:rgba(251,248,242,.10)"></div>'+
+        '<div id="pz" style="margin:40px 50px 0;font-family:\'Space Grotesk\';font-weight:700;'+
+        'font-size:78px;color:#FBF8F2"></div>'+
+        '<div id="cd" style="margin:26px 50px 0;display:inline-block;margin-left:50px;'+
+        'font-family:\'Space Grotesk\';font-weight:700;font-size:56px;letter-spacing:1px;'+
+        'color:#16120D;background:#FBF8F2;border-radius:18px;padding:14px 30px;'+
+        'font-variant-numeric:tabular-nums"></div></div>'+
+        '<div id="multa2" style="position:absolute;left:150px;right:150px;top:1590px;text-align:center;'+
+        'font-family:\'Space Grotesk\';font-weight:700;font-size:44px;color:#0A2418;'+
+        'background:#1FB877;border-radius:26px;padding:24px 16px;opacity:0"></div>';
+      document.getElementById('pz').innerHTML=cfg.prezzo;
+      document.getElementById('multa2').textContent=cfg.multa;
+    },
+    draw(t){
+      const fin=Math.min(1,Math.max(0,(t-SLOG)/0.8));
+      ctx.clearRect(0,0,1080,1920);
+      velo();
+      const s=resto(t);
+      const cd=document.getElementById('cd');
+      const mm=String(Math.floor(s/60)).padStart(2,'0'), ss=String(Math.floor(s%60)).padStart(2,'0');
+      cd.textContent='Scade tra '+mm+':'+ss;
+      // il lampo del reset: e' il momento della verita', va visto
+      let flash=0;
+      for(const r of cfg.reset){ if(t>=r && t<r+0.5) flash=1-(t-r)/0.5; }
+      cd.style.background = flash>0 ? '#1FB877' : (s<2.2 ? '#FBF8F2' : 'rgba(251,248,242,.92)');
+      cd.style.transform='scale('+(1+0.05*flash+(s<2.2?0.02*Math.sin(t*14):0.012*Math.sin(t*2.4))).toFixed(3)+')';
+      const card=document.getElementById('card');
+      card.style.transform='translateY('+(Math.sin(t*1.05)*7).toFixed(1)+'px) scale('+
+        (1+0.012*Math.sin(t*0.85)+0.02*fin*Math.sin(t*1.3)).toFixed(3)+') rotate('+(0.3*Math.sin(t*0.7)).toFixed(2)+'deg)';
+      const m=document.getElementById('multa2');
+      const mp=Math.min(1,Math.max(0,(t-cfg.multa_a)/0.45));
+      m.style.opacity=(mp*(t>SLOG+0.6?Math.max(0.55,1-(t-SLOG-0.6)):1)).toFixed(2);
+      m.style.transform='scale('+(0.85+0.15*ease(mp)+0.012*Math.sin(t*2.2)).toFixed(3)+')';
+      card.style.opacity=(t>SLOG?Math.max(0.25,1-(t-SLOG)*1.2):1).toFixed(2);
+    }
+  };
+})();
+"""
+
+MOTIVO_DOMANDA = r"""
+// DOMANDA — impianto tipografico per la rubrica R3: al centro non c'e' un numero ma
+// l'esca stessa ("ULTIMI 2 PEZZI"), che pulsa come sui siti; poi i 37 studi si accendono
+// come una giuria, e alla fine l'esca si moltiplica: la vedi ovunque perche' funziona.
+// cfg: { pill:'ULTIMI 2 PEZZI', dots_a, dots_n:37, replica_a }
+MOTIVO = (function(){
+  const cfg = CFG;
+  let seed=53; function rnd(){seed=(seed*1103515245+12345)&0x7fffffff;return seed/0x7fffffff;}
+  const ORD=[]; for(let i=0;i<cfg.dots_n;i++) ORD.push(rnd());
+  const REP=[]; for(let i=0;i<8;i++) REP.push({dy:i*118, dx:(i%2?36:-36), o:rnd()*0.25});
+  return {
+    init(){
+      document.getElementById('mezzo').innerHTML =
+        '<div id="qmark" style="position:absolute;top:610px;left:0;right:0;text-align:center;'+
+        'font-family:\'Space Grotesk\';font-weight:700;font-size:300px;color:#1FB877;opacity:0">?</div>'+
+        '<div id="pills" style="position:absolute;top:940px;left:0;right:0"></div>';
+      let h='';
+      for(let i=0;i<9;i++) h+='<div class="pl" style="top:'+(i? 0:0)+'px"></div>';
+      document.getElementById('pills').innerHTML=
+        '<style>.pl{position:absolute;left:0;right:0;margin:0 auto;width:640px;text-align:center;'+
+        "font-family:Manrope;font-weight:800;font-size:54px;letter-spacing:2px;color:#16120D;"+
+        'background:#FBF8F2;border-radius:60px;padding:26px 0}</style>'+h;
+      const P=document.querySelectorAll('.pl');
+      P.forEach(el=>el.textContent=cfg.pill);
+    },
+    draw(t){
+      const fin=Math.min(1,Math.max(0,(t-SLOG)/0.8));
+      ctx.clearRect(0,0,1080,1920);
+      // i 37 studi: una griglia di tacche che si accendono una a una
+      const dp=Math.min(1,Math.max(0,(t-cfg.dots_a)/2.2));
+      const zoom=1+0.05*(t/DUR)+0.02*Math.sin(t*1.15)*fin;
+      ctx.save(); ctx.translate(540,1300); ctx.scale(zoom,zoom); ctx.translate(-540,-1300);
+      const acc=Math.round(cfg.dots_n*ease(dp));
+      for(let i=0;i<cfg.dots_n;i++){
+        const c=i%13, r=(i/13)|0;
+        const on = i<acc;
+        ctx.globalAlpha = on ? 0.95 : 0.18;
+        ctx.fillStyle = on ? '#1FB877' : '#B5A896';
+        const puls = on ? 1+0.10*Math.sin(t*2.2+i*1.7) : 1;
+        ctx.fillRect(198+c*54, 1560-((r+1)*46)*1, 14*puls, 34*puls);
+      }
+      if(dp>0){
+        ctx.globalAlpha=Math.min(1,dp*2); ctx.fillStyle='#B5A896';
+        ctx.font='800 30px Manrope'; ctx.textAlign='left';
+        ctx.fillText('37 studi · 335 misure', 198, 1622);
+      }
+      ctx.restore();
+      velo();
+      // l'esca che pulsa, poi si moltiplica
+      const P=document.querySelectorAll('.pl');
+      const rp=ease(Math.min(1,Math.max(0,(t-cfg.replica_a)/1.1)));
+      P.forEach((el,i)=>{
+        if(i===0){
+          el.style.opacity=(t>SLOG?Math.max(0.2,1-(t-SLOG)*1.3):1).toFixed(2);
+          el.style.transform='scale('+(1+0.045*Math.sin(t*3.1))+')';
+        } else {
+          const r=REP[i-1];
+          el.style.opacity=(rp*(0.45-r.o*0.3)*(t>SLOG?Math.max(0.2,1-(t-SLOG)*1.3):1)).toFixed(2);
+          el.style.transform='translate('+(r.dx*rp)+'px,'+((i%2?1:-1)*Math.ceil(i/2)*118*rp)+'px) scale('+(1-0.05*Math.ceil(i/2))+')';
+        }
+      });
+      const q=document.getElementById('qmark');
+      const qp=Math.min(1,t/0.5);
+      q.style.opacity=((t<cfg.dots_a?qp:Math.max(0.25,1-(t-cfg.dots_a)))* (t>SLOG?Math.max(0,1-(t-SLOG)*1.6):1)).toFixed(2);
+      q.style.transform='scale('+(0.7+0.3*ease(qp)+0.03*Math.sin(t*1.9)).toFixed(3)+') rotate('+(4*Math.sin(t*1.1)).toFixed(1)+'deg)';
+    }
+  };
+})();
+"""
 MOTIVI = {"folla": MOTIVO_FOLLA, "conto": MOTIVO_CONTO, "pila": MOTIVO_PILA,
-          "contatore": MOTIVO_CONTATORE, "grafico": MOTIVO_GRAFICO}
+          "contatore": MOTIVO_CONTATORE, "grafico": MOTIVO_GRAFICO,
+          "cartellino": MOTIVO_CARTELLINO, "confronto": MOTIVO_CONFRONTO,
+          "interfaccia": MOTIVO_INTERFACCIA, "domanda": MOTIVO_DOMANDA}
 
 # ---------------------------------------------------------------- pagina
 
