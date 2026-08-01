@@ -558,7 +558,7 @@ MOTIVO = (function(){
         ctx.save();
         ctx.translate(str*140, str*760);                 // cade
         ctx.rotate(str*0.9);                              // ruotando
-        ctx.globalAlpha=1-str*0.85;
+        ctx.globalAlpha=Math.pow(1-str,1.8);       // svanisce prima di toccare la riga della fonte
         tag(ctx,'#221B14');
         ctx.textAlign='center';
         ctx.fillStyle='#1FB877'; ctx.font='700 150px "Space Grotesk"';
@@ -648,7 +648,7 @@ MOTIVO = (function(){
       c2.style.opacity=(cp*(t>SLOG?Math.max(0,1-(t-SLOG)*1.4):1)).toFixed(2);
       document.getElementById('psx').style.color = t>1.0 ? '#FBF8F2' : '#B5A896';
       document.getElementById('pdx').style.color = '#1FB877';
-      const via=(t>SLOG?Math.max(0.15,1-(t-SLOG)*1.6):1).toFixed(2);   // largo allo slogan
+      const via=(t>SLOG?Math.max(0,1-(t-SLOG)*2.2):1).toFixed(2);   // largo allo slogan: spariscono
       for(const id of ['tsx','tdx','psx','pdx'])
         document.getElementById(id).style.opacity=via;
     }

@@ -13,6 +13,22 @@ danno di non farla non sia peggiore: in quel caso si scrive qui perche'.
 
 ---
 
+## 2026-08-02 · Rifiniture ai reel 11-12, anomalia in coda, e il circuito del riscontro
+**Rifiniture (viste sui crop a piena risoluzione)**: nel 12 i titoli delle colonne restavano
+in trasparenza sotto lo slogan e si incastravano col dominio; nel 11 la faccia strappata del
+cartellino attraversava la riga della fonte mentre cadeva. Corretti entrambi, ri-collaudati PASS.
+**Coda**: la voce non pubblicata "Reel — Non è uno sconto" (04/08) portava il permalink del
+carosello G: un lettore l'avrebbe potuta credere gia' uscita. Tolto il permalink da ogni voce
+con pubblicato=false. Margine coda: 3 voci future, copertura fino al 06/08 — sotto la regola
+dei 60 giorni, tocca alla fabbrica del mattino.
+**Circuito del riscontro (nuovo)**: attivita' settimanale `Accumunation — riscontro reel e
+taratura`, trig_01D88yUi5TFhZYckqhCakfms, lunedi' 05:15 UTC (prima della fabbrica delle 06:00):
+legge le insights dei contenuti pubblicati (lista chiusa di tool, solo lettura + push del
+registro), aggiorna `piano/riscontri.json`, e se un motivo visivo stacca nettamente gli altri
+scrive la raccomandazione nel report e UNA riga datata in fondo a `tools/CANONE-REEL.md`
+sotto "## Riscontri dal pubblico". Le regole del canone si toccano coi numeri, non a sensazione.
+**Nessuna pubblicazione oggi 01/08**: la coda non aveva voci per quella data (buco di ritmo
+fra il 31/07 e il 02/08).
 ## 2026-08-01 · La revisione di Enrico sui reel 08-10, la causa vera, e i reel 11-14
 **Cosa ha trovato Enrico**: (1) la pila diceva "1 su 5" e mostrava ~1 su 6, perche' i capi
 distrutti sparivano dal conteggio; (2) tratti di voce storpiati ("Buttati" letto "potati",
