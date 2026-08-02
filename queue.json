@@ -130,19 +130,6 @@
    "permalink": "https://www.instagram.com/p/DbbVyPsm9pX/"
   },
   {
-   "id": "03-non-e-uno-sconto",
-   "quando": "2026-08-04 20:00 Roma",
-   "tipo": "reel",
-   "titolo": "Reel — Non è uno sconto",
-   "caption": "Non stiamo facendo sconti. Stiamo facendo matematica.\nLa differenza tra una promozione finta e un listino a quantita' vero.\nLink in bio.\n\n🫂\n\n#accumunation #trasparenza #preordine #consumoconsapevole #noaisconti",
-   "media": [
-    "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/reel/03-non-e-uno-sconto.mp4"
-   ],
-   "pubblicato": false,
-   "cover": "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/reel/03-non-e-uno-sconto-cover.jpg",
-   "nota": "Rigenerato il 31/07 col logo nuovo. Copertina con gancio. share_to_feed: false."
-  },
-  {
    "id": "05-f-credito-passaparola",
    "quando": "2026-08-02 20:00 Roma",
    "tipo": "carosello",
@@ -203,6 +190,136 @@
    ],
    "pubblicato": true,
    "permalink": "https://www.instagram.com/p/DbbV4UxHf4E/"
+  },
+  {
+   "id": "06-stesso-prezzo-per-tutti",
+   "quando": "2026-08-04 20:00 Roma",
+   "tipo": "reel",
+   "titolo": "Reel — Stesso prezzo per tutti",
+   "caption": "Cento euro da soli, sessantadue in cinquecento.\n\nStesso prodotto, stesso giorno, stesso venditore: è il listino a quantità, aperto a tutti. Il meccanismo intero è sul sito.\n\nLink in bio.\n\n🫂\n\n#acquistocollettivo #insiemecostadimeno #comefunziona #gruppodiacquisto #accumunation",
+   "media": [
+    "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/reel/06-stesso-prezzo-per-tutti.mp4"
+   ],
+   "cover": "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/reel/06-stesso-prezzo-per-tutti-cover.jpg",
+   "nota": "Stile D (movimento continuo), collaudo + ASR PASS. Audio: voce + musica libera muxata (autonomia). share_to_feed: false. Per l'audio in trend serve Enrico dall'app.",
+   "pubblicato": false
+  },
+  {
+   "id": "13-countdown-che-riparte",
+   "quando": "2026-08-07 20:00 Roma",
+   "tipo": "reel",
+   "titolo": "Reel — Il countdown che riparte",
+   "caption": "Il countdown scade. E riparte da capo.\n\nStesse condizioni, stesso prezzo di prima: per questo trucco l'Autorità garante ha sanzionato un sito per due milioni di euro.\n\nLink in bio.\n\n🫂\n\n#trasparenza #noaisconti #prezzi #consumoconsapevole #accumunation",
+   "media": [
+    "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/reel/13-countdown-che-riparte.mp4"
+   ],
+   "cover": "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/reel/13-countdown-che-riparte-cover.jpg",
+   "nota": "Stile D (movimento continuo), collaudo + ASR PASS. Audio: voce + musica libera muxata (autonomia). share_to_feed: false. Per l'audio in trend serve Enrico dall'app.",
+   "pubblicato": false
+  },
+  {
+   "id": "08-un-capo-su-cinque",
+   "quando": "2026-08-11 20:00 Roma",
+   "tipo": "reel",
+   "titolo": "Reel — Un capo su cinque",
+   "caption": "Un capo su cinque non si vende mai.\n\nE una parte finiva distrutta, nuova, mai indossata. Dal 19 luglio la legge europea lo vieta alle grandi imprese.\n\nLink in bio.\n\n🫂\n\n#consumoconsapevole #preordine #insiemecostadimeno #trasparenza #accumunation",
+   "media": [
+    "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/reel/08-un-capo-su-cinque.mp4"
+   ],
+   "cover": "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/reel/08-un-capo-su-cinque-cover.jpg",
+   "nota": "Stile D (movimento continuo), collaudo + ASR PASS. Audio: voce + musica libera muxata (autonomia). share_to_feed: false. Per l'audio in trend serve Enrico dall'app.",
+   "pubblicato": false
+  },
+  {
+   "id": "10-rispetto-a-cosa",
+   "quando": "2026-08-14 20:00 Roma",
+   "tipo": "reel",
+   "titolo": "Reel — Rispetto a cosa",
+   "caption": "Meno cinquanta per cento. Rispetto a cosa?\n\nDal 2023 lo sconto si calcola sul prezzo più basso degli ultimi trenta giorni, non su quello gonfiato la settimana prima.\n\nLink in bio.\n\n🫂\n\n#noaisconti #prezzi #comefunziona #trasparenza #accumunation",
+   "media": [
+    "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/reel/10-rispetto-a-cosa.mp4"
+   ],
+   "cover": "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/reel/10-rispetto-a-cosa-cover.jpg",
+   "nota": "Stile D (movimento continuo), collaudo + ASR PASS. Audio: voce + musica libera muxata (autonomia). share_to_feed: false. Per l'audio in trend serve Enrico dall'app.",
+   "pubblicato": false
+  },
+  {
+   "id": "09-centotrenta-chili",
+   "quando": "2026-08-18 20:00 Roma",
+   "tipo": "reel",
+   "titolo": "Reel — Centotrenta chili",
+   "caption": "Centotrenta chili di cibo buttati a testa, ogni anno.\n\nDieci li buttano i negozi. E quel costo non sparisce: finisce nel prezzo.\n\nLink in bio.\n\n🫂\n\n#consumoconsapevole #prezzi #gruppodiacquisto #insiemecostadimeno #accumunation",
+   "media": [
+    "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/reel/09-centotrenta-chili.mp4"
+   ],
+   "cover": "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/reel/09-centotrenta-chili-cover.jpg",
+   "nota": "Stile D (movimento continuo), collaudo + ASR PASS. Audio: voce + musica libera muxata (autonomia). share_to_feed: false. Per l'audio in trend serve Enrico dall'app.",
+   "pubblicato": false
+  },
+  {
+   "id": "11-mai-esistito",
+   "quando": "2026-08-21 20:00 Roma",
+   "tipo": "reel",
+   "titolo": "Reel — Mai esistito",
+   "caption": "C'è un outlet dove il prezzo pieno non è mai esistito.\n\nCapi nati per l'outlet, con lo sconto su un prezzo che nessuno ha mai pagato: trecentomila euro di sanzione.\n\nLink in bio.\n\n🫂\n\n#noaisconti #trasparenza #comefunziona #prezzi #accumunation",
+   "media": [
+    "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/reel/11-mai-esistito.mp4"
+   ],
+   "cover": "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/reel/11-mai-esistito-cover.jpg",
+   "nota": "Stile D (movimento continuo), collaudo + ASR PASS. Audio: voce + musica libera muxata (autonomia). share_to_feed: false. Per l'audio in trend serve Enrico dall'app.",
+   "pubblicato": false
+  },
+  {
+   "id": "12-ottantacinque-centesimi",
+   "quando": "2026-08-25 20:00 Roma",
+   "tipo": "reel",
+   "titolo": "Reel — Ottantacinque centesimi",
+   "caption": "In Germania distruggere un reso costa 85 centesimi. Donarlo costa di più.\n\nRisultato: venti milioni di resi distrutti in un anno, misurati già nel 2019.\n\nLink in bio.\n\n🫂\n\n#consumoconsapevole #insiemecostadimeno #preordine #trasparenza #accumunation",
+   "media": [
+    "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/reel/12-ottantacinque-centesimi.mp4"
+   ],
+   "cover": "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/reel/12-ottantacinque-centesimi-cover.jpg",
+   "nota": "Stile D (movimento continuo), collaudo + ASR PASS. Audio: voce + musica libera muxata (autonomia). share_to_feed: false. Per l'audio in trend serve Enrico dall'app.",
+   "pubblicato": false
+  },
+  {
+   "id": "14-scarsita-funziona",
+   "quando": "2026-08-28 20:00 Roma",
+   "tipo": "reel",
+   "titolo": "Reel — La scarsità funziona",
+   "caption": "“Ultimi 2 pezzi” funziona anche se non ci credi.\n\nTrentasette studi arrivano alla stessa conclusione: la scarsità spinge a comprare, vera o finta. Non è ingenuità.\n\nLink in bio.\n\n🫂\n\n#noaisconti #consumoconsapevole #prezzi #comefunziona #accumunation",
+   "media": [
+    "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/reel/14-scarsita-funziona.mp4"
+   ],
+   "cover": "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/reel/14-scarsita-funziona-cover.jpg",
+   "nota": "Stile D (movimento continuo), collaudo + ASR PASS. Audio: voce + musica libera muxata (autonomia). share_to_feed: false. Per l'audio in trend serve Enrico dall'app.",
+   "pubblicato": false
+  },
+  {
+   "id": "15-uno-su-tre",
+   "quando": "2026-09-01 20:00 Roma",
+   "tipo": "reel",
+   "titolo": "Reel — Uno su tre",
+   "caption": "In Francia hanno controllato più di cinquemila negozi in saldo.\n\nUno su tre aveva promozioni irregolari: ottocentonovanta verbali in un anno. Se uno sconto ti sembra strano, forse lo è.\n\nLink in bio.\n\n🫂\n\n#trasparenza #prezzi #noaisconti #gruppodiacquisto #accumunation",
+   "media": [
+    "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/reel/15-uno-su-tre.mp4"
+   ],
+   "cover": "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/reel/15-uno-su-tre-cover.jpg",
+   "nota": "Stile D (movimento continuo), collaudo + ASR PASS. Audio: voce + musica libera muxata (autonomia). share_to_feed: false. Per l'audio in trend serve Enrico dall'app.",
+   "pubblicato": false
+  },
+  {
+   "id": "07-countdown-scaduto",
+   "quando": "2026-09-04 20:00 Roma",
+   "tipo": "reel",
+   "titolo": "Reel — Il countdown scaduto",
+   "caption": "Quel countdown l'hai già visto.\n\nScade, e non succede niente: l'offerta resta lì. L'urgenza si fabbrica, e chi la fabbrica ci conta.\n\nLink in bio.\n\n🫂\n\n#comefunziona #consumoconsapevole #trasparenza #insiemecostadimeno #accumunation",
+   "media": [
+    "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/reel/07-countdown-scaduto.mp4"
+   ],
+   "cover": "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/reel/07-countdown-scaduto-cover.jpg",
+   "nota": "Stile D (movimento continuo), collaudo + ASR PASS. Audio: voce + musica libera muxata (autonomia). share_to_feed: false. Per l'audio in trend serve Enrico dall'app.",
+   "pubblicato": false
   }
  ],
  "gia_pubblicati": [

@@ -13,6 +13,22 @@ danno di non farla non sia peggiore: in quel caso si scrive qui perche'.
 
 ---
 
+## 2026-08-02 (pomeriggio) · Via libera di Enrico: i reel stile D entrano in coda
+**Cosa**: Enrico ha approvato il formato ("decisamente meglio. Andiamo avanti"). In coda
+10 reel, due a settimana (martedì e venerdì, 20:00), dal 04/08 al 04/09:
+06 stesso-prezzo · 13 countdown-che-riparte · 08 un-capo-su-cinque · 10 rispetto-a-cosa ·
+09 centotrenta-chili · 11 mai-esistito · 12 ottantacinque-centesimi · 14 scarsita-funziona ·
+15 uno-su-tre · 07 countdown-scaduto. Caption a canone, hashtag ruotati, cover 9:16, tutti
+con collaudo + ASR PASS.
+**Sostituzione**: il vecchio 03-non-e-uno-sconto (stile slideshow, superato per decisione di
+Enrico del 31/07) e' USCITO dalla coda; il suo slot del 04/08 va al 06 nuovo, che copre lo
+stesso tema (il meccanismo, non uno sconto). I file del 03 restano nel repo.
+**Margine**: la coda passa da 4 a 33 giorni di copertura (12 contenuti futuri). Ancora sotto
+i 60: tocca alla fabbrica del lunedi' colmare con caroselli e threads.
+**Audio**: tutti i reel escono in modalita' autonomia (voce+musica muxata). Per l'audio in
+trend serve Enrico dall'app, reel per reel: va ricordato nei report del pubblicatore.
+**Rischio**: contenuti gia' approvati nel formato; il default e' approvato via
+piano/da-approvare.html. Nessun trigger toccato, finestra di silenzio rispettata (15:30 Roma).
 ## 2026-08-02 (notte) · Il filo del cartellino, i due revisori nuovi, e i cinque della prova
 **L'errore trovato da Enrico**: nel reel 11 il filo oscillava in senso opposto al cartellino.
 Causa: il filo era calcolato con una formula a parte (+sin) mentre il cartellino ruota col
