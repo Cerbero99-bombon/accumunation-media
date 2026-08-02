@@ -16,7 +16,8 @@ NUM = {"ottantacinque":["85"],"trentasette":["37"],"trecentomila":["300000","300
        "venti":["20"],"duemiladiciannove":["2019"],"duemilaventitre":["2023"],
        "centotrenta":["130"],"cinquanta":["50"],"diciannove":["19"],"cinquecento":["500"],
        "trecentonovantatre":["393"],"novanta":["90"],"dieci":["10"],"cento":["100"],
-       "duemilioni":["2milioni"],"ventimila":["20mila","20000"]}
+       "duemilioni":["2milioni"],"ventimila":["20mila","20000"],
+       "cinquemila":["5000","5mila"],"ottocentonovanta":["890"],"cinquecento":["500"]}
 
 def deacc(s): return ''.join(c for c in unicodedata.normalize('NFD',s)
                              if unicodedata.category(c)!='Mn')

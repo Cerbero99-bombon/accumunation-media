@@ -535,10 +535,12 @@ MOTIVO = (function(){
       ctx.save(); ctx.translate(540,1060); ctx.scale(zoom,zoom); ctx.translate(-540,-1060);
       // il filo
       const sw=Math.sin(t*1.35)*0.10*Math.exp(-t*0.05);          // il pendolo, non si ferma mai
-      ctx.strokeStyle='#7D7161'; ctx.lineWidth=4;
-      ctx.beginPath(); ctx.moveTo(540,150);
-      ctx.lineTo(540+Math.sin(sw)*(CY-TH/2+64-150), CY-TH/2+64); ctx.stroke();
+      // REGOLA (errore trovato da Enrico il 02/08): filo e cartellino sono UN corpo rigido.
+      // Il filo si disegna DENTRO la stessa rotazione, mai ricalcolato a parte: la versione
+      // precedente usava +sin per il filo mentre il canvas ruota a -sin, e oscillavano opposti.
       ctx.save(); ctx.translate(540,150); ctx.rotate(sw); ctx.translate(-540,-150);
+      ctx.strokeStyle='#7D7161'; ctx.lineWidth=4;
+      ctx.beginPath(); ctx.moveTo(540,150); ctx.lineTo(540, CY-TH/2+64); ctx.stroke();
       ctx.translate(CX,CY);
       const str=ease(Math.min(1,Math.max(0,(t-cfg.strappo_a)/0.8)));
       // il retro: appare da sotto lo strappo
@@ -791,10 +793,83 @@ MOTIVO = (function(){
   };
 })();
 """
+
+MOTIVO_VETRINE = r"""
+// VETRINE — una via di negozi in saldo, l'ispezione passa, uno su tre viene verbalizzato.
+// La griglia e' 30 vetrine e i verbali sono ESATTAMENTE 10: il rapporto detto a voce si
+// deve poter contare sul fotogramma fermo.
+// cfg: { scan_a, scan_fine, chip_a, chip:"1 su 3" }
+MOTIVO = (function(){
+  const cfg = CFG;
+  let seed=61; function rnd(){seed=(seed*1103515245+12345)&0x7fffffff;return seed/0x7fffffff;}
+  const COLS=6, ROWS=5, X0=118, Y0=724, DX=142, DY=142, W=110, H=104;
+  const S=[];
+  for(let i=0;i<COLS*ROWS;i++){
+    S.push({x:X0+(i%COLS)*DX, y:Y0+((i/COLS)|0)*DY,
+            irr:(i%3===1),                        // 10 su 30, contabili
+            ph:rnd()*6.283, j:(rnd()-.5)*8});
+  }
+  function negozio(o,acceso,flag,t){
+    const x=o.x+o.j, y=o.y+Math.sin(t*0.9+o.ph)*2.5;
+    ctx.globalAlpha = acceso ? 0.9 : 0.32;
+    ctx.strokeStyle='#B5A896'; ctx.lineWidth=3;
+    ctx.strokeRect(x,y+26,W,H-26);                              // il corpo
+    ctx.fillStyle='rgba(251,248,242,'+(acceso?0.14:0.05)+')';
+    ctx.fillRect(x+14,y+44,W-28,H-58);                          // la vetrina
+    ctx.fillStyle='#B5A896';
+    for(let k=0;k<4;k++){                                        // la tenda a strisce
+      ctx.globalAlpha=(acceso?0.9:0.32)*(k%2?0.45:0.95);
+      ctx.fillRect(x-4+k*(W+8)/4, y+8, (W+8)/4-3, 20);
+    }
+    if(flag){                                                    // il verbale: verde, storto
+      ctx.save(); ctx.translate(x+W/2,y+70); ctx.rotate(-0.12);
+      ctx.globalAlpha=0.95; ctx.fillStyle='#1FB877';
+      ctx.fillRect(-44,-22,88,44);
+      ctx.fillStyle='#0A2418'; ctx.font='800 22px Manrope'; ctx.textAlign='center';
+      ctx.fillText('VERBALE',0,8); ctx.restore();
+    }
+  }
+  return {
+    init(){
+      document.getElementById('mezzo').innerHTML =
+        '<div id="chip" style="position:absolute;top:562px;left:0;right:0;text-align:center;'+
+        'font-family:\'Space Grotesk\';font-weight:700;font-size:150px;letter-spacing:-6px;'+
+        'color:#1FB877;opacity:0;text-shadow:0 20px 70px rgba(22,18,13,.95)"></div>';
+      document.getElementById('chip').textContent=cfg.chip;
+    },
+    draw(t){
+      const fin=Math.min(1,Math.max(0,(t-SLOG)/0.8));
+      const zoom=1+0.05*(t/DUR)+0.02*Math.sin(t*1.2)*fin;
+      ctx.save(); ctx.translate(540,1080); ctx.scale(zoom,zoom); ctx.translate(-540,-1080);
+      // l'ispezione: una linea che scorre la via, negozio per negozio
+      const p=Math.min(1,Math.max(0,(t-cfg.scan_a)/(cfg.scan_fine-cfg.scan_a)));
+      const passo=p*COLS*ROWS;
+      for(let i=0;i<S.length;i++){
+        // ordine di lettura: riga per riga, da sinistra
+        negozio(S[i], i<passo, S[i].irr && i<passo-0.5, t);
+      }
+      if(p>0 && p<1){                                            // la linea dell'ispezione
+        const i=Math.floor(passo), r=(i/COLS)|0, c=i%COLS;
+        const lx=X0+c*DX+(passo-i)*DX-16, ly=Y0+r*DY;
+        ctx.globalAlpha=0.85; ctx.strokeStyle='#1FB877'; ctx.lineWidth=4;
+        ctx.setLineDash([10,8]); ctx.lineDashOffset=-t*30;
+        ctx.beginPath(); ctx.moveTo(lx,ly-8); ctx.lineTo(lx,ly+H+14); ctx.stroke();
+        ctx.setLineDash([]);
+      }
+      ctx.restore();
+      velo();
+      const ch=document.getElementById('chip');
+      const cp=Math.min(1,Math.max(0,(t-cfg.chip_a)/0.4));
+      ch.style.opacity=(cp*(t>SLOG?Math.max(0,1-(t-SLOG)*1.8):1)).toFixed(2);
+      ch.style.transform='scale('+(0.8+0.2*ease(cp)+0.015*Math.sin(t*2.1)).toFixed(3)+')';
+    }
+  };
+})();
+"""
 MOTIVI = {"folla": MOTIVO_FOLLA, "conto": MOTIVO_CONTO, "pila": MOTIVO_PILA,
           "contatore": MOTIVO_CONTATORE, "grafico": MOTIVO_GRAFICO,
           "cartellino": MOTIVO_CARTELLINO, "confronto": MOTIVO_CONFRONTO,
-          "interfaccia": MOTIVO_INTERFACCIA, "domanda": MOTIVO_DOMANDA}
+          "interfaccia": MOTIVO_INTERFACCIA, "domanda": MOTIVO_DOMANDA, "vetrine": MOTIVO_VETRINE}
 
 # ---------------------------------------------------------------- pagina
 
