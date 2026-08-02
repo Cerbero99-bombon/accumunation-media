@@ -401,7 +401,7 @@ MOTIVO = (function(){
       ctx.restore();
       velo();
       const big=document.getElementById('big');
-      big.textContent=val;
+      big.textContent = cfg.dec ? (cfg.fino*p).toFixed(cfg.dec).replace('.',',') : val;
       big.style.transform='scale('+(1+0.02*Math.sin(t*2.1)+0.06*(1-p)).toFixed(3)+')';
       document.getElementById('etich').style.opacity=(ev*(t>SLOG?Math.max(0,1-(t-SLOG)*2):1)).toFixed(2);
       document.getElementById('big').style.opacity=document.getElementById('uni').style.opacity=
@@ -554,7 +554,9 @@ MOTIVO = (function(){
         ctx.strokeStyle='#FBF8F2'; ctx.lineWidth=4;
         ctx.strokeRect(-212,-122,424,214);
         ctx.fillStyle='#FBF8F2';
-        ctx.fillText('MAI',0,-36); ctx.fillText('ESISTITO',0,56);
+        const TB=(cfg.timbro||'MAI|ESISTITO').split('|');
+        if(TB.length>1){ ctx.fillText(TB[0],0,-36); ctx.fillText(TB[1],0,56); }
+        else ctx.fillText(TB[0],0,10);
         ctx.restore();
       }
       // la faccia davanti: prezzo barrato e sconto urlato; si strappa e cade
@@ -573,7 +575,7 @@ MOTIVO = (function(){
         ctx.strokeStyle='#B5A896'; ctx.lineWidth=8;
         ctx.beginPath(); ctx.moveTo(-w/2-16,80); ctx.lineTo(w/2+16,96); ctx.stroke();
         ctx.fillStyle='#7D7161'; ctx.font='600 34px Manrope';
-        ctx.fillText('OUTLET',0,224);
+        ctx.fillText(cfg.etichetta||'OUTLET',0,224);
         ctx.restore();
       }
       ctx.restore(); ctx.restore();
@@ -668,8 +670,9 @@ MOTIVO_INTERFACCIA = r"""
 MOTIVO = (function(){
   const cfg = CFG;
   function resto(t){
-    // prima del primo reset il timer sta MORENDO (arriva a zero proprio quando la voce
-    // dice "ecco"); al reset riparte da capo, da cfg.secondi pieni. E' la bugia in scena.
+    // Con reset: il timer muore proprio quando la voce dice "ecco", poi riparte da capo.
+    // Senza reset (cfg.reset assente o vuota): un countdown normale che scorre e basta.
+    if(!cfg.reset || !cfg.reset.length) return Math.max(0, cfg.secondi-t);
     const r0=cfg.reset[0];
     if(t<r0) return Math.max(0, r0-t);
     let da=r0; for(const r of cfg.reset){ if(t>=r) da=r; }
@@ -689,6 +692,9 @@ MOTIVO = (function(){
         '<div style="margin:18px 50px 0;height:26px;width:42%;border-radius:13px;background:rgba(251,248,242,.10)"></div>'+
         '<div id="pz" style="margin:40px 50px 0;font-family:\'Space Grotesk\';font-weight:700;'+
         'font-size:78px;color:#FBF8F2"></div>'+
+        (cfg.pill?'<div id="scars" style="display:inline-block;margin:22px 0 0 50px;'+
+        'font-weight:800;font-size:34px;letter-spacing:.5px;color:#16120D;'+
+        'background:#B5A896;border-radius:14px;padding:12px 22px"></div><br>':'')+
         '<div id="cd" style="margin:26px 50px 0;display:inline-block;margin-left:50px;'+
         'font-family:\'Space Grotesk\';font-weight:700;font-size:56px;letter-spacing:1px;'+
         'color:#16120D;background:#FBF8F2;border-radius:18px;padding:14px 30px;'+
@@ -697,6 +703,7 @@ MOTIVO = (function(){
         'font-family:\'Space Grotesk\';font-weight:700;font-size:44px;color:#0A2418;'+
         'background:#1FB877;border-radius:26px;padding:24px 16px;opacity:0"></div>';
       document.getElementById('pz').innerHTML=cfg.prezzo;
+      if(cfg.pill) document.getElementById('scars').textContent=cfg.pill;
       document.getElementById('multa2').textContent=cfg.multa;
     },
     draw(t){
@@ -711,6 +718,8 @@ MOTIVO = (function(){
       let flash=0;
       for(const r of cfg.reset){ if(t>=r && t<r+0.5) flash=1-(t-r)/0.5; }
       cd.style.background = flash>0 ? '#1FB877' : (s<2.2 ? '#FBF8F2' : 'rgba(251,248,242,.92)');
+      if(cfg.pill){ const sc=document.getElementById('scars');
+        sc.style.transform='scale('+(1+0.045*Math.sin(t*3.4))+') rotate('+(0.6*Math.sin(t*2.2))+'deg)'; }
       cd.style.transform='scale('+(1+0.05*flash+(s<2.2?0.02*Math.sin(t*14):0.012*Math.sin(t*2.4))).toFixed(3)+')';
       const card=document.getElementById('card');
       card.style.transform='translateY('+(Math.sin(t*1.05)*7).toFixed(1)+'px) scale('+
@@ -806,9 +815,8 @@ MOTIVO = (function(){
   let seed=61; function rnd(){seed=(seed*1103515245+12345)&0x7fffffff;return seed/0x7fffffff;}
   const COLS=6, ROWS=5, X0=118, Y0=724, DX=142, DY=142, W=110, H=104;
   const S=[];
-  // 10 su 30 ESATTI ma sparsi: i%3 metteva i verbali in due colonne perfette,
-  // un pattern che si vede e suona finto. Due per riga, colonne sempre diverse.
-  const IRR=new Set([1,4, 6,9, 14,17, 18,21, 26,29].map((v,k)=>[1,4,8,11,12,17,20,21,27,28][k]));
+  // Gli irregolari sono ESATTI ma sparsi (mai colonne allineate: il pattern si vede).
+  const IRR=new Set(cfg.flag||[1,4,8,11,12,17,20,21,27,28]);
   for(let i=0;i<COLS*ROWS;i++){
     S.push({x:X0+(i%COLS)*DX, y:Y0+((i/COLS)|0)*DY,
             irr:IRR.has(i),
@@ -821,17 +829,25 @@ MOTIVO = (function(){
     ctx.strokeRect(x,y+26,W,H-26);                              // il corpo
     ctx.fillStyle='rgba(251,248,242,'+(acceso?0.14:0.05)+')';
     ctx.fillRect(x+14,y+44,W-28,H-58);                          // la vetrina
-    ctx.fillStyle='#B5A896';
-    for(let k=0;k<4;k++){                                        // la tenda a strisce
-      ctx.globalAlpha=(acceso?0.9:0.32)*(k%2?0.45:0.95);
-      ctx.fillRect(x-4+k*(W+8)/4, y+8, (W+8)/4-3, 20);
+    if(cfg.stile==='siti'){                                      // finestra browser
+      ctx.fillStyle='rgba(251,248,242,'+(acceso?0.22:0.08)+')';
+      ctx.fillRect(x,y+2,W,22);
+      ctx.fillStyle='#16120D';
+      for(let k=0;k<3;k++){ ctx.globalAlpha=(acceso?0.9:0.4);
+        ctx.beginPath(); ctx.arc(x+12+k*14,y+13,4,0,6.2832); ctx.fill(); }
+    } else {
+      ctx.fillStyle='#B5A896';
+      for(let k=0;k<4;k++){                                      // la tenda a strisce
+        ctx.globalAlpha=(acceso?0.9:0.32)*(k%2?0.45:0.95);
+        ctx.fillRect(x-4+k*(W+8)/4, y+8, (W+8)/4-3, 20);
+      }
     }
     if(flag){                                                    // il verbale: verde, storto
       ctx.save(); ctx.translate(x+W/2,y+70); ctx.rotate(-0.12);
       ctx.globalAlpha=0.95; ctx.fillStyle='#1FB877';
       ctx.fillRect(-44,-22,88,44);
       ctx.fillStyle='#0A2418'; ctx.font='800 22px Manrope'; ctx.textAlign='center';
-      ctx.fillText('VERBALE',0,8); ctx.restore();
+      ctx.fillText(cfg.tag||'VERBALE',0,8); ctx.restore();
     }
   }
   return {
@@ -871,10 +887,128 @@ MOTIVO = (function(){
   };
 })();
 """
+
+MOTIVO_CENTO = r"""
+// CENTO — una griglia 10x10. La voce chiede "su cento, quanti?", e se ne accendono
+// POCHI, esatti e sparsi. Il vuoto che resta e' il messaggio.
+// cfg: { acc:[indici degli accesi], accendi_a, chip:"al massimo 5 su 100", chip_a }
+MOTIVO = (function(){
+  const cfg = CFG;
+  let seed=71; function rnd(){seed=(seed*1103515245+12345)&0x7fffffff;return seed/0x7fffffff;}
+  const N=100, COLS=10, X0=120, Y0=700, DX=94, DY=78;
+  const D=[];
+  for(let i=0;i<N;i++) D.push({x:X0+(i%COLS)*DX, y:Y0+((i/COLS)|0)*DY,
+                               ph:rnd()*6.283, ord:rnd()});
+  const ACC=cfg.acc||[7,23,41,68,84];
+  function divano(x,y,on,t,al){
+    ctx.globalAlpha=al;
+    ctx.fillStyle = on ? '#1FB877' : '#B5A896';
+    ctx.fillRect(x, y+18, 64, 22);                 // seduta
+    ctx.fillRect(x, y, 64, 14);                    // schienale
+    ctx.fillRect(x-8, y+8, 10, 32);                // braccioli
+    ctx.fillRect(x+62, y+8, 10, 32);
+  }
+  return {
+    init(){
+      document.getElementById('mezzo').innerHTML =
+        '<div id="chipc" style="position:absolute;top:560px;left:0;right:0;text-align:center;'+
+        'font-family:\'Space Grotesk\';font-weight:700;font-size:96px;letter-spacing:-3px;'+
+        'color:#1FB877;opacity:0;text-shadow:0 20px 70px rgba(22,18,13,.95)"></div>';
+      document.getElementById('chipc').textContent=cfg.chip;
+    },
+    draw(t){
+      const fin=Math.min(1,Math.max(0,(t-SLOG)/0.8));
+      const zoom=1+0.05*(t/DUR)+0.02*Math.sin(t*1.2)*fin;
+      ctx.save(); ctx.translate(540,1080); ctx.scale(zoom,zoom); ctx.translate(-540,-1080);
+      const ent=Math.min(1,t/1.4);                 // la griglia entra a onde
+      for(let i=0;i<N;i++){
+        const d=D[i];
+        if(d.ord>ent) continue;
+        const on = ACC.includes(i) && t>cfg.accendi_a+ACC.indexOf(i)*0.22;
+        const br=Math.sin(t*0.9+d.ph)*2;
+        divano(d.x, d.y+br, on, t, on?0.95:(0.30+0.05*Math.sin(t*1.1+d.ph)));
+        if(on){ ctx.globalAlpha=0.25+0.1*Math.sin(t*2.5+d.ph);   // alone dei pochi veri
+          ctx.fillStyle='#1FB877'; ctx.fillRect(d.x-14,d.y+br-8,92,56); }
+      }
+      ctx.restore();
+      velo();
+      const ch=document.getElementById('chipc');
+      const cp=Math.min(1,Math.max(0,(t-cfg.chip_a)/0.4));
+      ch.style.opacity=(cp*(t>SLOG?Math.max(0,1-(t-SLOG)*1.8):1)).toFixed(2);
+      ch.style.transform='scale('+(0.85+0.15*ease(cp)+0.014*Math.sin(t*2.1)).toFixed(3)+')';
+    }
+  };
+})();
+"""
+
+MOTIVO_TEMPO = r"""
+// TEMPO — una linea del tempo: un paese si muove per primo, gli altri arrivano anni dopo.
+// cfg: { anni:[2021,...,2027], da:2022, a:2026, et_da:"Francia", et_a:"Unione Europea",
+//        da_t, corsa_t, a_t, chip:"4 anni prima", chip_a }
+MOTIVO = (function(){
+  const cfg = CFG;
+  const X0=120, X1=960, Y=1120;
+  function px(anno){ return X0+(X1-X0)*(anno-cfg.anni[0])/(cfg.anni[cfg.anni.length-1]-cfg.anni[0]); }
+  return {
+    init(){
+      document.getElementById('mezzo').innerHTML =
+        '<div id="chipt" style="position:absolute;top:588px;left:0;right:0;text-align:center;'+
+        'font-family:\'Space Grotesk\';font-weight:700;font-size:110px;letter-spacing:-4px;'+
+        'color:#1FB877;opacity:0;text-shadow:0 20px 70px rgba(22,18,13,.95)"></div>';
+      document.getElementById('chipt').textContent=cfg.chip;
+    },
+    draw(t){
+      const fin=Math.min(1,Math.max(0,(t-SLOG)/0.8));
+      const zoom=1+0.05*(t/DUR)+0.02*Math.sin(t*1.2)*fin;
+      ctx.save(); ctx.translate(540,1080); ctx.scale(zoom,zoom);
+      ctx.rotate(0.006*Math.sin(t*1.05)*fin); ctx.translate(-540,-1080);
+      // l'asse e gli anni
+      ctx.globalAlpha=0.6; ctx.strokeStyle='#7D7161'; ctx.lineWidth=4;
+      ctx.beginPath(); ctx.moveTo(X0,Y); ctx.lineTo(X1,Y); ctx.stroke();
+      ctx.font='600 30px Manrope'; ctx.textAlign='center'; ctx.fillStyle='#7D7161';
+      for(const a of cfg.anni){
+        ctx.globalAlpha=0.7;
+        ctx.beginPath(); ctx.moveTo(px(a),Y-12); ctx.lineTo(px(a),Y+12); ctx.stroke();
+        ctx.fillText(String(a), px(a), Y+56);
+      }
+      const p1=ease(Math.min(1,Math.max(0,(t-cfg.da_t)/0.5)));
+      const run=ease(Math.min(1,Math.max(0,(t-cfg.corsa_t)/(cfg.a_t-cfg.corsa_t))));
+      const p2=ease(Math.min(1,Math.max(0,(t-cfg.a_t)/0.5)));
+      if(run>0){                                   // la corsa fra i due punti
+        ctx.globalAlpha=0.9; ctx.strokeStyle='#1FB877'; ctx.lineWidth=9; ctx.lineCap='round';
+        ctx.setLineDash([16,12]); ctx.lineDashOffset=-t*26;
+        ctx.beginPath(); ctx.moveTo(px(cfg.da),Y);
+        ctx.lineTo(px(cfg.da)+(px(cfg.a)-px(cfg.da))*run, Y); ctx.stroke(); ctx.setLineDash([]);
+      }
+      function nodo(anno,et,pp,sotto){
+        if(pp<=0) return;
+        const x=px(anno), pulse=1+0.10*Math.sin(t*2.4)*pp;
+        ctx.globalAlpha=pp; ctx.fillStyle='#1FB877';
+        ctx.beginPath(); ctx.arc(x,Y,20*pulse*pp,0,6.2832); ctx.fill();
+        ctx.globalAlpha=0.3*pp; ctx.beginPath(); ctx.arc(x,Y,38*pulse,0,6.2832); ctx.fill();
+        ctx.globalAlpha=pp; ctx.fillStyle='#FBF8F2';
+        ctx.font='800 38px Manrope';
+        ctx.fillText(et, x, sotto? Y+120 : Y-96);
+        ctx.font='700 44px "Space Grotesk"';
+        ctx.fillText(String(anno), x, sotto? Y+170 : Y-46);
+      }
+      nodo(cfg.da, cfg.et_da, p1, false);
+      nodo(cfg.a, cfg.et_a, p2, true);
+      ctx.restore();
+      velo();
+      const ch=document.getElementById('chipt');
+      const cp=Math.min(1,Math.max(0,(t-cfg.chip_a)/0.4));
+      ch.style.opacity=(cp*(t>SLOG?Math.max(0,1-(t-SLOG)*1.8):1)).toFixed(2);
+      ch.style.transform='scale('+(0.85+0.15*ease(cp)+0.014*Math.sin(t*2.1)).toFixed(3)+')';
+    }
+  };
+})();
+"""
 MOTIVI = {"folla": MOTIVO_FOLLA, "conto": MOTIVO_CONTO, "pila": MOTIVO_PILA,
           "contatore": MOTIVO_CONTATORE, "grafico": MOTIVO_GRAFICO,
           "cartellino": MOTIVO_CARTELLINO, "confronto": MOTIVO_CONFRONTO,
-          "interfaccia": MOTIVO_INTERFACCIA, "domanda": MOTIVO_DOMANDA, "vetrine": MOTIVO_VETRINE}
+          "interfaccia": MOTIVO_INTERFACCIA, "domanda": MOTIVO_DOMANDA, "vetrine": MOTIVO_VETRINE,
+          "cento": MOTIVO_CENTO, "tempo": MOTIVO_TEMPO}
 
 # ---------------------------------------------------------------- pagina
 
