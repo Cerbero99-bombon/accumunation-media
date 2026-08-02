@@ -1,7 +1,1 @@
-[
- {"t":"Quasi quattrocento negozi online, passati al setaccio.","rate":"+0%","pitch":"-4Hz","pausa":0.40},
- {"t":"Centoquarantotto usavano trucchi di manipolazione.","rate":"-2%","pitch":"-5Hz","pausa":0.45},
- {"t":"Countdown falsi e percorsi che spingono al più caro.","rate":"-4%","pitch":"-5Hz","pausa":0.50},
- {"t":"Più di uno su tre. Non è sfortuna.","rate":"-8%","pitch":"-6Hz","pausa":0.55},
- {"t":"Il prezzo pieno non si augura a nessuno.","rate":"-10%","pitch":"-7Hz","pausa":0.30}
-]
+[{"t": "Quasi quattrocento negozi online, passati al setaccio.", "rate": "+0%", "pitch": "-4Hz", "pausa": 0.4}, {"t": "In centoquarantotto usavano trucchi per manipolare i clienti.", "rate": "-2%", "pitch": "-5Hz", "pausa": 0.45}, {"t": "Conti alla rovescia finti, e percorsi che spingono al più caro.", "rate": "-4%", "pitch": "-5Hz", "pausa": 0.5}, {"t": "Più di uno su tre. Non è sfortuna.", "rate": "-8%", "pitch": "-6Hz", "pausa": 0.55}, {"t": "Il prezzo pieno non si augura a nessuno.", "rate": "-10%", "pitch": "-7Hz", "pausa": 0.3}]
