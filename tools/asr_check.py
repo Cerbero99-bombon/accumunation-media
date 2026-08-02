@@ -18,7 +18,7 @@ NUM = {"ottantacinque":["85"],"trentasette":["37"],"trecentomila":["300000","300
        "trecentonovantatre":["393"],"novanta":["90"],"dieci":["10"],"cento":["100"],
        "duemilioni":["2milioni"],"ventimila":["20mila","20000"],
        "cinquemila":["5000","5mila"],"ottocentonovanta":["890"],"cinquecento":["500"],
-       "cinque":["5"],"sette":["7"],"otto":["8"],"nove":["9"],"quattro":["4"],
+       "cinque":["5"],"chili":["kg"],"sette":["7"],"otto":["8"],"nove":["9"],"quattro":["4"],
        "trenta":["30"],"quaranta":["40"],"sessanta":["60"],"settanta":["70"],
        "ottanta":["80"],"mille":["1000"]}
 
