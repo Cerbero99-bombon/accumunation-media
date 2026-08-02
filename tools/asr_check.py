@@ -17,7 +17,10 @@ NUM = {"ottantacinque":["85"],"trentasette":["37"],"trecentomila":["300000","300
        "centotrenta":["130"],"cinquanta":["50"],"diciannove":["19"],"cinquecento":["500"],
        "trecentonovantatre":["393"],"novanta":["90"],"dieci":["10"],"cento":["100"],
        "duemilioni":["2milioni"],"ventimila":["20mila","20000"],
-       "cinquemila":["5000","5mila"],"ottocentonovanta":["890"],"cinquecento":["500"]}
+       "cinquemila":["5000","5mila"],"ottocentonovanta":["890"],"cinquecento":["500"],
+       "cinque":["5"],"sette":["7"],"otto":["8"],"nove":["9"],"quattro":["4"],
+       "trenta":["30"],"quaranta":["40"],"sessanta":["60"],"settanta":["70"],
+       "ottanta":["80"],"mille":["1000"]}
 
 def deacc(s): return ''.join(c for c in unicodedata.normalize('NFD',s)
                              if unicodedata.category(c)!='Mn')
@@ -36,7 +39,8 @@ def lev(a,b):
     return prev[-1]
 
 spec = json.load(open(sys.argv[1], encoding="utf-8")); bdir = sys.argv[2]
-model = WhisperModel("base", device="cpu", compute_type="int8")
+import os
+model = WhisperModel(os.environ.get("ASR_MODEL","base"), device="cpu", compute_type="int8")
 falliti = 0
 for i,b in enumerate(spec):
     segs,_ = model.transcribe(f"{bdir}/b{i:02d}.wav", language="it")
