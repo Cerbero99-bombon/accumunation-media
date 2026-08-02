@@ -1,6 +1,7 @@
 [
- {"t":"Centotrenta chili di cibo.","rate":"+0%","pitch":"-4Hz","pausa":0.35},
- {"t":"Buttati. A testa. Ogni anno.","rate":"-10%","pitch":"-7Hz","pausa":0.50},
+ {"t":"Centotrenta chili di cibo buttati.","rate":"+0%","pitch":"-4Hz","pausa":0.40},
+ {"t":"A testa, ogni anno, in Europa.","rate":"-6%","pitch":"-6Hz","pausa":0.50},
  {"t":"Dieci li buttano i negozi.","rate":"-4%","pitch":"-5Hz","pausa":0.45},
- {"t":"Il prezzo pieno non si augura a nessuno.","rate":"-12%","pitch":"-8Hz","pausa":0.30}
+ {"t":"E quel costo non sparisce: finisce nel prezzo.","rate":"-6%","pitch":"-6Hz","pausa":0.50},
+ {"t":"Il prezzo pieno non si augura a nessuno.","rate":"-10%","pitch":"-7Hz","pausa":0.30}
 ]
