@@ -13,6 +13,22 @@ danno di non farla non sia peggiore: in quel caso si scrive qui perche'.
 
 ---
 
+## 2026-08-02 (notte) · Il filo del cartellino, i due revisori nuovi, e i cinque della prova
+**L'errore trovato da Enrico**: nel reel 11 il filo oscillava in senso opposto al cartellino.
+Causa: il filo era calcolato con una formula a parte (+sin) mentre il cartellino ruota col
+canvas (-sin). Classe dell'errore: un vincolo fisico ricalcolato fuori dal suo sistema di
+coordinate. Regola nuova nel canone + prova delle fasi opposte su ogni aggancio.
+**Revisori montati** (richiesti esplicitamente da Enrico):
+- fisico-matematico: vincoli rigidi nello stesso sistema di coordinate, etichetta=scena
+  (contatore 15 -> 15 figure visibili), quote esatte sparse (niente pattern i%3);
+- linguistico: ASR bloccante col modello base (il tiny da' falsi positivi), blocchi >=4 parole,
+  prova del senso. Scoperto e chiuso anche un buco nel MODO di chiamare il cancello: un PASS
+  finto da pipe bash aveva fatto committare una voce bocciata.
+**Prodotti (tutti PASS collaudo + ASR)**: 06 v2 (folla, copione nuovo con beat di senso),
+08 v2 (pila, audio pulito), 09 v3 (contatore, copione con chiusura "quel costo finisce nel
+prezzo"), 11 v3 (filo rigido), 15 NUOVO uno-su-tre (motivo `vetrine`, D20 Francia, R4:
+30 negozi, 10 verbali contabili). Dispensa: D20 usata. Motivi nel motore: 10.
+**Coda**: non toccata.
 ## 2026-08-02 · Rifiniture ai reel 11-12, anomalia in coda, e il circuito del riscontro
 **Rifiniture (viste sui crop a piena risoluzione)**: nel 12 i titoli delle colonne restavano
 in trasparenza sotto lo slogan e si incastravano col dominio; nel 11 la faccia strappata del

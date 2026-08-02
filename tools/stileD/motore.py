@@ -125,7 +125,9 @@ MOTIVO = (function(){
       for(let i=N-1;i>=0;i--){
         const p=P[i], q=(n-i);
         if(q<=0) continue;
-        const e=ease(Math.min(1,q/9));
+        // regola del conteggio: sotto le 30 unita' l'occhio conta, quindi una figura
+        // "contata" dal numero deve essere GIA' visibile: ingresso rapido (q/2).
+        const e=ease(Math.min(1,q/(n<30?2:9)));
         const br=Math.sin(t*0.9+p.f)*2.6*p.s, bry=Math.sin(t*1.27+p.f)*1.4*p.s;
         let px=p.x+(1-e)*p.sx+br, py=p.y+(1-e)*p.sy+bry,
             ps=p.s*(0.72+0.28*e), pa=Math.min(1,e*1.15)*p.a;
@@ -804,9 +806,12 @@ MOTIVO = (function(){
   let seed=61; function rnd(){seed=(seed*1103515245+12345)&0x7fffffff;return seed/0x7fffffff;}
   const COLS=6, ROWS=5, X0=118, Y0=724, DX=142, DY=142, W=110, H=104;
   const S=[];
+  // 10 su 30 ESATTI ma sparsi: i%3 metteva i verbali in due colonne perfette,
+  // un pattern che si vede e suona finto. Due per riga, colonne sempre diverse.
+  const IRR=new Set([1,4, 6,9, 14,17, 18,21, 26,29].map((v,k)=>[1,4,8,11,12,17,20,21,27,28][k]));
   for(let i=0;i<COLS*ROWS;i++){
     S.push({x:X0+(i%COLS)*DX, y:Y0+((i/COLS)|0)*DY,
-            irr:(i%3===1),                        // 10 su 30, contabili
+            irr:IRR.has(i),
             ph:rnd()*6.283, j:(rnd()-.5)*8});
   }
   function negozio(o,acceso,flag,t){

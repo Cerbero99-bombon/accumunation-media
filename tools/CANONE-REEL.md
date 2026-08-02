@@ -114,3 +114,34 @@ Un reel non e' un elenco di numeri: e' un fatto che si chiude.
 - I badge (multa, sigillo) mai sotto y=1540: la UI di Instagram li copre. Si appoggiano
   SULL'oggetto (sulla card, sul cartellino), come un avviso.
 - Niente elementi vivi sopra la riga della fonte (y~1506) ne' sopra il dominio in chiusura.
+
+
+---
+
+# Aggiunta del 02/08/2026 — il revisore fisico-matematico e quello linguistico
+
+Nati dalla seconda revisione di Enrico (il filo del cartellino oscillava opposto al cartellino).
+
+## Fisica e geometria
+- **Un vincolo fisico e' UN corpo**: filo+cartellino, ombra+oggetto, contatto+appoggio si
+  disegnano nello stesso sistema di coordinate (stessa rotate/translate), MAI ricalcolati con
+  formule parallele. Il filo usava +sin mentre il canvas ruota a -sin: oscillavano opposti.
+- **Prova delle fasi opposte**: per ogni aggancio, due fotogrammi a fasi opposte del moto,
+  affiancati, e si GUARDA che il vincolo tenga da entrambe le parti.
+- **Etichetta = scena**: se un contatore dice 15, le figure visibili devono essere 15. Sotto
+  le ~30 unita' l'occhio conta: l'ingresso delle figure dev'essere quasi istantaneo (q/2), la
+  dissolvenza lenta va bene solo oltre la soglia del contabile.
+- **Le quote esatte si distribuiscono sparse**: 10 su 30 con i%3 produce due colonne perfette,
+  un pattern che si vede e suona finto. Set fisso, sparso, due per riga, colonne sempre diverse.
+
+## Lingua e audio
+- Cancello ASR col modello **base** (il tiny da' falsi positivi anche sullo slogan): sui FAIL
+  del tiny, ricontrollare il singolo blocco col base prima di rifare il take.
+- "augura a nessuno" trascritto "augura nessuno" e' la liaison naturale di Remy, non un difetto.
+- MAI validare il cancello dietro una pipe: `check | tail || ESITO=1` misura l'esito di tail.
+  Il 02/08 un PASS finto ha fatto committare una voce bocciata. `set -o pipefail` o due passi.
+
+## Audio, tetto vero
+- Il loudnorm da solo non basta: l'AAC in encoding riporta il picco sopra il tetto. Catena:
+  loudnorm TP=-1.5 + `alimiter=limit=0.84` sul master PCM, poi encode. Il collaudo misura il
+  file FINALE decodificato, ed e' quello che conta.
