@@ -175,6 +175,17 @@
    "scadenza": null,
    "stato": "aperta",
    "nata": "conversazione"
+  },
+  {
+   "id": "017",
+   "tipo": "enrico",
+   "titolo": "Cancellare (o lasciar affondare) i 2 reel muti del 30/07",
+   "dettaglio": "I reel 01-quanto-costa e 02-e-se-non-si-parte sul profilo sono senza audio (produzione pre-pipeline voce) e in stile slideshow superato. L'API non puo' cancellarli: decidere dall'app se eliminarli. Dal 04/08 escono i reel nuovi con la voce.",
+   "area": "",
+   "quando": "subito",
+   "scadenza": null,
+   "stato": "aperta",
+   "nata": "conversazione"
   }
  ]
 }

@@ -13,6 +13,26 @@ danno di non farla non sia peggiore: in quel caso si scrive qui perche'.
 
 ---
 
+## 2026-08-02 (sera) · Ritmo a 4 reel/settimana, 6 reel nuovi, cancello ASR trasferito nel container
+**Decisione di Enrico**: 4 reel a settimana da subito, obiettivo 1 al giorno. E l'audio va
+DENTRO ogni reel di default (era gia' cosi'; il trend dall'app resta l'eccezione manuale).
+I 2 reel muti sul profilo (01, 02, produzione pre-voce) sono in plancia da cancellare a mano.
+**Prodotti 6 reel nuovi (collaudo + ASR PASS)**: 16-cinque-su-cento (motivo `cento`, D10) ·
+17-due-posti-rimasti (`interfaccia` con pillola scarsita', D12) · 18-nel-bilancio
+(`contatore` a decimali, D08, al passato) · 19-il-prezzo-in-tv (`cartellino` con timbro
+A CASA, D13) · 20-quattro-anni-prima (motivo `tempo`, D06) · 21-centoquarantotto
+(`vetrine` stile siti, D17). Motivi nel motore: 12.
+**Calendario**: 16 reel dal 04 al 30 agosto (mar-mer-ven-dom, 20:00), caroselli F e H
+invariati. Copertura coda: 26 giorni. `piano/calendario-agosto.html` e' il piano leggibile.
+**Cancello ASR — cambio di casa**: le macchine remote da 1GB uccidono il modello base e il
+tiny da' falsi positivi sistematici (boccia perfino lo slogan). Il modello sta ora nel ramo
+`asr-model` del repo (5 pezzi da 28MB: `cat parte_a* > model.bin`) e il riascolto gira nel
+container. Il decoder int8 e' non-deterministico (a volte collassa su output vuoto):
+asr_check ora fa 3 tentativi e tiene il migliore. Ha beccato un difetto VERO: Remy legge
+"countdown" come "Kant-da-un" -> il copione del 21 e' passato a "conti alla rovescia".
+**Dispensa quasi esaurita**: libere solo D03, D04, D07. Per reggere 4-7 reel/settimana la
+fabbrica del lunedi' DEVE rifornirla (target: +15 fatti verificati con fonte).
+**Coda toccata fuori dalla finestra di silenzio.**
 ## 2026-08-02 (pomeriggio) · Via libera di Enrico: i reel stile D entrano in coda
 **Cosa**: Enrico ha approvato il formato ("decisamente meglio. Andiamo avanti"). In coda
 10 reel, due a settimana (martedì e venerdì, 20:00), dal 04/08 al 04/09:

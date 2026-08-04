@@ -728,6 +728,7 @@ MOTIVO = (function(){
       const mp=Math.min(1,Math.max(0,(t-cfg.multa_a)/0.45));
       m.style.opacity=(mp*(t>SLOG+0.6?Math.max(0.55,1-(t-SLOG-0.6)):1)).toFixed(2);
       m.style.transform='scale('+(0.85+0.15*ease(mp)+0.012*Math.sin(t*2.2)).toFixed(3)+')';
+      cd.style.opacity=(1-mp*0.85).toFixed(2);      // il timer lascia il posto alla multa
       card.style.opacity=(t>SLOG?Math.max(0.25,1-(t-SLOG)*1.2):1).toFixed(2);
     }
   };
@@ -895,7 +896,7 @@ MOTIVO_CENTO = r"""
 MOTIVO = (function(){
   const cfg = CFG;
   let seed=71; function rnd(){seed=(seed*1103515245+12345)&0x7fffffff;return seed/0x7fffffff;}
-  const N=100, COLS=10, X0=120, Y0=700, DX=94, DY=78;
+  const N=100, COLS=10, X0=120, Y0=742, DX=94, DY=78;
   const D=[];
   for(let i=0;i<N;i++) D.push({x:X0+(i%COLS)*DX, y:Y0+((i/COLS)|0)*DY,
                                ph:rnd()*6.283, ord:rnd()});
