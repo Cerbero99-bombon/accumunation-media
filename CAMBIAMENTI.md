@@ -13,6 +13,25 @@ danno di non farla non sia peggiore: in quel caso si scrive qui perche'.
 
 ---
 
+## 2026-08-04 · Il buco di 3 giorni, il rattoppo immediato, e il pubblicatore riscritto
+**Il guasto**: nessuna uscita dall'01 al 03/08. Il task serale non ha né pubblicato né
+marcato né riferito (il carosello F del 02/08 era ancora pubblicato=false). Ultimo media
+su IG: 31/07. Enrico l'ha notato lui — inaccettabile due volte.
+**Rattoppo (fatto subito, 12:35 Roma)**: pubblicati A MANO il reel 06-stesso-prezzo
+(instagram.com/reel/DbnXIJSk0B1) e la PRIMA STORIA del canale. F recuperato al 06/08,
+H all'08/08, resto del calendario invariato.
+**Storie — nuova regola di Enrico: una al giorno, sempre.** Prodotte 7 storie di rimando
+(04-10/08, `social/storie/`), in coda alle 20:15 di ogni sera. Ogni settimana se ne
+produce il lotto nuovo.
+**Pubblicatore riscritto (trig_019CX4z8vuE95YdsPfsdaJTw)**: legge la coda da
+raw.githubusercontent SENZA token e SENZA computer di Enrico acceso; guardia anti-doppione
+sui media di oggi; pubblica anche le storie; marca pubblicato=true con doppia via (GITHUB
+via Composio, fallback device); report OBBLIGATORIO anche a coda vuota — il silenzio e' il
+guasto peggiore. Collaudato subito con un run a vuoto via fire_trigger.
+**Skill nuova sul device: `accumunation-regia`** — continuita' (mai un giorno senza storia,
+ogni sessione apre controllando il flusso), evoluzione autonoma sui riscontri (un
+esperimento alla volta, cosa si puo' variare senza chiedere e cosa no), playbook di
+diagnosi del pubblicatore, soglia di rifornimento dispensa (<8 voci libere).
 ## 2026-08-02 (sera) · Ritmo a 4 reel/settimana, 6 reel nuovi, cancello ASR trasferito nel container
 **Decisione di Enrico**: 4 reel a settimana da subito, obiettivo 1 al giorno. E l'audio va
 DENTRO ogni reel di default (era gia' cosi'; il trend dall'app resta l'eccezione manuale).

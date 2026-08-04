@@ -131,7 +131,7 @@
   },
   {
    "id": "05-f-credito-passaparola",
-   "quando": "2026-08-02 20:00 Roma",
+   "quando": "2026-08-06 20:00 Roma",
    "tipo": "carosello",
    "titolo": "F — Credito passaparola",
    "caption": "Porti un amico, tutti e due ci guadagnate. Letteralmente.\nNon è marketing, è come funziona il credito passaparola su Accumunation.\nDettagli → link in bio.\n\n🫂\n\n#accumunation #passaparola #acquistocollettivo #preordine #consumoconsapevole",
@@ -142,7 +142,8 @@
     "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/evergreen/05-f-credito-passaparola/slide-04.jpg",
     "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/evergreen/05-f-credito-passaparola/slide-05.jpg"
    ],
-   "pubblicato": false
+   "pubblicato": false,
+   "nota": "Slot spostato dal 02/08 (task serale fermo) al 06/08."
   },
   {
    "id": "03-g-non-e-uno-sconto",
@@ -162,7 +163,7 @@
   },
   {
    "id": "06-h-perche-esiste",
-   "quando": "2026-08-06 20:00 Roma",
+   "quando": "2026-08-08 20:00 Roma",
    "tipo": "carosello",
    "titolo": "H — Perché esiste",
    "caption": "L'ho fondata perché ero stanco di scegliere tra prezzo pieno e svendita.\nPerché esiste Accumunation, in poche righe.\nLink in bio.\n\n🫂\n\n#accumunation #founder #storiavera #preordine #consumoconsapevole",
@@ -193,7 +194,7 @@
   },
   {
    "id": "06-stesso-prezzo-per-tutti",
-   "quando": "2026-08-04 20:00 Roma",
+   "quando": "2026-08-04 12:35 Roma",
    "tipo": "reel",
    "titolo": "Reel — Stesso prezzo per tutti",
    "caption": "Cento euro da soli, sessantadue in cinquecento.\n\nStesso prodotto, stesso giorno, stesso venditore: è il listino a quantità, aperto a tutti. Il meccanismo intero è sul sito.\n\nLink in bio.\n\n🫂\n\n#acquistocollettivo #insiemecostadimeno #comefunziona #gruppodiacquisto #accumunation",
@@ -201,8 +202,9 @@
     "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/reel/06-stesso-prezzo-per-tutti.mp4"
    ],
    "cover": "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/reel/06-stesso-prezzo-per-tutti-cover.jpg",
-   "nota": "Stile D (movimento continuo), collaudo + ASR PASS. Audio: voce + musica libera muxata (autonomia). share_to_feed: false. Per l'audio in trend serve Enrico dall'app.",
-   "pubblicato": false
+   "nota": "Pubblicato a mano il 04/08 (recupero del blocco del task serale). Storia di rimando uscita insieme.",
+   "pubblicato": true,
+   "permalink": "https://www.instagram.com/reel/DbnXIJSk0B1/"
   },
   {
    "id": "13-countdown-che-riparte",
@@ -397,6 +399,72 @@
    ],
    "cover": "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/reel/21-centoquarantotto-cover.jpg",
    "nota": "Stile D, collaudo + ASR PASS. Audio: voce + musica muxata. share_to_feed: false.",
+   "pubblicato": false
+  },
+  {
+   "id": "story-2026-08-05",
+   "quando": "2026-08-05 20:15 Roma",
+   "tipo": "storia",
+   "titolo": "Storia — countdown che riparte",
+   "media": [
+    "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/storie/story-2026-08-05.jpg"
+   ],
+   "nota": "Storia di rimando al contenuto del giorno. Solo immagine: niente caption via API.",
+   "pubblicato": false
+  },
+  {
+   "id": "story-2026-08-06",
+   "quando": "2026-08-06 20:15 Roma",
+   "tipo": "storia",
+   "titolo": "Storia — credito passaparola",
+   "media": [
+    "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/storie/story-2026-08-06.jpg"
+   ],
+   "nota": "Storia di rimando al contenuto del giorno. Solo immagine: niente caption via API.",
+   "pubblicato": false
+  },
+  {
+   "id": "story-2026-08-07",
+   "quando": "2026-08-07 20:15 Roma",
+   "tipo": "storia",
+   "titolo": "Storia — un capo su cinque",
+   "media": [
+    "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/storie/story-2026-08-07.jpg"
+   ],
+   "nota": "Storia di rimando al contenuto del giorno. Solo immagine: niente caption via API.",
+   "pubblicato": false
+  },
+  {
+   "id": "story-2026-08-08",
+   "quando": "2026-08-08 20:15 Roma",
+   "tipo": "storia",
+   "titolo": "Storia — perché esiste",
+   "media": [
+    "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/storie/story-2026-08-08.jpg"
+   ],
+   "nota": "Storia di rimando al contenuto del giorno. Solo immagine: niente caption via API.",
+   "pubblicato": false
+  },
+  {
+   "id": "story-2026-08-09",
+   "quando": "2026-08-09 20:15 Roma",
+   "tipo": "storia",
+   "titolo": "Storia — rispetto a cosa",
+   "media": [
+    "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/storie/story-2026-08-09.jpg"
+   ],
+   "nota": "Storia di rimando al contenuto del giorno. Solo immagine: niente caption via API.",
+   "pubblicato": false
+  },
+  {
+   "id": "story-2026-08-10",
+   "quando": "2026-08-10 20:15 Roma",
+   "tipo": "storia",
+   "titolo": "Storia — dietro le quinte",
+   "media": [
+    "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/storie/story-2026-08-10.jpg"
+   ],
+   "nota": "Storia di rimando al contenuto del giorno. Solo immagine: niente caption via API.",
    "pubblicato": false
   }
  ],
