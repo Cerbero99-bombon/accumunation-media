@@ -25,7 +25,8 @@ for p in q['post']:
         if p['tipo']=='reel' and not p.get('cover'): warn.append(f"{pid}: reel senza cover")
         if p.get('permalink'): err.append(f"{pid}: non pubblicato ma con permalink")
         if rete:
-            for u in p['media']+([p['cover']] if p.get('cover') else []):
+            # le voci threads sono di solo testo: nessun media da verificare
+            for u in p.get('media',[])+([p['cover']] if p.get('cover') else []):
                 if not urlok(u): err.append(f"{pid}: URL non raggiungibile {u[-60:]}")
         if p['tipo']=='storia': giorni_storia.add(d)
 # una storia al giorno, da domani all'ultima programmata
