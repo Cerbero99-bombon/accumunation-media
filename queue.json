@@ -466,6 +466,83 @@
    ],
    "nota": "Storia di rimando al contenuto del giorno. Solo immagine: niente caption via API.",
    "pubblicato": false
+  },
+  {
+   "id": "story-2026-08-11",
+   "quando": "2026-08-11 20:15 Roma",
+   "tipo": "storia",
+   "titolo": "Storia — 130 kg",
+   "media": [
+    "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/storie/story-2026-08-11.jpg"
+   ],
+   "nota": "Storia giornaliera. Solo immagine.",
+   "pubblicato": false
+  },
+  {
+   "id": "story-2026-08-12",
+   "quando": "2026-08-12 20:15 Roma",
+   "tipo": "storia",
+   "titolo": "Storia — mai esistito",
+   "media": [
+    "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/storie/story-2026-08-12.jpg"
+   ],
+   "nota": "Storia giornaliera. Solo immagine.",
+   "pubblicato": false
+  },
+  {
+   "id": "story-2026-08-13",
+   "quando": "2026-08-13 20:15 Roma",
+   "tipo": "storia",
+   "titolo": "Storia — garantito",
+   "media": [
+    "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/storie/story-2026-08-13.jpg"
+   ],
+   "nota": "Storia giornaliera. Solo immagine.",
+   "pubblicato": false
+  },
+  {
+   "id": "story-2026-08-14",
+   "quando": "2026-08-14 20:15 Roma",
+   "tipo": "storia",
+   "titolo": "Storia — scarsità",
+   "media": [
+    "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/storie/story-2026-08-14.jpg"
+   ],
+   "nota": "Storia giornaliera. Solo immagine.",
+   "pubblicato": false
+  },
+  {
+   "id": "story-2026-08-15",
+   "quando": "2026-08-15 20:15 Roma",
+   "tipo": "storia",
+   "titolo": "Storia — dietro le quinte",
+   "media": [
+    "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/storie/story-2026-08-15.jpg"
+   ],
+   "nota": "Storia giornaliera. Solo immagine.",
+   "pubblicato": false
+  },
+  {
+   "id": "story-2026-08-16",
+   "quando": "2026-08-16 20:15 Roma",
+   "tipo": "storia",
+   "titolo": "Storia — 85 centesimi",
+   "media": [
+    "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/storie/story-2026-08-16.jpg"
+   ],
+   "nota": "Storia giornaliera. Solo immagine.",
+   "pubblicato": false
+  },
+  {
+   "id": "story-2026-08-17",
+   "quando": "2026-08-17 20:15 Roma",
+   "tipo": "storia",
+   "titolo": "Storia — piu siete",
+   "media": [
+    "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/storie/story-2026-08-17.jpg"
+   ],
+   "nota": "Storia giornaliera. Solo immagine.",
+   "pubblicato": false
   }
  ],
  "gia_pubblicati": [
