@@ -49,11 +49,11 @@ def dur(f):
     return float(sh(f'ffprobe -v error -show_entries format=duration -of csv=p=0 "{f}"'))
 
 
-def main(hook, reel, out, nome, inizio=None):
+def main(hook, reel, out, nome, inizio=None, lungh=None):
     tr, xd, extra, perche = TRANSIZIONI[nome]
     dh = dur(hook); dr = dur(reel)
     ini = float(inizio) if inizio is not None else max(0.0, dh - DUR_HOOK)
-    lh = min(DUR_HOOK, dh - ini)
+    lh = min(float(lungh) if lungh else DUR_HOOK, dh - ini)
 
     # 1. spezzone normalizzato: riempie il 9:16, 30 fps, senza audio (l'audio si fa dopo)
     base = f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H}"
