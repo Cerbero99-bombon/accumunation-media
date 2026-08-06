@@ -196,8 +196,9 @@
     "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/reel/13-countdown-che-riparte.mp4"
    ],
    "cover": "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/reel/13-countdown-che-riparte-cover.jpg",
-   "nota": "Stile D (movimento continuo), collaudo + ASR PASS. Audio: voce + musica libera muxata (autonomia). share_to_feed: false. Per l'audio in trend serve Enrico dall'app.",
-   "pubblicato": false
+   "nota": "Stile D (movimento continuo), collaudo + ASR PASS. Audio: voce + musica libera muxata (autonomia). share_to_feed: false. Per l'audio in trend serve Enrico dall'app. | recuperato a mano 06/08 15:53 dopo guasto del task serale",
+   "pubblicato": true,
+   "permalink": "https://www.instagram.com/reel/Dbs3Tx-gN68/"
   },
   {
    "id": "story-2026-08-05",
@@ -207,8 +208,9 @@
    "media": [
     "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/storie/story-2026-08-05.jpg"
    ],
-   "nota": "Storia di rimando al contenuto del giorno. Solo immagine: niente caption via API.",
-   "pubblicato": false
+   "nota": "Storia di rimando al contenuto del giorno. Solo immagine: niente caption via API. | recuperato a mano 06/08 15:53 dopo guasto del task serale",
+   "pubblicato": true,
+   "permalink": "id:18160776109467058 (storia, nessun permalink)"
   },
   {
    "id": "05-f-credito-passaparola",
