@@ -236,8 +236,10 @@
    "media": [
     "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/storie/story-2026-08-06.jpg"
    ],
-   "nota": "Storia di rimando al contenuto del giorno. Solo immagine: niente caption via API.",
-   "pubblicato": false
+   "nota": "Storia di rimando al contenuto del giorno. Solo immagine: niente caption via API. | FB: storia uscita alle 16:20 del 06/08 per una POST di prova finita in pubblicazione. Su IG esce regolarmente alle 20:15.",
+   "pubblicato": false,
+   "fb_pubblicato": true,
+   "fb_post_id": "1530276614883754"
   },
   {
    "id": "threads-85-centesimi",
