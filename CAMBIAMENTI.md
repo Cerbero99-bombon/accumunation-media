@@ -214,3 +214,38 @@ con i permalink veri, quindi il run delle 20:00 li salta.
 **Nota tecnica**: `INSTAGRAM_CREATE_MEDIA_CONTAINER` con `child_image_urls` ora risponde 400.
 Per i caroselli si usa **`INSTAGRAM_CREATE_CAROUSEL_CONTAINER`**, che accetta `child_image_urls`
 direttamente. Il prompt del pubblicatore serale va aggiornato di conseguenza.
+
+## 2026-08-06 · Sei caption riscritte dalla chiusura in giu', e la finestra sicura scritta per intero
+**Cosa**: cambiata la sola **chiusura** (CTA + hashtag) di sei voci non pubblicate della coda:
+`05-f-credito-passaparola` (06/08), `08-un-capo-su-cinque` (07/08), `06-h-perche-esiste` (08/08),
+`10-rispetto-a-cosa` (09/08), `09-centotrenta-chili` (11/08), `11-mai-esistito` (12/08).
+**Il corpo di tutte e sei non e' stato toccato**, e lo dimostra il controllo fatto prima di scrivere:
+la caption nuova comincia con il corpo vecchio carattere per carattere (116-165 caratteri a seconda
+della voce). Cambia solo cio' che stava da «Link in bio.» in giu'.
+**Perche'**: D-005 di Enrico del 05/08 — i contenuti «non suscitano tanti stimoli e sembrano ads».
+Su sette voci in uscita entro il 12/08, **zero** chiedevano qualcosa a chi guarda e tutte chiudevano
+con lo stesso blocco di 5 hashtag con `#accumunation` in testa. Ora la richiesta e' scritta, e gli
+hashtag sono 2-3 tematici, mai lo stesso gruppo due volte. Il link non sparisce: sta in bio.
+**Conseguenza**: nessuna sul calendario, nessuna sui media. Nessun `pubblicato`, nessun `permalink`,
+nessun `threads_media_id`, nessun `quando` toccato. Diff: 1 file, 6 righe.
+**Se va storto**: si torna indietro con `git revert` del commit di questa riga. Le caption vecchie
+stanno per intero in `social/CHIUSURE-20260805.md` nel repo CERBERO.
+**Fuori perimetro, dichiarato**: `13-countdown-che-riparte` (slot 05/08 20:00, gia' passato) resta
+com'e'. E' `pubblicato=false` ma **questo non prova che non sia uscito**: su Instagram nessun
+automatismo ha mai scritto quel campo (censimento sulla storia del repo, 06/08). Riscriverne la
+caption significherebbe forse riscrivere un post gia' uscito, quindi non si tocca.
+
+## 2026-08-06 · La finestra sicura per scrivere in coda: **11:30-18:30**, e gli slot del mattino
+**Cosa**: la regola qui sopra («finestra di silenzio 19:00-23:00») **e' vera ma incompleta**, e per
+questo si aggiunge la finestra positiva: **si scrive in `queue.json` solo fra le 11:30 e le 18:30 di
+Roma**. Fuori da li' non si tocca.
+**Perche' non basta evitare le 19:00-23:00**: esiste anche uno **slot del mattino alle 09:00**, nato
+quando Threads e' entrato in coda (primo lotto, 04/08). Le voci future che ci vivono oggi sono
+**quattro**: `threads-countdown-riparte` (08/08), `threads-domanda-70` (12/08), `threads-130-chili`
+(15/08), `threads-uno-su-tre` (19/08). Contate a macchina sul file il 06/08, non riprese da altrove.
+Chi si fosse fidato solo della finestra di silenzio avrebbe scritto in coda alle 09:10 credendosi
+al sicuro.
+**E il pubblicatore puo' arrivare tardi**: l'unico commit automatico esistente e' quello del 05/08,
+«recupero del run 09:00 fallito», committato alle 10:55 per uno slot delle 09:00 — **deriva +1h55**.
+La finestra parte alle 11:30 per questo, non per prudenza generica.
+**Conseguenza**: nessuna sui contenuti. E' una regola su **quando** si scrive, non su cosa esce.
