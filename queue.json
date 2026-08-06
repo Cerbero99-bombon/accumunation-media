@@ -225,8 +225,12 @@
     "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/evergreen/05-f-credito-passaparola/slide-04.jpg",
     "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/evergreen/05-f-credito-passaparola/slide-05.jpg"
    ],
-   "pubblicato": false,
-   "nota": "Slot spostato dal 02/08 (task serale fermo) al 06/08."
+   "pubblicato": true,
+   "nota": "Slot spostato dal 02/08 (task serale fermo) al 06/08.",
+   "ig_media_id": "18060177212777454",
+   "permalink": "https://www.instagram.com/p/Dbtu7q3IM3R/",
+   "fb_pubblicato": true,
+   "fb_post_id": "1159827427224071_122105288817411311"
   },
   {
    "id": "story-2026-08-06",
@@ -237,9 +241,10 @@
     "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/storie/story-2026-08-06.jpg"
    ],
    "nota": "Storia di rimando al contenuto del giorno. Solo immagine: niente caption via API. | FB: storia uscita alle 16:20 del 06/08 per una POST di prova finita in pubblicazione. Su IG esce regolarmente alle 20:15.",
-   "pubblicato": false,
+   "pubblicato": true,
    "fb_pubblicato": true,
-   "fb_post_id": "1530276614883754"
+   "fb_post_id": "1530276614883754",
+   "ig_media_id": "17944576776294621"
   },
   {
    "id": "threads-85-centesimi",
@@ -248,7 +253,9 @@
    "titolo": "Threads — 85 centesimi",
    "testo": "In Germania smaltire un reso costa 85 centesimi. Donarlo costa di piu.\n\nFinche il conto e questo, nessuna campagna di sensibilizzazione sposta niente.\n\nSi sposta cambiando il conto.\n\n🫂",
    "nota": "Testo nativo Threads. Nessuna immagine.",
-   "pubblicato": false
+   "pubblicato": true,
+   "threads_media_id": "18341245870267091",
+   "permalink": "https://www.threads.com/@accumunation/post/DbtvG-RkvPK"
   },
   {
    "id": "08-un-capo-su-cinque",
