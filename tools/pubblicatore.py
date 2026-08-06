@@ -60,8 +60,10 @@ def chiama(url, dati=None, metodo=None):
 
 # ------------------------------------------------------------------ Instagram
 def ig_base():
-    """graph.instagram.com col token Instagram, altrimenti il Graph con il token pagina."""
-    return (IGAPI, IG_TOK) if IG_TOK else (GRAPH, FB_TOK)
+    """Dal 07/08 Instagram passa dal Graph con il token della Pagina: una chiave sola per
+    IG e FB, che e' il motivo per cui il collegamento e' stato rifatto. IG_TOKEN resta
+    come scavalco se un giorno servisse una chiave Instagram separata."""
+    return (GRAPH, IG_TOK or FB_TOK)
 
 
 def ig_contenitore(campi):
