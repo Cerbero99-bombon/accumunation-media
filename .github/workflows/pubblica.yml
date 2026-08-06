@@ -1,0 +1,57 @@
+name: Pubblicatore Accumunation
+
+# Perche' qui e non in una sessione: una sessione schedulata non riesce a raggiungere
+# Meta, e quando fallisce non riesce nemmeno a dirlo. Qui c'e' Internet vero, i segreti
+# stanno nel repo e ogni run lascia un log consultabile anche a distanza di giorni.
+
+on:
+  schedule:
+    - cron: '0 18 * * *'      # 20:00 di Roma con l'ora legale (18:00 UTC)
+  workflow_dispatch:
+    inputs:
+      prova:
+        description: 'Prova a vuoto: legge la coda e non pubblica niente'
+        type: boolean
+        default: false
+      max:
+        description: 'Quante uscite al massimo'
+        default: '3'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pubblicatore
+  cancel-in-progress: false
+
+jobs:
+  pubblica:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Pubblica le voci mature
+        env:
+          FB_PAGE_ID:       ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_TOKEN:    ${{ secrets.FB_PAGE_TOKEN }}
+          IG_USER_ID:       ${{ secrets.IG_USER_ID }}
+          IG_TOKEN:         ${{ secrets.IG_TOKEN }}
+          THREADS_USER_ID:  ${{ secrets.THREADS_USER_ID }}
+          THREADS_TOKEN:    ${{ secrets.THREADS_TOKEN }}
+          PROVA:            ${{ inputs.prova && '1' || '0' }}
+          MAX_USCITE:       ${{ inputs.max || '3' }}
+        run: python3 tools/pubblicatore.py
+
+      - name: Riporta coda e registro nel repo
+        if: always()
+        run: |
+          git config user.name  "pubblicatore"
+          git config user.email "01enricodesimini99@gmail.com"
+          git add queue.json log-pubblicatore.md || true
+          git diff --cached --quiet || git commit -m "pubblicatore: run $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git pull --rebase --autostash -q origin main || true
+          git push -q origin HEAD:main
+
+      - name: Referto nel riepilogo del run
+        if: always()
+        run: tail -40 log-pubblicatore.md >> $GITHUB_STEP_SUMMARY
