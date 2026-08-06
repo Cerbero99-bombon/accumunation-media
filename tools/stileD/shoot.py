@@ -6,8 +6,8 @@ async def main(html, outdir, dur):
     if fr.exists(): shutil.rmtree(fr)
     fr.mkdir(parents=True)
     async with async_playwright() as pw:
-        b = await pw.chromium.launch(executable_path='/opt/pw-browsers/chromium-1194/chrome-linux/chrome',
-                                     args=['--no-sandbox','--disable-dev-shm-usage'])
+        b = await pw.chromium.launch(channel=None,
+                                     args=['--no-sandbox','--disable-dev-shm-usage','--single-process','--no-zygote','--disable-gpu','--js-flags=--max-old-space-size=192'])
         p = await b.new_page(viewport={'width':W,'height':H}, device_scale_factor=1)
         await p.goto('file://'+str(pathlib.Path(html).resolve()))
         await p.evaluate("document.fonts.ready")

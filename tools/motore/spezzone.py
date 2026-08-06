@@ -56,15 +56,18 @@ def main(hook, reel, out, nome, inizio=None):
     lh = min(DUR_HOOK, dh - ini)
 
     # 1. spezzone normalizzato: riempie il 9:16, 30 fps, senza audio (l'audio si fa dopo)
+    base = f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H}"
     coda = ""
     if extra == "flash":
         coda = f",eq=brightness='0.42*max(0\\,(t-{lh-xd-0.10:.2f})/0.28)'"
     elif extra == "mosso":
-        coda = f",boxblur=luma_radius='min(14\\,28*max(0\\,(t-{lh-xd:.2f})/{xd:.2f}))':luma_power=1:enable='gte(t,{lh-xd:.2f})'"
+        # la panoramica vera: si allarga il fotogramma e lo si fa scorrere sull'ultimo mezzo secondo
+        base = (f"scale={int(W*1.18)}:{int(H*1.18)}:force_original_aspect_ratio=increase,"
+                f"crop={W}:{H}:x='(iw-{W})/2+(iw-{W})/2*min(1\\,max(0\\,(t-{lh-xd-0.18:.2f})/{xd+0.18:.2f}))':y=(ih-{H})/2")
     elif extra == "nero":
-        coda = f",eq=brightness='-1.0*step(t-{lh-0.07:.2f}\\,0)'"
+        coda = f",eq=brightness='if(gt(t,{lh-0.07:.2f}),-1,0)'"
     sh(f'ffmpeg -y -loglevel error -ss {ini} -t {lh} -i "{hook}" -an '
-       f'-vf "scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},fps={FPS},setsar=1{coda}" '
+       f'-vf "{base},fps={FPS},setsar=1{coda}" '
        f'-c:v libx264 -preset veryfast -crf 18 -pix_fmt yuv420p -g 15 -keyint_min 15 -sc_threshold 0 _sp.mp4')
     if extra == "fermo":   # un fermo immagine breve prima dello scatto in avanti
         sh(f'ffmpeg -y -loglevel error -i _sp.mp4 -vf "tpad=stop_mode=clone:stop_duration=0.15" '
