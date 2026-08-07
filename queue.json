@@ -268,7 +268,11 @@
    ],
    "cover": "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/reel/08-un-capo-su-cinque-cover.jpg",
    "nota": "Stile D (movimento continuo), collaudo + ASR PASS. Audio: voce + musica libera muxata (autonomia). share_to_feed: false. Per l'audio in trend serve Enrico dall'app.",
-   "pubblicato": false
+   "pubblicato": true,
+   "ig_media_id": "18100105106594940",
+   "permalink": "https://www.instagram.com/reel/Dbv_zYJlFrF/",
+   "fb_post_id": "1066867525687292",
+   "fb_pubblicato": true
   },
   {
    "id": "story-2026-08-07",
@@ -279,7 +283,11 @@
     "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/storie/story-2026-08-07.jpg"
    ],
    "nota": "Storia di rimando al contenuto del giorno. Solo immagine: niente caption via API.",
-   "pubblicato": false
+   "pubblicato": true,
+   "ig_media_id": "18111929446771468",
+   "permalink": "https://www.instagram.com/stories/accumunation/3958663508830045060",
+   "fb_post_id": "2858765887815409",
+   "fb_pubblicato": true
   },
   {
    "id": "threads-countdown-riparte",
