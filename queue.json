@@ -296,7 +296,9 @@
    "titolo": "Threads — countdown riparte",
    "testo": "Deghi ha preso 2 milioni di multa perche il countdown, arrivato a zero, ripartiva. Stesse condizioni, stesso sconto, timer nuovo.\n\nLa domanda che mi resta: se l'offerta era vera la prima volta, a cosa serviva il timer?\n\n🫂",
    "nota": "Testo nativo Threads. Nessuna immagine.",
-   "pubblicato": false
+   "pubblicato": true,
+   "threads_media_id": "18111119410801360",
+   "permalink": "https://www.threads.com/@accumunation/post/DbyiXpNiZAC"
   },
   {
    "id": "10-rispetto-a-cosa",
@@ -309,7 +311,11 @@
    ],
    "cover": "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/reel/10-rispetto-a-cosa-cover.jpg",
    "nota": "Stile D (movimento continuo), collaudo + ASR PASS. Audio: voce + musica libera muxata (autonomia). share_to_feed: false. Per l'audio in trend serve Enrico dall'app.",
-   "pubblicato": false
+   "pubblicato": true,
+   "ig_media_id": "18070514786443546",
+   "permalink": "https://www.instagram.com/reel/DbyiZWJDdHU/",
+   "fb_post_id": "2901953276828897",
+   "fb_pubblicato": true
   },
   {
    "id": "story-2026-08-08",
@@ -320,7 +326,11 @@
     "https://raw.githubusercontent.com/Cerbero99-bombon/accumunation-media/main/social/storie/story-2026-08-08.jpg"
    ],
    "nota": "Storia di rimando al contenuto del giorno. Solo immagine: niente caption via API.",
-   "pubblicato": false
+   "pubblicato": true,
+   "ig_media_id": "18145058140492524",
+   "permalink": "https://www.instagram.com/stories/accumunation/3959378696684386478",
+   "fb_post_id": "1690136405433515",
+   "fb_pubblicato": true
   },
   {
    "id": "21-centoquarantotto",
